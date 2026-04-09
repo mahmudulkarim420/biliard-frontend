@@ -1,10 +1,23 @@
-import { ArrowDownRight, ChevronsLeft, Zap, MonitorSmartphone, Laptop, Monitor } from "lucide-react";
+import { ArrowDownRight, Zap } from "lucide-react";
+// png file path adjust koro jodi dorkar hoy
+import rectanglePng from "@/assets/Rectangle 11.png";
 
 const services = [
   {
     number: "01",
     title: "Brand Strategy &\nArt Direction",
-    icon: <ChevronsLeft className="w-8 h-8" strokeWidth={1.5} />,
+    icon: <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_151_2)">
+        <path d="M17.8669 24.6375C17.5562 24.3735 17.3066 24.045 17.1355 23.6749C16.9643 23.305 16.8757 22.902 16.8757 22.4944C16.8757 22.0866 16.9643 21.6838 17.1355 21.3137C17.3066 20.9436 17.5562 20.6153 17.8669 20.3513L38.9606 2.06247C39.3697 1.71444 39.8698 1.49082 40.4019 1.41803C40.9341 1.34525 41.4759 1.42636 41.9634 1.65177C42.4509 1.87719 42.8638 2.23747 43.1529 2.69004C43.4423 3.14259 43.5958 3.66851 43.5956 4.2056V40.7682C43.5958 41.3052 43.4423 41.8311 43.1529 42.2837C42.8638 42.7362 42.4509 43.0965 41.9634 43.3219C41.4759 43.5473 40.9341 43.6285 40.4019 43.5557C39.8698 43.483 39.3697 43.2593 38.9606 42.9113L17.8669 24.6375Z" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M28.125 39.375V40.7813C28.1252 41.3183 27.9716 41.8442 27.6823 42.2968C27.3932 42.7495 26.9803 43.1096 26.4928 43.335C26.0053 43.5604 25.4634 43.6416 24.9313 43.5688C24.3992 43.4961 23.8991 43.2724 23.49 42.9244L2.39813 24.6375C2.08744 24.3735 1.83788 24.045 1.66673 23.6749C1.49558 23.305 1.40694 22.902 1.40694 22.4944C1.40694 22.0866 1.49558 21.6838 1.66673 21.3137C1.83788 20.9438 2.08744 20.6153 2.39813 20.3513L23.4919 2.06248C23.9016 1.71461 24.4022 1.49137 24.9347 1.41917C25.4672 1.34698 26.0092 1.42886 26.4967 1.65512C26.9841 1.88137 27.3966 2.24253 27.6851 2.69587C27.9737 3.14921 28.1263 3.67573 28.125 4.2131V5.62498" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <defs>
+        <clipPath id="clip0_151_2">
+          <rect width="45" height="45" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+    ,
     isActive: false,
   },
   {
@@ -12,7 +25,21 @@ const services = [
     title: "UX/UI\nDesign",
     icon: (
       <div className="relative w-8 h-8">
-        <Monitor className="w-8 h-8" strokeWidth={1.5} />
+        <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_151_5)">
+            <path d="M15.4688 37.9688L16.875 29.5312" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M11.25 37.9688H23.9062" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M1.40625 22.0312H23.9062" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M19.6875 29.5312H7.03125C5.53941 29.5312 4.10867 28.9386 3.05377 27.8837C1.99888 26.8288 1.40625 25.398 1.40625 23.9062V7.03125C1.40625 5.53941 1.99888 4.10867 3.05377 3.05377C4.10867 1.99888 5.53941 1.40625 7.03125 1.40625H37.9688C39.4605 1.40625 40.8913 1.99888 41.9462 3.05377C43.0011 4.10867 43.5938 5.53941 43.5938 7.03125V23.9062" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M37.9687 18.2812L26.8875 31.1812C26.7981 31.2819 26.7397 31.4063 26.7199 31.5396C26.6998 31.6727 26.7189 31.8088 26.775 31.9313C26.8329 32.0559 26.9257 32.1613 27.0422 32.2346C27.1586 32.3077 27.2938 32.3456 27.4312 32.3438H32.3437V43.5938L43.425 30.6938C43.5146 30.5931 43.5729 30.4687 43.5928 30.3354C43.6129 30.2023 43.5937 30.0662 43.5375 29.9438C43.4811 29.8219 43.3912 29.7186 43.2784 29.6454C43.1655 29.5725 43.0344 29.5329 42.9 29.5312H37.9687V18.2812Z" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </g>
+          <defs>
+            <clipPath id="clip0_151_5">
+              <rect width="45" height="45" fill="white" />
+            </clipPath>
+          </defs>
+        </svg>
+
         <Zap className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-[40%] -translate-y-[40%] fill-transparent" strokeWidth={1.5} />
       </div>
     ),
@@ -21,21 +48,41 @@ const services = [
   {
     number: "03",
     title: "Brand Strategy &\nArt Direction",
-    icon: <MonitorSmartphone className="w-8 h-8" strokeWidth={1.5} />,
-    isActive: false, // Eta default vabe active thakbe
+    icon: <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_151_11)">
+        <path d="M30.9375 43.5938H19.6875L21.0938 35.1562H29.5312L30.9375 43.5938Z" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M15.4688 43.5938H35.1562" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M21.0938 9.84375H40.7812C41.5271 9.84375 42.2426 10.1401 42.7701 10.6675C43.2975 11.195 43.5938 11.9103 43.5938 12.6562V32.3438C43.5938 33.0896 43.2975 33.8051 42.7701 34.3326C42.2426 34.86 41.5271 35.1562 40.7812 35.1562H9.84375C9.09784 35.1562 8.38245 34.86 7.85501 34.3326C7.32758 33.8051 7.03125 33.0896 7.03125 32.3438V29.5312" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M7.03125 29.5312H43.5938" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M4.21875 1.40625H12.6562C12.6562 1.40625 15.4688 1.40625 15.4688 4.21875V21.0938C15.4688 21.0938 15.4688 23.9062 12.6562 23.9062H4.21875C4.21875 23.9062 1.40625 23.9062 1.40625 21.0938V4.21875C1.40625 4.21875 1.40625 1.40625 4.21875 1.40625Z" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M1.40625 18.2812H15.4688" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <defs>
+        <clipPath id="clip0_151_11">
+          <rect width="45" height="45" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+    ,
+    isActive: false, // Example: setting this as active by default
   },
   {
     number: "04",
     title: "Website/App\nDesign",
-    icon: <Laptop className="w-8 h-8" strokeWidth={1.5} />,
+    icon: <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M39.375 26.7188V8.4375C39.375 7.69159 39.0787 6.9762 38.5513 6.44876C38.0239 5.92133 37.3084 5.625 36.5625 5.625H8.4375C7.69159 5.625 6.9762 5.92133 6.44876 6.44876C5.92133 6.9762 5.625 7.69159 5.625 8.4375V26.7188H39.375Z" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M43.3517 35.4206C43.542 35.8489 43.6222 36.3178 43.5851 36.7849C43.5482 37.2521 43.395 37.7025 43.1396 38.0953C42.8842 38.4883 42.5345 38.8112 42.1228 39.0345C41.7108 39.258 41.2498 39.375 40.781 39.375H4.21863C3.75003 39.375 3.28885 39.258 2.87699 39.0345C2.46513 38.8112 2.11561 38.4883 1.86022 38.0953C1.60482 37.7025 1.45164 37.2521 1.41457 36.7849C1.37751 36.3178 1.45775 35.8489 1.648 35.4206L5.62488 26.7188H39.3748L43.3517 35.4206Z" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M19.6875 33.75H25.3125" stroke="#FF3838" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    ,
     isActive: false,
   },
 ];
 
 const Innovations = () => {
   return (
-    <section className="relative z-10 w-full overflow-x-hidden bg-[#09090b] px-6 py-24 sm:px-12 lg:px-24">
-      {/* Topographic Contour Background */}
+    <section className="relative z-10 w-full overflow-hidden bg-[#09090b] px-6 py-24 sm:px-12 lg:px-24">
+      {/* Background Pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-20"
         style={{
@@ -65,27 +112,32 @@ const Innovations = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative flex flex-col overflow-hidden rounded-[2rem] p-8 pb-10 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/50 bg-gradient-to-tl ${service.isActive
-                ? "from-[#222430] to-[#15161c] shadow-2xl shadow-black/50"
-                : "from-[#1a1b24] to-[#0c0d11] hover:from-[#222430] hover:to-[#15161c]"
+              className={`group relative flex flex-col overflow-hidden rounded-[2rem] p-8 pb-10 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/70 bg-gradient-to-tl ${service.isActive
+                ? "from-[#222430] to-[#15161c] shadow-2xl shadow-black/60"
+                : "from-[#1a1b24] to-[#0c0d11] hover:from-[#1d1e29] hover:to-[#111218]"
                 }`}
             >
-              {/* Wavy Glass Overlay - Ekhon shob card e hover korle 30% opacity hobe */}
+              {/* --- New Replacement: Rectangle PNG Overlay --- */}
+              {/* Ekhane active card e eita 30% opacity thakbe, ar hover korle o 30% hobe */}
               <div
-                className={`pointer-events-none absolute inset-0 transition-opacity duration-500 ${service.isActive ? "opacity-30" : "opacity-0 group-hover:opacity-30"
+                className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ease-in-out ${service.isActive ? "opacity-30" : "opacity-0 group-hover:opacity-30"
                   }`}
                 style={{
-                  backgroundImage: `radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 60%), repeating-radial-gradient(circle at 0 0, transparent 0, #13141a 4px), repeating-linear-gradient(#2a2b36, #2a2b36)`,
-                  backgroundBlendMode: 'overlay',
+                  backgroundImage: `url(${rectanglePng})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat',
                 }}
               />
+              {/* ----------------------------------------------- */}
 
               {/* Number (Outline Text) */}
               <div
-                className="mb-20 text-[120px] font-medium leading-none tracking-tight opacity-40 transition-opacity duration-300 group-hover:opacity-80"
+                className="mb-20 text-[120px] font-medium leading-none tracking-tight opacity-30 transition-opacity duration-300 group-hover:opacity-60"
                 style={{
-                  WebkitTextStroke: "1px rgba(255, 255, 255, 0.26)",
+                  WebkitTextStroke: "1px rgba(255, 255, 255, 0.2)",
                   color: "transparent",
+                  fontFamily: "serif", // matched the design font
                 }}
               >
                 {service.number}

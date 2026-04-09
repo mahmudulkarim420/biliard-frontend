@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { MoveRight, Plus, Minus } from "lucide-react";
 
 const services = [
@@ -24,29 +25,36 @@ const faqs = [
 ];
 
 const MarketingSection = () => {
-    // Second item (index 1) is open by default as requested
     const [openIndex, setOpenIndex] = useState<number | null>(1);
 
     return (
-        <section className="bg-[#f5f5f5] py-24 px-6 sm:px-12 lg:px-24 w-full">
+        <section className="bg-[#f5f5f5] py-24 px-6 sm:px-12 lg:px-24 w-full overflow-hidden">
             <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-                {/* LEFT SIDE CONTENT */}
-                <div className="flex flex-col">
+                {/* LEFT SIDE CONTENT - Animated */}
+                <motion.div 
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="flex flex-col"
+                >
                     <span className="text-[#ff3b30] text-[12px] font-bold tracking-[0.2em] mb-4">
                         OUR OFFER
                     </span>
 
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-10">
+                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-10 tracking-tight">
                         We perform best <br /> digital marketing
                     </h2>
 
                     <div className="flex flex-col md:flex-row gap-8 items-start mb-12">
-                        <div className="w-full md:w-1/3 shrink-0">
-                            <img
+                        <div className="w-full md:w-1/3 shrink-0 overflow-hidden rounded-sm">
+                            <motion.img
+                                whileHover={{ scale: 1.1 }}
+                                transition={{ duration: 0.6 }}
                                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400"
                                 alt="Team working"
-                                className="rounded-sm grayscale object-cover w-full h-32"
+                                className="grayscale object-cover w-full h-32"
                             />
                         </div>
                         <p className="text-gray-500 text-sm leading-relaxed">
@@ -54,11 +62,15 @@ const MarketingSection = () => {
                         </p>
                     </div>
 
-                    {/* Services Grid */}
+                    {/* Services Grid with Staggered Animation */}
                     <div className="grid grid-cols-1 md:grid-cols-2 border-t border-gray-200">
-                        {services.map((service) => (
-                            <div
+                        {services.map((service, idx) => (
+                            <motion.div
                                 key={service.id}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: idx * 0.1, duration: 0.5 }}
                                 className="flex items-center justify-between py-6 pr-6 border-b border-gray-200 group cursor-pointer"
                             >
                                 <div className="flex items-center gap-3">
@@ -68,43 +80,58 @@ const MarketingSection = () => {
                                     </span>
                                 </div>
                                 <MoveRight className="w-4 h-4 text-gray-400 group-hover:text-[#ff3b30] group-hover:translate-x-1 transition-all" />
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
 
-                {/* RIGHT SIDE FAQ ACCORDION */}
-                <div className="flex flex-col gap-4 lg:mt-16">
+                {/* RIGHT SIDE FAQ ACCORDION - Animated */}
+                <motion.div 
+                    initial={{ opacity: 0, x: 50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="flex flex-col gap-4 lg:mt-16"
+                >
                     {faqs.map((faq, index) => {
                         const isOpen = openIndex === index;
                         return (
                             <div
                                 key={index}
-                                className="bg-white rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.04)] overflow-hidden transition-all duration-300"
+                                className={`bg-white rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.03)] overflow-hidden border transition-colors duration-300 ${isOpen ? 'border-[#ff3b30]/20' : 'border-transparent'}`}
                             >
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? null : index)}
-                                    className="w-full flex items-center justify-between p-6 md:p-8 text-left"
+                                    className="w-full flex items-center justify-between p-6 md:p-8 text-left outline-none"
                                 >
-                                    <span className={`text-[16px] md:text-[18px] font-bold transition-colors ${isOpen ? 'text-[#ff3b30]' : 'text-gray-900'}`}>
+                                    <span className={`text-[16px] md:text-[18px] font-bold transition-colors duration-300 ${isOpen ? 'text-[#ff3b30]' : 'text-gray-900'}`}>
                                         {faq.question}
                                     </span>
-                                    <div className="bg-gray-100 rounded-full p-1 transition-transform">
-                                        {isOpen ? <Minus className="w-4 h-4 text-gray-600" /> : <Plus className="w-4 h-4 text-gray-600" />}
+                                    <div className={`rounded-full p-1.5 transition-all duration-300 ${isOpen ? 'bg-[#ff3b30] text-white rotate-180' : 'bg-gray-100 text-gray-600'}`}>
+                                        {isOpen ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
                                     </div>
                                 </button>
 
-                                {isOpen && (
-                                    <div className="px-6 md:px-8 pb-8 animate-in fade-in slide-in-from-top-2 duration-300">
-                                        <p className="text-gray-500 text-sm leading-relaxed max-w-sm">
-                                            {faq.answer}
-                                        </p>
-                                    </div>
-                                )}
+                                <AnimatePresence>
+                                    {isOpen && (
+                                        <motion.div 
+                                            initial={{ height: 0, opacity: 0 }}
+                                            animate={{ height: "auto", opacity: 1 }}
+                                            exit={{ height: 0, opacity: 0 }}
+                                            transition={{ duration: 0.4, ease: "easeInOut" }}
+                                        >
+                                            <div className="px-6 md:px-8 pb-8">
+                                                <p className="text-gray-500 text-sm leading-relaxed max-w-sm border-l-2 border-[#ff3b30]/20 pl-4">
+                                                    {faq.answer}
+                                                </p>
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         );
                     })}
-                </div>
+                </motion.div>
 
             </div>
         </section>

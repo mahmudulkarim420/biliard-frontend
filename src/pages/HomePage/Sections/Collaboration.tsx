@@ -1,4 +1,6 @@
 import { Award } from "lucide-react";
+import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 const stats = [
   { number: "05+", label: "YEARS OF EXPERIENCE" },
@@ -24,6 +26,32 @@ const steps = [
     desc: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at.",
   },
 ];
+
+const Counter = ({ value, duration = 2 }: { value: string; duration?: number }) => {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => {
+    const num = Math.round(latest);
+    // Returning a string consistently to avoid MotionValue<string | number> type mismatch
+    return value.includes("+") ? `${num}+` : `${num}`;
+  });
+  
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  useEffect(() => {
+    if (inView) {
+      // Extract the target number (e.g., "05+" -> 5, "90" -> 90)
+      const target = parseInt(value.replace(/[^\d]/g, ""), 10);
+      const controls = animate(count, target, { 
+        duration: duration,
+        ease: "easeOut"
+      });
+      return controls.stop;
+    }
+  }, [inView, value, count, duration]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+};
 
 const Collaboration = () => {
   return (
@@ -52,7 +80,7 @@ const Collaboration = () => {
                 className="mb-3 text-6xl font-light tracking-wide text-transparent sm:text-7xl lg:text-[80px]"
                 style={{ WebkitTextStroke: "1.5px #ff3b30" }}
               >
-                {stat.number}
+                <Counter value={stat.number} />
               </h3>
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
                 {stat.label}
