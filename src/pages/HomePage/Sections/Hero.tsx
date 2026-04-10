@@ -50,12 +50,12 @@ const Hero = () => {
               <span className="hidden sm:inline"> </span>
               Agency for
               <br />
-              <span className="text-[#ff3b30]">Design</span>
+              <span>Design</span>
             </h1>
 
             {/* Premium CTA */}
             <div className="flex flex-col sm:flex-row items-start gap-6">
-              <button className="group relative overflow-hidden bg-[#ff3b30] px-8 py-4 sm:px-10 sm:py-5 text-[11px] sm:text-sm font-bold uppercase tracking-widest text-white transition-all duration-300 active:scale-95">
+              <button className="group relative overflow-hidden bg-btn px-8 py-4 sm:px-10 sm:py-5 text-[11px] sm:text-sm font-bold uppercase tracking-widest text-white transition-all duration-300 active:scale-95">
                 <span className="relative z-10">Discover More</span>
                 <div className="absolute inset-0 z-0 translate-y-full bg-black/20 transition-transform duration-300 group-hover:translate-y-0" />
               </button>

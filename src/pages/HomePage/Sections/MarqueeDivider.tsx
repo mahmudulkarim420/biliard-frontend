@@ -34,7 +34,7 @@ const MarqueeDivider = () => {
                                 <span
                                     className="mx-8 whitespace-nowrap text-5xl font-black uppercase tracking-widest sm:text-6xl md:text-7xl lg:text-[100px]"
                                     style={{
-                                        WebkitTextStroke: "3px #9ca3af",
+                                        WebkitTextStroke: "3px rgb(156, 163, 175)",
                                         color: "transparent",
                                     }}
                                 >

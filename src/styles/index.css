@@ -35,6 +35,11 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    --title: 231 11% 13%;
+    --desc: 215 18% 34%;
+    --brand: 0 100% 61%;
+    --brand-foreground: 0 0% 100%;
   }
 
   .dark {

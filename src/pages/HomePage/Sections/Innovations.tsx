@@ -100,7 +100,7 @@ const Innovations = () => {
           </h2>
           <a
             href="#"
-            className="group flex items-center pb-2 text-sm font-medium tracking-wide text-[#ff3b30] transition-colors hover:text-red-400"
+            className="group flex items-center pb-2 text-sm font-medium tracking-wide text-brand transition-colors hover:text-red-400"
           >
             Explore More
             <ArrowDownRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:translate-y-1" />

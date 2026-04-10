@@ -2,21 +2,24 @@ import { useState } from "react";
 import { Check, Play, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import bg from "@/assets/bg (3).png";
+import img1 from "@/assets/img (15).avif";
+import img2 from "@/assets/img (16).avif";
+import img3 from "@/assets/img (17).avif";
 
 const tabData = {
     "innovation": {
         text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at established fact that a reader will be by the readable content of a page when looking at.",
-        image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=300",
+        image: img1,
         list: ["Europe inline concept surplus law", "Edition embulum dignisim", "If you are going to use a passage"]
     },
     "creative idea": {
         text: "Creativity is intelligence having fun. We focus on delivering out-of-the-box solutions that make your brand stand out. Our creative process is deeply rooted in understanding your core values.",
-        image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=300",
+        image: img2,
         list: ["Unique brand identity design", "Engaging visual storytelling", "User-centric creative approach"]
     },
     "experience": {
         text: "With over a decade of industry experience, we bring proven methodologies and a track record of success. We have helped numerous startups and enterprises achieve their digital goals.",
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=300",
+        image: img3,
         list: ["10+ years of industry expertise", "Award-winning development team", "Proven track record of success"]
     }
 };
@@ -28,12 +31,12 @@ const FeaturesSection = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <section className="relative z-20 w-full bg-[#f8f9fc] py-24 px-6 sm:px-12 lg:px-24">
+        <section className="relative z-20 w-full bg-slate-50 py-24 px-6 sm:px-12 lg:px-24">
             {/* Hexagon Pattern */}
             <div
                 className="pointer-events-none absolute inset-0 opacity-[0.03]"
                 style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='103.92304845413264' viewBox='0 0 60 103.92304845413264' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 103.92304845413264l-30-17.32050807568877v-34.64101615137754l30-17.32050807568877 30 17.32050807568877v34.64101615137754z' fill='none' stroke='%23000000' stroke-width='2'/%3E%3C/svg%3E")`,
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='103.92304845413264' viewBox='0 0 60 103.92304845413264' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 103.92304845413264l-30-17.32050807568877v-34.64101615137754l30-17.32050807568877 30 17.32050807568877v34.64101615137754z' fill='none' stroke='black' strokeWidth='2'/%3E%3C/svg%3E")`,
                     backgroundSize: '80px 138px'
                 }}
             />
@@ -64,7 +67,7 @@ const FeaturesSection = () => {
                                 <div className="absolute inset-0 animate-ping rounded-full bg-white/20"></div>
                                 <button
                                     onClick={() => setIsModalOpen(true)}
-                                    className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white text-[#ff3b30] shadow-2xl transition-transform hover:scale-110 active:scale-95 sm:h-20 sm:w-20 lg:h-24 lg:w-24"
+                                    className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white text-brand shadow-2xl transition-transform hover:scale-110 active:scale-95 sm:h-20 sm:w-20 lg:h-24 lg:w-24"
                                 >
                                     <Play className="ml-1 h-6 w-6 fill-current sm:h-8 sm:w-8 lg:h-10 lg:w-10" />
                                 </button>
@@ -77,20 +80,20 @@ const FeaturesSection = () => {
                 <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
                     {/* Left Column: Text & Animated Progress Bar */}
                     <div>
-                        <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-[#ff3b30]">
+                        <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
                             Innovative Ideas
                         </p>
-                        <h2 className="mb-6 text-3xl font-bold leading-tight text-gray-900 md:text-4xl lg:text-[42px]">
+                        <h2 className="mb-6 text-3xl font-bold leading-tight text-title md:text-4xl lg:text-[42px]">
                             We Offer You A <br /> Digital Platform
                         </h2>
-                        <p className="mb-10 text-[15px] leading-relaxed text-gray-500">
+                        <p className="mb-10 text-[15px] leading-relaxed text-desc">
                             It is a long established fact that a reader will be distracted by the readable content of a page when looking at established fact.
                         </p>
 
                         <div className="w-full max-w-md">
                             <div className="mb-3 flex justify-between">
-                                <span className="text-sm font-bold text-gray-900 uppercase tracking-wide">Digital Marketing</span>
-                                <span className="text-sm font-bold text-[#ff3b30]">85%</span>
+                                <span className="text-sm font-bold text-title uppercase tracking-wide">Digital Marketing</span>
+                                <span className="text-sm font-bold text-brand">85%</span>
                             </div>
                             <div className="h-2 w-full rounded-full bg-gray-200 overflow-hidden">
                                 <motion.div
@@ -98,7 +101,7 @@ const FeaturesSection = () => {
                                     whileInView={{ width: "85%" }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 1.5, ease: "easeOut" }}
-                                    className="relative h-full rounded-full bg-[#ff3b30]"
+                                    className="relative h-full rounded-full bg-brand"
                                 />
                             </div>
                         </div>
@@ -111,17 +114,17 @@ const FeaturesSection = () => {
                                 <button
                                     key={tab}
                                     onClick={() => setActiveTab(tab)}
-                                    className={`relative px-7 py-3 text-[12px] font-bold uppercase tracking-wider transition-all duration-500 ${activeTab === tab ? 'text-white' : 'bg-white text-gray-600 hover:text-[#ff3b30]'}`}
+                                    className={`relative px-7 py-3 text-[12px] font-bold uppercase tracking-wider transition-all duration-500 ${activeTab === tab ? 'text-white' : 'bg-white text-gray-600 hover:text-brand'}`}
                                 >
                                     <AnimatePresence>
                                         {activeTab === tab && (
                                             <motion.div
                                                 layoutId="activeTabBg"
-                                                className="absolute inset-0 bg-[#ff3b30] shadow-lg shadow-red-500/30"
+                                                className="absolute inset-0 bg-brand shadow-lg shadow-brand/30"
                                                 initial={false}
                                                 transition={{ type: "spring", stiffness: 380, damping: 30 }}
                                             >
-                                                <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-3 w-3 rotate-45 bg-[#ff3b30]"></div>
+                                                <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-3 w-3 rotate-45 bg-brand"></div>
                                             </motion.div>
                                         )}
                                     </AnimatePresence>
@@ -147,8 +150,8 @@ const FeaturesSection = () => {
                                         <ul className="flex flex-col gap-3">
                                             {tabData[activeTab].list.map((item, index) => (
                                                 <li key={index} className="flex items-center gap-3 text-[13px] font-bold text-gray-800">
-                                                    <div className="flex h-5 w-5 items-center justify-center rounded-full bg-[#ff3b30]/10">
-                                                        <Check className="h-3 w-3 text-[#ff3b30] stroke-[4]" />
+                                                    <div className="flex h-5 w-5 items-center justify-center rounded-full bg-brand/10">
+                                                        <Check className="h-3 w-3 text-brand stroke-[4]" />
                                                     </div>
                                                     {item}
                                                 </li>
@@ -180,7 +183,7 @@ const FeaturesSection = () => {
                             {/* Close Button */}
                             <button
                                 onClick={() => setIsModalOpen(false)}
-                                className="absolute right-4 top-4 z-10 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-[#ff3b30]"
+                                className="absolute right-4 top-4 z-10 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-brand"
                             >
                                 <X className="h-6 w-6" />
                             </button>
@@ -200,5 +203,6 @@ const FeaturesSection = () => {
         </section>
     );
 };
+
 
 export default FeaturesSection;

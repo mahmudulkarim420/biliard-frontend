@@ -1,7 +1,7 @@
 import { Award } from "lucide-react";
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
-
+import bg from "@/assets/img (12).png";
 const stats = [
   { number: "05+", label: "YEARS OF EXPERIENCE" },
   { number: "24+", label: "SATISFIED CLIENTS" },
@@ -53,7 +53,7 @@ const Counter = ({ value, duration = 2 }: { value: string; duration?: number }) 
 
 const Collaboration = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0a0a0c] pt-[70px]">
+    <section className="relative w-full overflow-hidden bg-neutral-950 pt-[70px]">
 
       {/* Background patterns */}
       <div
@@ -77,7 +77,7 @@ const Collaboration = () => {
             <div key={index} className="flex flex-col items-center text-center md:items-start md:text-left">
               <h3
                 className="mb-3 text-5xl font-light tracking-wide text-transparent sm:text-6xl lg:text-[75px]"
-                style={{ WebkitTextStroke: "1.5px #ff3b30" }}
+                style={{ WebkitTextStroke: "1.5px hsl(var(--brand))" }}
               >
                 <Counter value={stat.number} />
               </h3>
@@ -98,14 +98,14 @@ const Collaboration = () => {
         {/* Left Column: Image Area */}
         <div className="relative w-full min-h-[400px] lg:w-[45%] lg:min-h-auto">
           <img
-            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=1000"
+            src={bg}
             alt="Team collaborating in office"
             className="absolute inset-0 h-full w-full object-cover grayscale"
           />
           <div className="absolute inset-0 bg-black/5"></div>
 
           {/* Floating Red Square */}
-          <div className="absolute bottom-0 right-0 z-20 flex aspect-square w-[220px] flex-col items-center justify-center bg-[#ff3b30] p-6 text-center text-white shadow-2xl lg:bottom-24 lg:right-[-30px] lg:w-[260px]">
+          <div className="absolute bottom-0 right-0 z-20 flex aspect-square w-[220px] flex-col items-center justify-center bg-brand p-6 text-center text-white shadow-2xl lg:bottom-24 lg:right-[-30px] lg:w-[260px]">
             <div className="relative mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-white/30">
               {/* Simplified Award Icon to match the vibe */}
               <Award className="h-10 w-10 text-white" />
@@ -121,7 +121,7 @@ const Collaboration = () => {
 
         {/* Right Column: Content & Steps */}
         <div className="w-full bg-white px-8 py-16 sm:px-16 lg:w-[55%] lg:py-24 lg:pl-32 lg:pr-24">
-          <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-[#ff3b30]">
+          <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
             COLLABORATION
           </p>
           <h2 className="mb-14 text-4xl font-bold leading-[1.1] text-gray-900 md:text-5xl lg:text-[54px] tracking-tight">
@@ -136,12 +136,12 @@ const Collaboration = () => {
 
             {steps.map((step, index) => (
               <div key={index} className="group relative z-10 flex gap-6 sm:gap-8">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-[1.5px] border-gray-300 bg-white text-[13px] font-bold text-gray-500 transition-colors duration-300 group-hover:border-[#ff3b30] group-hover:text-[#ff3b30]">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-[1.5px] border-gray-300 bg-white text-[13px] font-bold text-gray-500 transition-colors duration-300 group-hover:border-brand group-hover:text-brand">
                   {step.num}
                 </div>
 
                 <div>
-                  <h4 className="mb-2 text-[16px] font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#ff3b30]">
+                  <h4 className="mb-2 text-[16px] font-bold text-gray-900 transition-colors duration-300 group-hover:text-brand">
                     {step.title}
                   </h4>
                   <p className="text-[14px] leading-relaxed text-gray-500 max-w-sm">
@@ -157,5 +157,6 @@ const Collaboration = () => {
     </section>
   );
 };
+
 
 export default Collaboration;

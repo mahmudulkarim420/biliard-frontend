@@ -48,7 +48,7 @@ const Portfolio = () => {
                   {activeCategory === category && (
                     <motion.div
                       layoutId="underline"
-                      className="absolute -bottom-1 left-0 h-[2px] w-full bg-[#ff3b30]"
+                      className="absolute -bottom-1 left-0 h-[2px] w-full bg-brand"
                     />
                   )}
                 </button>

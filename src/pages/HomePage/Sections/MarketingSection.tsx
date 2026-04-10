@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MoveRight, Plus, Minus } from "lucide-react";
-
+import img from "@/assets/img (13).png";
 const services = [
     { id: "01", title: "Product Design" },
     { id: "02", title: "Advertising" },
@@ -28,7 +28,7 @@ const MarketingSection = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(1);
 
     return (
-        <section className="bg-[#f5f5f5] pt-[100px] pb-[120px] px-6 sm:px-12 lg:px-24 w-full overflow-hidden">
+        <section className="bg-gray-100 pt-[100px] pb-[120px] px-6 sm:px-12 lg:px-24 w-full overflow-hidden">
             <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
                 {/* LEFT SIDE CONTENT - Animated */}
@@ -39,7 +39,7 @@ const MarketingSection = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="flex flex-col"
                 >
-                    <span className="text-[#ff3b30] text-[12px] font-bold tracking-[0.2em] mb-4">
+                    <span className="text-brand text-[12px] font-bold tracking-[0.2em] mb-4">
                         OUR OFFER
                     </span>
 
@@ -52,7 +52,7 @@ const MarketingSection = () => {
                             <motion.img
                                 whileHover={{ scale: 1.1 }}
                                 transition={{ duration: 0.6 }}
-                                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400"
+                                src={img}
                                 alt="Team working"
                                 className="grayscale object-cover w-full h-32"
                             />
@@ -75,11 +75,11 @@ const MarketingSection = () => {
                             >
                                 <div className="flex items-center gap-3">
                                     <span className="text-[12px] font-bold text-gray-400">{service.id}.</span>
-                                    <span className="text-[15px] font-bold text-gray-900 group-hover:text-[#ff3b30] transition-colors">
+                                    <span className="text-[15px] font-bold text-gray-900 group-hover:text-brand transition-colors">
                                         {service.title}
                                     </span>
                                 </div>
-                                <MoveRight className="w-4 h-4 text-gray-400 group-hover:text-[#ff3b30] group-hover:translate-x-1 transition-all" />
+                                <MoveRight className="w-4 h-4 text-gray-400 group-hover:text-brand group-hover:translate-x-1 transition-all" />
                             </motion.div>
                         ))}
                     </div>
@@ -98,16 +98,16 @@ const MarketingSection = () => {
                         return (
                             <div
                                 key={index}
-                                className={`bg-white rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.03)] overflow-hidden border transition-colors duration-300 ${isOpen ? 'border-[#ff3b30]/20' : 'border-transparent'}`}
+                                className={`bg-white rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.03)] overflow-hidden border transition-colors duration-300 ${isOpen ? 'border-brand/20' : 'border-transparent'}`}
                             >
                                 <button
                                     onClick={() => setOpenIndex(isOpen ? null : index)}
                                     className="w-full flex items-center justify-between p-6 md:p-8 text-left outline-none"
                                 >
-                                    <span className={`text-[16px] md:text-[18px] font-bold transition-colors duration-300 ${isOpen ? 'text-[#ff3b30]' : 'text-gray-900'}`}>
+                                    <span className={`text-[16px] md:text-[18px] font-bold transition-colors duration-300 ${isOpen ? 'text-brand' : 'text-gray-900'}`}>
                                         {faq.question}
                                     </span>
-                                    <div className={`rounded-full p-1.5 transition-all duration-300 ${isOpen ? 'bg-[#ff3b30] text-white rotate-180' : 'bg-gray-100 text-gray-600'}`}>
+                                    <div className={`rounded-full p-1.5 transition-all duration-300 ${isOpen ? 'bg-brand text-white rotate-180' : 'bg-gray-100 text-gray-600'}`}>
                                         {isOpen ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
                                     </div>
                                 </button>
@@ -121,7 +121,7 @@ const MarketingSection = () => {
                                             transition={{ duration: 0.4, ease: "easeInOut" }}
                                         >
                                             <div className="px-6 md:px-8 pb-8">
-                                                <p className="text-gray-500 text-sm leading-relaxed max-w-sm border-l-2 border-[#ff3b30]/20 pl-4">
+                                                <p className="text-gray-500 text-sm leading-relaxed max-w-sm border-l-2 border-brand/20 pl-4">
                                                     {faq.answer}
                                                 </p>
                                             </div>
@@ -137,5 +137,6 @@ const MarketingSection = () => {
         </section>
     );
 };
+
 
 export default MarketingSection;
