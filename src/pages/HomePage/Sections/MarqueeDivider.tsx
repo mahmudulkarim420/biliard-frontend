@@ -8,7 +8,7 @@ const MarqueeDivider = () => {
     ];
 
     return (
-        <section className="relative z-10 flex w-full overflow-x-hidden bg-white pt-12 pb-56 sm:pt-16 sm:pb-64 lg:pb-80">
+        <section className="relative z-10 flex w-full overflow-x-hidden bg-white pt-[50px] pb-[350px]">
             <style>{`
         @keyframes marquee {
           0% { transform: translateX(0%); }

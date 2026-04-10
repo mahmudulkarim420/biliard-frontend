@@ -26,7 +26,7 @@ const Portfolio = () => {
   );
 
   return (
-    <section className="relative w-full bg-white px-6 py-24 sm:px-12 lg:px-24">
+    <section className="relative w-full bg-white px-6 pt-[110px] pb-[110px] sm:px-12 lg:px-24">
       <div className="mx-auto max-w-[1200px]">
         {/* Header Section */}
         <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
@@ -40,9 +40,8 @@ const Portfolio = () => {
               <li key={category}>
                 <button
                   onClick={() => setActiveCategory(category)}
-                  className={`relative text-[13px] font-bold tracking-wider transition-colors duration-300 ${
-                    activeCategory === category ? "text-gray-900" : "text-gray-400 hover:text-gray-900"
-                  }`}
+                  className={`relative text-[13px] font-bold tracking-wider transition-colors duration-300 ${activeCategory === category ? "text-gray-900" : "text-gray-400 hover:text-gray-900"
+                    }`}
                 >
                   {category}
                   {/* নিচের ছোট আন্ডারলাইন এনিমেশন */}
@@ -59,7 +58,7 @@ const Portfolio = () => {
         </div>
 
         {/* Portfolio Grid with Animation */}
-        <motion.div 
+        <motion.div
           layout
           className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
         >

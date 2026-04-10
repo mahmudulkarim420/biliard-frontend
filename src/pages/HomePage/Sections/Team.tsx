@@ -25,7 +25,7 @@ const teamMembers = [
 
 const Team = () => {
   return (
-    <section className="w-full bg-white px-6 py-24 sm:px-12 lg:px-24 overflow-hidden">
+    <section className="w-full bg-white px-6 pt-[100px] pb-[100px] sm:px-12 lg:px-24 overflow-hidden">
       <div className="mx-auto max-w-[1200px]">
         {/* Header Section */}
         <div className="mb-16 text-center lg:mb-24">

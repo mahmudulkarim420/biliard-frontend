@@ -3,7 +3,7 @@ import img1 from "@/assets/img.png";
 import img2 from "@/assets/img (1).png";
 const AboutUs = () => {
     return (
-        <section className="bg-white px-6 py-24 sm:px-12 lg:px-24">
+        <section className="bg-white px-6 pt-[80px] pb-[115px] sm:px-12 lg:px-24">
             <div className="mx-auto max-w-[1200px]">
                 <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24">
 

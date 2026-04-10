@@ -34,7 +34,7 @@ const partners = ["Endomate", "dromin", "Amtek", "SkyMan", "Assote"];
 
 const BlogSection = () => {
     return (
-        <section className="bg-white py-24 px-6 sm:px-12 lg:px-24 w-full">
+        <section className="bg-white pt-[70px] pb-[70px] px-6 sm:px-12 lg:px-24 w-full">
             <div className="max-w-[1200px] mx-auto text-center">
 
                 {/* Header Section */}

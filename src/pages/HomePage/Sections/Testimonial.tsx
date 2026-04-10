@@ -33,9 +33,9 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <section className="relative flex min-h-[550px] w-full items-center overflow-hidden bg-[#0a0a0c] py-24 lg:min-h-[600px]">
+    <section className="relative flex min-h-[500px] w-full items-center overflow-hidden bg-[#0a0a0c] py-20 sm:py-24 lg:min-h-[600px]">
 
-      {/* 1. Background Image Slider - Increased Visibility */}
+      {/* 1. Background Image Slider - Mobile Optimized Size */}
       <div className="absolute inset-0 z-0">
         <AnimatePresence mode="wait">
           <motion.img
@@ -45,65 +45,66 @@ const Testimonial = () => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ duration: 1.2, ease: "easeInOut" }}
-            className="h-full w-full object-cover grayscale"
+            /* মোবাইলে ইমেজের সাইজ ব্যালেন্স করার জন্য scale ক্লাস ব্যবহার করা হয়েছে */
+            className="h-full w-full object-cover grayscale scale-110 sm:scale-100"
           />
         </AnimatePresence>
 
-        {/* Updated Overlay - Changed opacity from /90 to /70 to make images visible */}
-        <div className="absolute inset-0 bg-[#16171e]/70"></div>
-        <div className="absolute inset-0 bg-black/30 mix-blend-multiply"></div>
+        {/* Overlays */}
+        <div className="absolute inset-0 bg-[#16171e]/75 sm:bg-[#16171e]/70"></div>
+        <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 sm:px-12 lg:px-24">
         <div className="relative mx-auto flex w-full max-w-4xl flex-col">
 
-          {/* 2. Massive Quote Mark - Watermark style */}
-          <div className="pointer-events-none absolute -left-10 -top-12 z-0 opacity-40 sm:-left-16 sm:-top-20 md:-left-24 md:-top-28">
+          {/* 2. Massive Quote Mark - Responsive Sizing */}
+          <div className="pointer-events-none absolute -left-4 -top-8 z-0 opacity-30 sm:-left-12 sm:-top-16 md:-left-24 md:-top-28">
             <svg
-              className="h-40 w-40 fill-[#ff3b30] sm:h-56 sm:w-56 md:h-[320px] md:w-[320px]"
+              className="h-24 w-24 fill-[#ff3b30] sm:h-40 sm:w-40 md:h-[320px] md:w-[320px]"
               viewBox="0 0 24 24"
             >
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
             </svg>
           </div>
 
-          {/* 3. Text Content Slider - Fully Readable */}
-          <div className="relative z-20 flex flex-col pl-4 sm:pl-12 md:pl-[80px]">
+          {/* 3. Text Content Slider - Responsive Typography */}
+          <div className="relative z-20 flex flex-col pl-2 sm:pl-10 md:pl-[80px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`content-${currentIndex}`}
-                initial={{ x: 80, opacity: 0 }}
+                initial={{ x: 40, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                exit={{ x: -80, opacity: 0 }}
-                transition={{ duration: 0.7, ease: [0.23, 1, 0.32, 1] }}
+                exit={{ x: -40, opacity: 0 }}
+                transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
                 className="flex flex-col"
               >
-                {/* Text Area */}
-                <h3 className="mb-10 text-2xl font-medium leading-[1.3] text-white sm:text-4xl md:text-[45px] lg:leading-[1.4]">
+                {/* Responsive Headline Gap and Size */}
+                <h3 className="mb-8 text-[22px] font-bold leading-[1.4] text-white sm:mb-10 sm:text-3xl md:text-[45px] lg:leading-[1.4] tracking-tight">
                   "{testimonials[currentIndex].text}"
                 </h3>
 
-                {/* Meta Info - Perfectly Clear */}
-                <div className="flex flex-col gap-1 border-l-2 border-[#ff3b30] pl-6 transition-all duration-300">
-                  <h5 className="text-[20px] font-bold text-white tracking-wide">
+                {/* Meta Info */}
+                <div className="flex flex-col gap-1 border-l-[3px] border-[#ff3b30] pl-5 transition-all duration-300">
+                  <h5 className="text-[18px] font-bold text-white tracking-wide sm:text-[20px]">
                     {testimonials[currentIndex].name}
                   </h5>
-                  <p className="text-[14px] font-medium text-gray-400">
+                  <p className="text-[12px] font-medium text-gray-400 sm:text-[14px]">
                     {testimonials[currentIndex].role}
                   </p>
                 </div>
               </motion.div>
             </AnimatePresence>
 
-            {/* Pagination Dots */}
-            <div className="mt-14 flex items-center gap-3">
+            {/* Pagination Dots - Centered on mobile if needed */}
+            <div className="mt-10 flex items-center gap-2.5 sm:mt-14 sm:gap-3">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`h-1.5 rounded-full transition-all duration-500 ${index === currentIndex
-                    ? "w-12 bg-[#ff3b30] shadow-[0_0_20px_rgba(255,59,48,0.8)]"
-                    : "w-3 bg-white/20 hover:bg-white/50"
+                  className={`h-1 rounded-full transition-all duration-500 ${index === currentIndex
+                    ? "w-10 bg-[#ff3b30] shadow-[0_0_15px_rgba(255,59,48,0.6)]"
+                    : "w-2.5 bg-white/20 hover:bg-white/40"
                     }`}
                 />
               ))}

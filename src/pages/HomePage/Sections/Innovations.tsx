@@ -81,7 +81,7 @@ const services = [
 
 const Innovations = () => {
   return (
-    <section className="relative z-10 w-full overflow-hidden bg-[#09090b] px-6 py-24 sm:px-12 lg:px-24">
+    <section className="relative z-10 w-full overflow-hidden bg-[#09090b] px-6 pt-[70px] pb-[115px] sm:px-12 lg:px-24">
       {/* Background Pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-20"
@@ -94,7 +94,7 @@ const Innovations = () => {
       <div className="relative z-10 mx-auto max-w-[1200px]">
 
         {/* Header Section */}
-        <div className="mb-16 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <div className="mb-[40px] flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <h2 className="max-w-[500px] text-4xl font-semibold leading-[1.1] text-white md:text-5xl lg:text-[52px]">
             Creative problem solving innovations
           </h2>
@@ -108,7 +108,8 @@ const Innovations = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+        {/* Grid behavior: 1 col on mobile, 2 cols on tablet, 4 cols on desktop */}
+        <div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <div
               key={index}
@@ -117,8 +118,7 @@ const Innovations = () => {
                 : "from-[#1a1b24] to-[#0c0d11] hover:from-[#1d1e29] hover:to-[#111218]"
                 }`}
             >
-              {/* --- New Replacement: Rectangle PNG Overlay --- */}
-              {/* Ekhane active card e eita 30% opacity thakbe, ar hover korle o 30% hobe */}
+              {/* --- Rectangle PNG Overlay --- */}
               <div
                 className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ease-in-out ${service.isActive ? "opacity-30" : "opacity-0 group-hover:opacity-30"
                   }`}
@@ -129,15 +129,14 @@ const Innovations = () => {
                   backgroundRepeat: 'no-repeat',
                 }}
               />
-              {/* ----------------------------------------------- */}
 
-              {/* Number (Outline Text) */}
+              {/* Number (Outline Text) - Responsive font size for smaller screens */}
               <div
-                className="mb-20 text-[120px] font-medium leading-none tracking-tight opacity-30 transition-opacity duration-300 group-hover:opacity-60"
+                className="mb-12 sm:mb-20 text-[80px] sm:text-[120px] font-medium leading-none tracking-tight opacity-30 transition-opacity duration-300 group-hover:opacity-60"
                 style={{
                   WebkitTextStroke: "1px rgba(255, 255, 255, 0.2)",
                   color: "transparent",
-                  fontFamily: "serif", // matched the design font
+                  fontFamily: "serif",
                 }}
               >
                 {service.number}
@@ -148,7 +147,7 @@ const Innovations = () => {
                 <div className="mb-6 origin-left text-[#ff3b30] transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,59,48,0.5)]">
                   {service.icon}
                 </div>
-                <h3 className="whitespace-pre-line text-[17px] font-semibold leading-snug text-gray-100">
+                <h3 className="whitespace-pre-line text-[16px] sm:text-[17px] font-semibold leading-snug text-gray-100">
                   {service.title}
                 </h3>
               </div>

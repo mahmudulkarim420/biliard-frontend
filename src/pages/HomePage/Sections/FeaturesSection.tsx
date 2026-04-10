@@ -41,21 +41,21 @@ const FeaturesSection = () => {
             <div className="relative z-10 mx-auto max-w-[1200px]">
 
                 {/* --- Video Banner Section --- */}
-                <div className="group relative z-30 -mt-52 mb-20 h-[400px] w-full overflow-hidden bg-gray-950 lg:-mt-80 lg:h-[500px] shadow-2xl rounded-sm">
-                    {/* Background Image Layer */}
+                <div className="group relative z-30 -mt-44 sm:-mt-64 lg:-mt-[320px] mb-20 h-[300px] sm:h-[400px] lg:h-[550px] w-full overflow-hidden bg-gray-950 shadow-2xl rounded-sm">
+                    {/* Background Image Layer - Enhanced Responsiveness */}
                     <img
                         src={bg}
                         alt="Agency team"
-                        className="h-full w-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60"
+                        className="h-full w-full object-cover object-center sm:object-[center_20%] lg:object-top transition-transform duration-1000 group-hover:scale-105 opacity-60 lg:opacity-70"
                     />
 
                     {/* Content Overlay Layer */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 sm:flex-row sm:text-left sm:justify-between lg:px-24">
-                        <div className="flex-1"></div> {/* Spacer */}
+                        <div className="hidden sm:block flex-1"></div> {/* Spacer */}
 
-                        <div className="flex flex-col items-center sm:items-end gap-10">
+                        <div className="flex flex-col items-center sm:items-end gap-6 sm:gap-10">
 
-                            <h2 className="max-w-[500px] text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-7xl text-center sm:text-right">
+                            <h2 className="max-w-[300px] sm:max-w-[500px] text-2xl font-bold leading-tight text-white mb-2 sm:mb-0 sm:text-5xl lg:text-7xl text-center sm:text-right">
                                 We creating unique <br className="hidden lg:block" /> brand agency
                             </h2>
 
@@ -64,9 +64,9 @@ const FeaturesSection = () => {
                                 <div className="absolute inset-0 animate-ping rounded-full bg-white/20"></div>
                                 <button
                                     onClick={() => setIsModalOpen(true)}
-                                    className="relative flex h-20 w-20 items-center justify-center rounded-full bg-white text-[#ff3b30] shadow-2xl transition-transform hover:scale-110 active:scale-95 lg:h-24 lg:w-24"
+                                    className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white text-[#ff3b30] shadow-2xl transition-transform hover:scale-110 active:scale-95 sm:h-20 sm:w-20 lg:h-24 lg:w-24"
                                 >
-                                    <Play className="ml-1 h-8 w-8 fill-current lg:h-10 lg:w-10" />
+                                    <Play className="ml-1 h-6 w-6 fill-current sm:h-8 sm:w-8 lg:h-10 lg:w-10" />
                                 </button>
                             </div>
 
