@@ -1,5 +1,6 @@
 import img1 from "@/assets/img.png";
 import img2 from "@/assets/img (1).png";
+import DiscoverMoreBtn from "@/components/shared/DiscoverMoreBtn";
 const AboutUs = () => {
     return (
         <section className="bg-white px-6 pt-[80px] pb-[115px] sm:px-12 lg:px-24">
@@ -99,9 +100,7 @@ const AboutUs = () => {
                         </div>
 
                         {/* CTA Button */}
-                        <button className="bg-brand px-8 py-3.5 text-[13px] font-bold uppercase tracking-widest text-white transition-all duration-300 hover:bg-brand/90 hover:shadow-lg hover:shadow-brand/30">
-                            Discover More
-                        </button>
+                        <DiscoverMoreBtn className="py-3.5" />
 
 
                     </div>

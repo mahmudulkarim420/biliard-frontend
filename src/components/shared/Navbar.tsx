@@ -5,7 +5,15 @@ import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
 
 const navLinks = [
-  { name: "Home", href: "/", hasDropdown: true },
+  {
+    name: "Home",
+    href: "/",
+    hasDropdown: true,
+    subLinks: [
+      { name: "Home 1", href: "/" },
+      { name: "Home 2", href: "/home-2" },
+    ],
+  },
   { name: "Pages", href: "/pages", hasDropdown: true },
   { name: "Feature", href: "/feature", hasDropdown: false },
   { name: "Blog", href: "/blog", hasDropdown: false },
@@ -61,17 +69,35 @@ const Navbar = () => {
               {navLinks.map((link) => {
                 const isActive = location.pathname === link.href;
                 return (
-                  <Link
-                    key={link.name}
-                    to={link.href}
-                    className={cn(
-                      "flex items-center gap-1 text-[13px] font-semibold tracking-wide transition-colors hover:text-white",
-                      isActive ? "text-white" : "text-gray-300"
+                  <div key={link.name} className="relative group/nav-item py-2">
+                    <Link
+                      to={link.href}
+                      className={cn(
+                        "flex items-center gap-1 text-[13px] font-semibold tracking-wide transition-colors hover:text-white",
+                        isActive ? "text-white" : "text-gray-300"
+                      )}
+                    >
+                      {link.name}
+                      {link.hasDropdown && <ChevronDown className="h-3.5 w-3.5 opacity-70 transition-transform group-hover/nav-item:rotate-180" />}
+                    </Link>
+
+                    {/* Dropdown Panel */}
+                    {link.hasDropdown && link.subLinks && (
+                      <div className="absolute top-full left-0 mt-2 min-w-[200px] origin-top scale-95 opacity-0 invisible transition-all duration-200 group-hover/nav-item:scale-100 group-hover/nav-item:opacity-100 group-hover/nav-item:visible">
+                        <div className="rounded-xl border border-white/10 bg-black/90 p-2 shadow-2xl backdrop-blur-xl">
+                          {link.subLinks.map((sub) => (
+                            <Link
+                              key={sub.name}
+                              to={sub.href}
+                              className="block rounded-lg px-4 py-2.5 text-[13px] font-medium text-gray-400 transition-all hover:bg-white/5 hover:text-white hover:pl-5"
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
                     )}
-                  >
-                    {link.name}
-                    {link.hasDropdown && <ChevronDown className="h-3.5 w-3.5 opacity-70" />}
-                  </Link>
+                  </div>
                 );
               })}
             </div>
@@ -143,17 +169,33 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Links */}
-        <div className="flex flex-col space-y-6">
+        <div className="flex flex-col space-y-4">
           {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              to={link.href}
-              onClick={() => setIsOpen(false)}
-              className="group flex items-center justify-between text-lg font-semibold text-gray-300 transition-colors hover:text-brand"
-            >
-              {link.name}
-              <div className="h-1 w-1 rounded-full bg-brand opacity-0 transition-opacity group-hover:opacity-100" />
-            </Link>
+            <div key={link.name} className="flex flex-col space-y-3">
+              <Link
+                to={link.href}
+                onClick={() => !link.hasDropdown && setIsOpen(false)}
+                className="group flex items-center justify-between text-lg font-semibold text-gray-300 transition-colors hover:text-brand"
+              >
+                {link.name}
+                <div className="h-1 w-1 rounded-full bg-brand opacity-0 transition-opacity group-hover:opacity-100" />
+              </Link>
+              
+              {link.hasDropdown && link.subLinks && (
+                <div className="flex flex-col space-y-2 pl-4 border-l border-white/10 ml-1">
+                  {link.subLinks.map((sub) => (
+                    <Link
+                      key={sub.name}
+                      to={sub.href}
+                      onClick={() => setIsOpen(false)}
+                      className="text-sm font-medium text-gray-500 hover:text-brand transition-colors"
+                    >
+                      {sub.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
 
