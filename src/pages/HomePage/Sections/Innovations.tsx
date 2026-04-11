@@ -101,7 +101,7 @@ const services: ServiceCard[] = [
 // and a service title. A decorative cross/plus SVG pattern fills the background.
 const Innovations = () => {
   return (
-    <section className="relative z-10 w-full overflow-hidden bg-[#09090b] px-6 pt-[70px] pb-[115px] sm:px-12 lg:px-24">
+    <section className="relative z-10 w-full overflow-hidden bg-[#09090b] section-padding section-padding-x">
 
       {/* Repeating cross-plus SVG pattern — very low opacity decorative texture */}
       <div
@@ -119,12 +119,16 @@ const Innovations = () => {
           <h2 className="max-w-[500px] text-4xl font-semibold leading-[1.1] text-white md:text-5xl lg:text-[52px]">
             Creative problem solving innovations
           </h2>
+
           <a
             href="#"
-            className="group flex items-center pb-2 text-sm font-medium tracking-wide text-brand transition-colors hover:text-red-400"
+            className="group relative flex items-center pb-2 text-sm font-semibold uppercase tracking-widest text-brand transition-colors"
           >
             Explore More
             <ArrowDownRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:translate-y-1" />
+
+            {/* --- Bottom Line --- */}
+            <span className="absolute bottom-0 left-0 h-[1.5px] w-full bg-brand origin-right scale-x-100 transition-transform duration-300 group-hover:origin-left group-hover:scale-x-100 group-hover:bg-red-400"></span>
           </a>
         </div>
 
@@ -134,17 +138,15 @@ const Innovations = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative flex flex-col overflow-hidden rounded-[2rem] p-8 pb-10 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/70 bg-gradient-to-tl ${
-                service.isActive
+              className={`group relative flex flex-col overflow-hidden rounded-[2rem] p-8 pb-10 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/70 bg-gradient-to-tl ${service.isActive
                   ? "from-[#222430] to-[#15161c] shadow-2xl shadow-black/60"
                   : "from-[#1a1b24] to-[#0c0d11] hover:from-[#1d1e29] hover:to-[#111218]"
-              }`}
+                }`}
             >
               {/* Rectangle texture overlay — fades in on hover (or always visible when isActive) */}
               <div
-                className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                  service.isActive ? "opacity-30" : "opacity-0 group-hover:opacity-30"
-                }`}
+                className={`pointer-events-none absolute inset-0 transition-opacity duration-700 ease-in-out ${service.isActive ? "opacity-30" : "opacity-0 group-hover:opacity-30"
+                  }`}
                 style={{
                   backgroundImage: `url(${rectanglePng})`,
                   backgroundSize: "cover",
@@ -155,11 +157,11 @@ const Innovations = () => {
 
               {/* Large outline number — fades up in opacity on hover */}
               <div
-                className="mb-12 sm:mb-20 text-[80px] sm:text-[120px] font-medium leading-none tracking-tight opacity-30 transition-opacity duration-300 group-hover:opacity-60"
+                className="mb-12 sm:mb-20 text-[80px] sm:text-[120px] font-medium leading-none tracking-tight opacity-50 transition-opacity duration-300 group-hover:opacity-60"
                 style={{
-                  WebkitTextStroke: "1px rgba(255, 255, 255, 0.2)",
+                  WebkitTextStroke: "1px rgba(255, 255, 255, 0.29)",
                   color: "transparent",
-                  fontFamily: "serif",
+                  fontFamily: "roboto",
                 }}
               >
                 {service.number}

@@ -6,6 +6,8 @@ import { AnimatePresence } from "framer-motion";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import PageTransition from "@/components/shared/PageTransition";
+import ScrollToTop from "@/components/shared/ScrollToTop";
+import Preloader from "@/components/shared/Preloader";
 
 // ─── Layout ───────────────────────────────────────────────────────────────────
 // Root layout for the primary Home page.
@@ -16,6 +18,7 @@ const RootLayout = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col">
+      <Preloader />
       <Navbar />
       <main className="flex-1">
         <AnimatePresence mode="wait">
@@ -25,6 +28,7 @@ const RootLayout = () => {
         </AnimatePresence>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

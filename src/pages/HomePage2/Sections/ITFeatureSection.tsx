@@ -24,7 +24,7 @@ const featuresList = [
 // feature checklist with descriptive body copy.
 const ITFeatureSection = () => {
   return (
-    <section className="relative w-full bg-white py-24 px-6 sm:px-12 lg:px-24 overflow-hidden">
+    <section className="relative w-full bg-white section-padding-h2 px-6 sm:px-12 lg:px-24 overflow-hidden">
       <div className="mx-auto max-w-[1200px]">
 
         {/* ── Section Header ── */}
@@ -73,11 +73,18 @@ const ITFeatureSection = () => {
           <div className="relative w-full max-w-md mx-auto lg:mx-0 pl-10 pt-10">
 
             {/* Background geometric shape (brand-colored crosshair outline) */}
-            <div className="absolute top-0 right-[-30px] z-0">
-              <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 0V30M50 100V70M0 50H30M100 50H70M14 14L35 35M86 86L65 65M14 86L35 65M86 14L65 35" stroke="#FF3838" strokeWidth="1" strokeOpacity="0.5" />
-                <rect x="30" y="30" width="40" height="40" stroke="#FF3838" strokeWidth="1" strokeOpacity="0.5" />
+            <div className="absolute top-0 right-[-120px] z-0">
+              <svg width="260" height="250" viewBox="0 0 260 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_243_38)">
+                  <path d="M116.202 147.015L170.302 198.852L139.786 228.194L85.847 176.148L85 175.33V176.507V250H42V176.507V175.333L41.153 176.147L-12.9751 228.194L-43.3029 198.853L10.7983 147.015L11.6969 146.154H10.4524H-66V104.846H10.4524H11.6938L10.7989 103.986L-43.3024 51.9652L-12.9762 22.8054L41.153 74.8531L42 75.6671V74.4927V1H85V74.4927V75.6699L85.847 74.8525L139.787 22.8049L170.301 51.9663L116.201 103.986L115.306 104.846H116.548H193V146.154H116.548H115.303L116.202 147.015Z" stroke="#FF3838" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_243_38">
+                    <rect width="260" height="250" fill="white" />
+                  </clipPath>
+                </defs>
               </svg>
+
             </div>
 
             {/* Main grayscale portrait image */}
@@ -90,7 +97,7 @@ const ITFeatureSection = () => {
             </div>
 
             {/* Overlapping brand-colored info card */}
-            <div className="absolute top-16 left-0 z-20 w-[240px] bg-brand p-8 text-white shadow-2xl">
+            <div className="absolute top-6 left-0 z-20 w-[240px] bg-brand p-8 text-white shadow-2xl">
               <div className="mb-6">
                 {/* Person-at-desk icon representing IT solutions */}
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -100,7 +107,7 @@ const ITFeatureSection = () => {
                   <circle cx="29" cy="29" r="2" fill="white" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-bold leading-snug">
+              <h3 className="text-2xl text-white font-semibold leading-[2]">
                 High Quality <br /> IT Solutions <br /> for Startup
               </h3>
             </div>

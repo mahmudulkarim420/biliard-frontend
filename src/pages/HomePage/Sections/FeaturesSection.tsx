@@ -50,7 +50,7 @@ const FeaturesSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative z-20 w-full bg-slate-50 py-24 px-6 sm:px-12 lg:px-24">
+    <section className="relative z-20 w-full bg-slate-50 section-padding section-padding-x">
 
       {/* Hexagonal repeating SVG pattern — very low opacity decorative texture */}
       <div

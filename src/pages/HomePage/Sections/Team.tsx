@@ -28,7 +28,7 @@ const teamMembers: TeamMember[] = [
 // de-grayscales, and a vertical social pill slides up from the bottom-left corner.
 const Team = () => {
   return (
-    <section className="w-full bg-white px-6 pt-[100px] pb-[100px] sm:px-12 lg:px-24 overflow-hidden">
+    <section className="w-full bg-white section-padding section-padding-x overflow-hidden">
       <div className="mx-auto max-w-[1200px]">
 
         {/* ── Section Header ── */}

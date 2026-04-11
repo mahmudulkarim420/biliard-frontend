@@ -117,7 +117,7 @@ const services: ServiceItem[] = [
 // the Hero below it via a negative top margin and a rounded-top border-radius.
 const Services = () => {
   return (
-    <section className="relative z-20 -mt-[200px] w-full bg-[#f8f9fa] pt-[110px] pb-[110px] px-6 sm:px-12 lg:px-24 overflow-hidden rounded-t-[50px]">
+    <section className="relative z-20 w-full bg-[#f8f9fa] section-padding-h2 px-6 sm:px-12 lg:px-24 overflow-hidden rounded-t-[50px]">
 
       {/* Decorative wavy line background — very low opacity for subtle texture */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none">

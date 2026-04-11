@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 575px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Fonts Configuration */
+  --font-title: "Manrope", sans-serif;
+  --font-body: "Roboto", sans-serif;
+
+  /* Colors Configuration */
+  --color-brand: #ff3b30;
+  /* Your standard brand red */
+  --color-title: #0f172a;
+  /* Slate 950 vibe for titles */
+  --color-desc: #64748b;
+  /* Slate 500 vibe for descriptions */
+  --color-primaryColor: #273f2b;
+  --color-secondaryColor: #d9fe8a;
+  --color-textColor: #3c5240;
+  --color-spaceWhite: #f7f9f2;
+  --color-primaryBorder: rgba(60, 82, 64, 0.3);
+
+  /* Shadows */
+  --shadow-card: 73px 0 20px 0 rgba(0, 0, 0, 0),
+    47px 0 19px 0 rgba(0, 0, 0, 0.01), 26px 0 16px 0 rgba(0, 0, 0, 0.05),
+    12px 0 12px 0 rgba(0, 0, 0, 0.09), 3px 0 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: var(--font-body);
+  background-color: var(--color-spaceWhite);
+}
+
+@layer base {
+
+  /* Global Headings Reset */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-title);
+    color: var(--color-title);
+    letter-spacing: -0.02em;
+  }
+
+  /* Specific Heading Adjustments */
+  h1 {
+    @apply text-[45px] leading-[54px] md:text-[64px] md:leading-[74px] lg:text-[84px] lg:leading-[94px] font-extrabold;
+  }
+
+  h2 {
+    @apply text-[32px] leading-[40px] md:text-[44px] md:leading-[52px] lg:text-[54px] lg:leading-[64px] font-bold;
+  }
+
+  h3 {
+    @apply text-[28px] leading-[36px] md:text-[32px] md:leading-[42px] font-bold;
+  }
+
+  h4 {
+    @apply text-[24px] leading-[32px] font-bold;
+  }
+
+  /* Body/Paragraph Text Adjustment */
+  p {
+    @apply font-body text-[16px] md:text-[18px] leading-[1.6] text-desc font-normal;
+  }
+
+  /* Global Classes */
+  .section-gap {
+    @apply lg:mt-[120px] md:mt-24 mt-16;
+  }
+
+  /* ── Standard section vertical padding ──────────────────────────────────
+     py-16 (64px)  → mobile
+     md:py-24 (96px) → tablet
+     lg:py-[120px]  → desktop
+     Apply this to every section's outermost <section> tag for perfect rhythm.
+  ──────────────────────────────────────────────────────────────────────── */
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-[120px];
+  }
+
+  .section-padding-h2 {
+    @apply py-16 md:py-24 lg:py-[130px];
+  }
+
+  /* Pairs with .section-padding for consistent horizontal gutters */
+  .section-padding-x {
+    @apply px-6 sm:px-12 lg:px-24;
+  }
+
+  .container-custom {
+    @apply max-w-[1200px] mx-auto px-6 sm:px-12 lg:px-24;
+  }
+}
+
+button:not(:disabled) {
+  @apply cursor-pointer font-title transition-all duration-300;
+}

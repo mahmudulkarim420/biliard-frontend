@@ -34,7 +34,7 @@ const PortfolioMarquee = () => {
   const duplicatedItems = [...portfolioItems, ...portfolioItems];
 
   return (
-    <section className="bg-white py-24 overflow-hidden">
+    <section className="bg-white section-padding-h2 overflow-hidden">
 
       {/* ── Section Header ── */}
       <div className="mx-auto max-w-[1200px] text-center mb-16 px-6">

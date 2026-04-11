@@ -41,7 +41,7 @@ const FaqContact = () => {
   };
 
   return (
-    <section className="relative w-full bg-[#0a0a0c] py-24 px-6 sm:px-12 lg:px-24 overflow-hidden">
+    <section className="relative w-full bg-[#0a0a0c] section-padding-h2 px-6 sm:px-12 lg:px-24 overflow-hidden">
 
       {/* ── Background Layers ── */}
 
@@ -71,7 +71,7 @@ const FaqContact = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
           {/* ── Left: FAQ Accordion ── */}
-          <div className="w-full pt-8">
+          <div className="w-full">
             <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-[#ff3b30]">
               FAQS
             </p>
@@ -102,9 +102,8 @@ const FaqContact = () => {
 
                     {/* Expandable answer panel */}
                     <div
-                      className={`grid transition-all duration-300 ease-in-out ${
-                        isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                      }`}
+                      className={`grid transition-all duration-300 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                        }`}
                     >
                       <div className="overflow-hidden">
                         <p className="px-6 pb-6 pt-2 text-[14px] leading-relaxed text-gray-400">

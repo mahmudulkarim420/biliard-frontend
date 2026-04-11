@@ -43,7 +43,7 @@ const Portfolio = () => {
   );
 
   return (
-    <section className="relative w-full bg-white px-6 pt-[110px] pb-[110px] sm:px-12 lg:px-24">
+    <section className="relative w-full bg-white section-padding section-padding-x">
       <div className="mx-auto max-w-[1200px]">
 
         {/* ── Section Header + Category Filter ── */}

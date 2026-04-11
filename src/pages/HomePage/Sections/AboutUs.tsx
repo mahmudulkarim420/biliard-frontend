@@ -11,7 +11,7 @@ import DiscoverMoreBtn from "@/components/shared/DiscoverMoreBtn";
 // Images begin in grayscale and reveal color on hover.
 const AboutUs = () => {
   return (
-    <section className="bg-white px-6 pt-[80px] pb-[115px] sm:px-12 lg:px-24">
+    <section className="bg-white section-padding section-padding-x">
       <div className="mx-auto max-w-[1200px]">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24">
 
@@ -51,7 +51,7 @@ const AboutUs = () => {
             </p>
 
             {/* Section heading */}
-            <h2 className="mb-8 max-w-[400px] text-4xl font-bold leading-[1.1] text-title md:text-5xl">
+            <h2 className="mb-8 max-w-[400px] text-4xl font-bold leading-[1.1] text-title md:text-4xl">
               We Empower Clients to be loved
             </h2>
 

@@ -8,8 +8,8 @@ import FaqContact from "@/pages/HomePage2/Sections/FaqContact";
 import PricingSection from "@/pages/HomePage2/Sections/PricingSection";
 
 // ─── Shared Sections ──────────────────────────────────────────────────────────
-import MarqueeDivider from "../HomePage/Sections/MarqueeDivider";
-import BlogSection from "../HomePage/Sections/BlogSection";
+import MarqueeDividerH2 from "@/pages/HomePage2/Sections/MarqueeDividerH2";
+import BlogSectionH2 from "@/pages/HomePage2/Sections/BlogSectionH2";
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
 // Home 2 page composition. Assembles all sections in vertical document order.
@@ -19,13 +19,13 @@ const Home2 = () => {
     <div>
       <Hero />
       <AboutSection />
-      <MarqueeDivider />
+      <MarqueeDividerH2 />
       <Services />
       <PortfolioSlider />
       <ITFeatureSection />
       <FaqContact />
       <PricingSection />
-      <BlogSection />
+      <BlogSectionH2 />
     </div>
   );
 };

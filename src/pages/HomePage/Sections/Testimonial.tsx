@@ -54,7 +54,7 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <section className="relative flex min-h-[500px] w-full items-center overflow-hidden bg-neutral-950 py-20 sm:py-24 lg:min-h-[600px]">
+    <section className="relative flex min-h-[500px] w-full items-center overflow-hidden bg-neutral-950 section-padding lg:min-h-[600px]">
 
       {/* ── Background Image Layer ── */}
       {/* Cross-fades between testimonial images using AnimatePresence "wait" mode. */}

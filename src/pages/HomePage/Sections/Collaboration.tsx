@@ -81,7 +81,7 @@ const Counter = ({ value, duration = 2 }: CounterProps) => {
 //           image panel with a floating award badge and a dashed step-by-step list.
 const Collaboration = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-neutral-950 pt-[70px]">
+    <section className="relative w-full overflow-hidden bg-neutral-950 section-padding pb-0">
 
       {/* ── Background Decorations ── */}
       {/* Dot-grid pattern and two blurred radial glows for depth */}
@@ -103,14 +103,17 @@ const Collaboration = () => {
             <div key={index} className="flex flex-col items-center text-center md:items-start md:text-left">
               <h3
                 className="mb-3 text-5xl font-light tracking-wide text-transparent sm:text-6xl lg:text-[75px]"
-                style={{ WebkitTextStroke: "1.5px hsl(var(--brand))" }}
+                style={{
+                  WebkitTextStroke: "1px #ff3b30",
+                  fontFamily: 'var(--font-title)'
+                }}
               >
                 <Counter value={stat.number} />
               </h3>
-              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">
+              <p className="text-[10px] font-bold uppercase mt-3 tracking-[0.2em] text-gray-400">
                 {stat.label}
               </p>
-              <div className="mt-5 hidden h-[1px] w-10 bg-gray-800 md:block" />
+              <div className="mt-5 hidden h-[1px] w-full bg-gray-800 md:block" />
             </div>
           ))}
         </div>
@@ -131,12 +134,16 @@ const Collaboration = () => {
 
           {/* Floating brand-colored award card — protrudes to the right on desktop */}
           <div className="absolute bottom-0 right-0 z-20 flex aspect-square w-[220px] flex-col items-center justify-center bg-brand p-6 text-center text-white shadow-2xl lg:bottom-24 lg:right-[-30px] lg:w-[260px]">
-            <div className="relative mb-5 flex h-20 w-20 items-center justify-center rounded-full border border-white/30">
-              <Award className="h-10 w-10 text-white" />
-              {/* Dashed ring that spins continuously */}
-              <div className="absolute inset-[-6px] rounded-full border border-dashed border-white/50 animate-[spin_20s_linear_infinite]" />
+            <div>
+              <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.0292 54.3418L3.125 75.0001L18.75 78.1251L25 96.8751L41.4333 70.8001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M79.9708 54.3418L96.875 75.0001L81.25 78.1251L75 96.8751L58.5667 70.8001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.625 37.5C15.625 46.6167 19.2466 55.3604 25.6932 61.8067C32.1397 68.2533 40.8832 71.875 50 71.875C59.1167 71.875 67.8604 68.2533 74.3067 61.8067C80.7533 55.3604 84.375 46.6167 84.375 37.5C84.375 28.3832 80.7533 19.6397 74.3067 13.1932C67.8604 6.74662 59.1167 3.125 50 3.125C40.8832 3.125 32.1397 6.74662 25.6932 13.1932C19.2466 19.6397 15.625 28.3832 15.625 37.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52.2125 17.8828L57.4125 28.1245H66.275C66.7629 28.1126 67.2429 28.2482 67.6525 28.5135C68.0621 28.7788 68.3821 29.1615 68.5708 29.6117C68.7596 30.0618 68.8079 30.5583 68.7096 31.0364C68.6117 31.5144 68.3717 31.9517 68.0208 32.2912L59.8833 40.2829L64.3917 50.6372C64.5904 51.1113 64.6354 51.6359 64.5196 52.1367C64.4042 52.638 64.1342 53.0901 63.7479 53.4292C63.3617 53.7688 62.8783 53.978 62.3667 54.028C61.855 54.078 61.3404 53.9659 60.8958 53.708L50 47.5788L39.1042 53.708C38.6596 53.9659 38.1451 54.078 37.6333 54.028C37.1216 53.978 36.6385 53.7688 36.2522 53.4292C35.8659 53.0901 35.5959 52.638 35.4804 52.1367C35.3649 51.6359 35.4097 51.1113 35.6084 50.6372L40.1167 40.2829L31.9792 32.2745C31.6286 31.9351 31.3885 31.4977 31.2904 31.0197C31.1922 30.5416 31.2407 30.0451 31.4292 29.595C31.6178 29.1449 31.9379 28.7622 32.3474 28.4968C32.757 28.2315 33.2372 28.0959 33.725 28.1078H42.5875L47.7917 17.8828C48.0042 17.4808 48.3221 17.1442 48.7117 16.9095C49.1012 16.6748 49.5475 16.5508 50.0021 16.5508C50.4571 16.5508 50.9029 16.6748 51.2925 16.9095C51.6821 17.1442 52 17.4808 52.2125 17.8828Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
             </div>
-            <h4 className="text-[18px] font-bold leading-snug lg:text-xl">
+            <h4 className="text-[18px] text-white font-semibold leading-snug lg:text-[26px]">
               2016 Best agency
               <br />
               Awards Winner

@@ -12,7 +12,7 @@ import DiscoverMoreBtn from "@/components/shared/DiscoverMoreBtn";
 // text content.
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-[500px] md:min-h-[650px] lg:min-h-[850px] flex items-center justify-center overflow-hidden bg-[#09090b] pt-12 md:pt-0">
+    <section className="relative w-full min-h-[500px] md:min-h-[650px] lg:min-h-[850px] flex items-center justify-center overflow-hidden bg-[#09090b] section-padding-h2">
 
       {/* ── Layer 1: Grayscale base photo ── */}
       <div className="absolute inset-0 z-0">
@@ -21,8 +21,7 @@ const Hero = () => {
           alt="Team collaboration"
           className="h-full w-full object-cover grayscale contrast-125 brightness-75 opacity-30 md:opacity-40 transition-opacity duration-700"
         />
-        {/* Top and bottom vignette gradient to blend image into the dark background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#09090b] via-transparent to-[#09090b] opacity-70" />
+
       </div>
 
       {/* ── Layer 2: Brand red shape accents ── */}
@@ -45,12 +44,12 @@ const Hero = () => {
       </div>
 
       {/* ── Content ── */}
-      <div className="relative z-20 container mx-auto px-6 text-center">
+      <div className="relative z-20 container mx-auto px-6 text-center pt-[96px] lg:pt-[140px]">
         <div className="max-w-[1000px] mx-auto">
 
           {/* Eyebrow label */}
           <div className="mb-2 md:mb-6 flex justify-center">
-            <span className="text-[10px] md:text-[13px] font-bold uppercase tracking-[0.4em] md:tracking-[0.6em] text-white/60">
+            <span className="text-[10px] md:text-[13px] font-semibold uppercase tracking-[0.4em] md:tracking-[0.6em] text-white/60">
               Creative Digital Agency
             </span>
           </div>
@@ -70,11 +69,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Corner brand-tinted gradients — add depth at viewport edges */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-10">
-        <div className="absolute top-0 left-0 w-[50%] h-[50%] bg-gradient-to-br from-brand/10 to-transparent opacity-50 md:opacity-100" />
-        <div className="absolute bottom-0 right-0 w-[50%] h-[50%] bg-gradient-to-tl from-brand/10 to-transparent opacity-50 md:opacity-100" />
-      </div>
+
 
     </section>
   );
