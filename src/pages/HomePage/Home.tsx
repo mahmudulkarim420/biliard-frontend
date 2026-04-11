@@ -1,3 +1,4 @@
+// ─── Local Page Sections ──────────────────────────────────────────────────────
 import Hero from "@/pages/HomePage/Sections/Hero";
 import Innovations from "@/pages/HomePage/Sections/Innovations";
 import AboutUs from "@/pages/HomePage/Sections/AboutUs";
@@ -9,6 +10,9 @@ import Team from "@/pages/HomePage/Sections/Team";
 import MarketingSection from "@/pages/HomePage/Sections/MarketingSection";
 import Testimonial from "@/pages/HomePage/Sections/Testimonial";
 import BlogSection from "@/pages/HomePage/Sections/BlogSection";
+
+// ─── Page ─────────────────────────────────────────────────────────────────────
+// Primary Home page composition. Assembles all sections in vertical document order.
 const Home = () => {
   return (
     <div>

@@ -1,7 +1,8 @@
-import React from "react";
 import { Check, Play } from "lucide-react";
-import mainImg from "@/assets/img (17).png"; // (placeholder image of the walking person)
+import mainImg from "@/assets/img (17).png";
 
+// --- Static Data ---
+// Feature list rendered in the right-side content column.
 const featuresList = [
   {
     title: "Branding & Strategy",
@@ -17,74 +18,81 @@ const featuresList = [
   },
 ];
 
+// --- ITFeatureSection ---
+// Two-part section: a header row with a headline and a rotating circular
+// badge, followed by a two-column grid of an image composition and a
+// feature checklist with descriptive body copy.
 const ITFeatureSection = () => {
   return (
     <section className="relative w-full bg-white py-24 px-6 sm:px-12 lg:px-24 overflow-hidden">
       <div className="mx-auto max-w-[1200px]">
-        
-        {/* --- Top Header Section --- */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 mb-20">
+
+        {/* ── Section Header ── */}
+        <div className="flex flex-col md:flex-row justify-start items-start md:items-center gap-10 md:gap-24 mb-20">
           <h2 className="text-4xl font-black leading-[1.2] text-title sm:text-5xl lg:text-[54px] tracking-tight max-w-2xl">
             There are many <br className="hidden md:block" />
             variations of passages <br className="hidden md:block" />
             of available but majority
           </h2>
 
-          {/* Circular Rotating Badge with Play Button */}
+          {/* Rotating circular badge with center play button */}
           <div className="relative flex items-center justify-center shrink-0 w-36 h-36">
-            {/* Spinning Text SVG */}
-            <svg 
-              className="absolute inset-0 w-full h-full animate-[spin_10s_linear_infinite]" 
+
+            {/* Spinning text path */}
+            <svg
+              className="absolute inset-0 w-full h-full animate-[spin_10s_linear_infinite]"
               viewBox="0 0 100 100"
             >
-              <path 
-                id="textPath" 
-                d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0" 
-                fill="transparent" 
+              <path
+                id="textPath"
+                d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
+                fill="transparent"
               />
               <text>
-                <textPath 
-                  href="#textPath" 
-                  startOffset="0%" 
+                <textPath
+                  href="#textPath"
+                  startOffset="0%"
                   className="text-[10px] font-bold tracking-[0.25em] uppercase fill-title"
                 >
                   Agencyan Excellent Creative •
                 </textPath>
               </text>
             </svg>
-            {/* Center Play Button */}
+
+            {/* Center play button */}
             <button className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-transparent border border-gray-200 text-title hover:bg-brand hover:text-white hover:border-brand transition-all duration-300">
               <Play className="h-4 w-4 fill-current ml-1" />
             </button>
           </div>
         </div>
 
-        {/* --- Bottom Content Grid --- */}
+        {/* ── Bottom Content Grid ── */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          
-          {/* Left Side: Image Composition */}
+
+          {/* Left: Image composition with decorative overlays */}
           <div className="relative w-full max-w-md mx-auto lg:mx-0 pl-10 pt-10">
-            {/* Background Geometric Shape (Red outline) */}
+
+            {/* Background geometric shape (brand-colored crosshair outline) */}
             <div className="absolute top-0 right-[-30px] z-0">
               <svg width="120" height="120" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M50 0V30M50 100V70M0 50H30M100 50H70M14 14L35 35M86 86L65 65M14 86L35 65M86 14L65 35" stroke="#FF3838" strokeWidth="1" strokeOpacity="0.5"/>
-                <rect x="30" y="30" width="40" height="40" stroke="#FF3838" strokeWidth="1" strokeOpacity="0.5"/>
+                <path d="M50 0V30M50 100V70M0 50H30M100 50H70M14 14L35 35M86 86L65 65M14 86L35 65M86 14L65 35" stroke="#FF3838" strokeWidth="1" strokeOpacity="0.5" />
+                <rect x="30" y="30" width="40" height="40" stroke="#FF3838" strokeWidth="1" strokeOpacity="0.5" />
               </svg>
             </div>
 
-            {/* Main Image */}
+            {/* Main grayscale portrait image */}
             <div className="relative z-10 aspect-[3/4] w-[85%] overflow-hidden rounded-sm">
-              <img 
-                src={mainImg} 
-                alt="Startup Team" 
+              <img
+                src={mainImg}
+                alt="Startup Team"
                 className="h-full w-full object-cover grayscale opacity-90"
               />
             </div>
 
-            {/* Overlapping Red Box */}
+            {/* Overlapping brand-colored info card */}
             <div className="absolute top-16 left-0 z-20 w-[240px] bg-brand p-8 text-white shadow-2xl">
               <div className="mb-6">
-                {/* Custom SVG Icon representing IT Solution/Person */}
+                {/* Person-at-desk icon representing IT solutions */}
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <circle cx="20" cy="12" r="6" />
                   <path d="M10 28C10 24 14 22 20 22C26 22 30 24 30 28V32H10V28Z" />
@@ -98,7 +106,7 @@ const ITFeatureSection = () => {
             </div>
           </div>
 
-          {/* Right Side: Text & Features List */}
+          {/* Right: Descriptive copy + features checklist */}
           <div className="w-full">
             <h4 className="text-xl sm:text-2xl font-bold text-title mb-6 leading-tight max-w-lg">
               Creating a concise and effective design studio brief is crucial for outlining your business
@@ -107,19 +115,19 @@ const ITFeatureSection = () => {
               That a reader will be distracted by the readable content of a page when looking at established fact that a reader will be by the readable content.
             </p>
 
-            {/* Features List */}
+            {/* Features list — each item separated by a subtle border */}
             <div className="flex flex-col">
               {featuresList.map((feature, index) => (
-                <div 
-                  key={index} 
-                  className={`flex items-start gap-5 py-6 ${index !== featuresList.length - 1 ? 'border-b border-gray-100' : ''}`}
+                <div
+                  key={index}
+                  className={`flex items-start gap-5 py-6 ${index !== featuresList.length - 1 ? "border-b border-gray-100" : ""}`}
                 >
-                  {/* Red Check Icon */}
+                  {/* Brand check icon */}
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand text-white shadow-md shadow-brand/20 mt-1 transition-transform duration-300 hover:scale-110">
                     <Check className="h-5 w-5 stroke-[3px]" />
                   </div>
-                  
-                  {/* Feature Text */}
+
+                  {/* Feature title and description */}
                   <div>
                     <h5 className="text-[17px] font-bold text-title mb-1">
                       {feature.title}

@@ -1,27 +1,33 @@
+// ─── Local Assets ─────────────────────────────────────────────────────────────
 import bgMain from "@/assets/bg (1).png";
 import redAccents from "@/assets/bg.png";
+
+// ─── Local Components ─────────────────────────────────────────────────────────
 import DiscoverMoreBtn from "@/components/shared/DiscoverMoreBtn";
 
+// ─── Component ────────────────────────────────────────────────────────────────
+// Full-bleed hero section for the primary Home page. Uses three stacked
+// absolute layers — a grayscale photo base, brand-colored red shape accents
+// (mix-blend-screen), and dark gradient overlays — to build visual depth
+// without any external animation library.
 const Hero = () => {
   return (
-    // h-svh এর বদলে মোবাইলে আমরা h-auto বা min-h-[550px] ব্যবহার করছি যাতে অতিরিক্ত গ্যাপ না থাকে
     <section className="relative w-full overflow-hidden bg-gray-950">
 
-      {/* 1. Base Layer: Grayscale Image bg(1) */}
+      {/* ── Layer 1: Grayscale base photo ── */}
       <div className="absolute inset-0 z-0">
         <img
           src={bgMain}
           alt="Digital agency office"
-          // Increased opacity for better visibility
           className="h-full w-full object-cover object-[75%_center] sm:object-top grayscale opacity-60 lg:opacity-80"
         />
-        {/* Lighter black overlay to brighten the scene */}
+        {/* Two-layer overlay: a solid dark scrim + a bottom-to-top gradient for content legibility */}
         <div className="absolute inset-0 bg-black/30 sm:bg-black/40" />
-        {/* Refined gradient to show more of the image at the bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-70" />
       </div>
 
-      {/* 2. Accent Layer: Red Shapes */}
+      {/* ── Layer 2: Brand red shape accents ── */}
+      {/* mix-blend-screen blends the red shapes with the grayscale photo below */}
       <div className="absolute inset-0 z-10 pointer-events-none">
         <img
           src={redAccents}
@@ -30,21 +36,19 @@ const Hero = () => {
         />
       </div>
 
-      {/* 3. Hero Content */}
+      {/* ── Content ── */}
       <div className="relative z-20 w-full pt-[160px] pb-[160px] px-6 sm:px-12 lg:px-24">
         <div className="mx-auto w-full max-w-[1200px]">
-          {/* Content Container */}
           <div className="max-w-[650px]">
 
-            {/* Subtitle */}
+            {/* Eyebrow label */}
             <div className="mb-4 sm:mb-6 flex items-center gap-3">
-
               <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-300 sm:text-xs">
                 Creative Digital Agency
               </p>
             </div>
 
-            {/* Main Heading */}
+            {/* Main heading */}
             <h1 className="mb-8 sm:mb-12 text-[42px] font-bold leading-[1.1] text-white sm:text-7xl lg:text-[85px] tracking-tight">
               Best Digital
               <br className="block sm:hidden" />
@@ -54,7 +58,7 @@ const Hero = () => {
               <span>Design</span>
             </h1>
 
-            {/* Premium CTA */}
+            {/* CTA button */}
             <div className="flex flex-col sm:flex-row items-start gap-6">
               <DiscoverMoreBtn className="sm:px-10 sm:py-5 sm:text-sm" />
             </div>

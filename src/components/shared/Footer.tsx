@@ -1,6 +1,11 @@
+// ─── External Libraries ──────────────────────────────────────────────────────
 import { Link } from "react-router-dom";
 import { Send, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-import logo from "@/assets/logo.png"
+
+// ─── Local Assets ─────────────────────────────────────────────────────────────
+import logo from "@/assets/logo.png";
+
+// ─── Static Data ──────────────────────────────────────────────────────────────
 const usefulLinks = [
   { name: "About Us", href: "/about" },
   { name: "Our Team", href: "/team" },
@@ -8,27 +13,31 @@ const usefulLinks = [
   { name: "Community", href: "/community" },
 ];
 
+// ─── Component ────────────────────────────────────────────────────────────────
+// Site-wide footer. Organized into a 4-column grid: brand/tagline, contact
+// details, quick links, and a newsletter form with social icons.
+// A radial-gradient dot pattern on the right half adds a subtle dark texture.
 const Footer = () => {
   return (
     <footer className="relative bg-neutral-950 pt-24 overflow-hidden">
-      {/* Background Dotted Pattern - Better Opacity and Sync */}
+
+      {/* Decorative dot grid — fades with a radial mask toward center */}
       <div
         className="absolute right-0 top-0 h-full w-1/2 opacity-10 pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(white 1.5px, transparent 1.5px)',
-          backgroundSize: '32px 32px',
-          maskImage: 'radial-gradient(ellipse at center, black, transparent 80%)',
-          WebkitMaskImage: 'radial-gradient(ellipse at center, black, transparent 80%)'
+          backgroundImage: "radial-gradient(white 1.5px, transparent 1.5px)",
+          backgroundSize: "32px 32px",
+          maskImage: "radial-gradient(ellipse at center, black, transparent 80%)",
+          WebkitMaskImage: "radial-gradient(ellipse at center, black, transparent 80%)",
         }}
       />
 
-      {/* Main Container - Aligned with the rest of the site */}
       <div className="relative z-10 mx-auto max-w-[1200px] px-6 sm:px-12 lg:px-24 lg:max-w-[1200px] box-content">
 
-        {/* Main Footer Content */}
+        {/* ── Main Footer Grid ── */}
         <div className="grid grid-cols-1 gap-12 pb-20 md:grid-cols-2 lg:grid-cols-4">
 
-          {/* 1. Brand / Logo */}
+          {/* Column 1: Brand */}
           <div className="flex flex-col space-y-6">
             <Link to="/" className="flex items-center space-x-2">
               <img src={logo} alt="logo" className="h-10 w-10" />
@@ -41,11 +50,11 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* 2. Contact Us */}
+          {/* Column 2: Contact details */}
           <div className="space-y-7">
             <h3 className="text-lg font-bold text-white relative inline-block">
               Contact Us
-              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand"></span>
+              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand" />
             </h3>
             <div className="space-y-4 pt-2">
               <p className="text-sm leading-relaxed text-gray-400">
@@ -62,11 +71,11 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* 3. Useful Links */}
+          {/* Column 3: Quick links */}
           <div className="space-y-7">
             <h3 className="text-lg font-bold text-white relative inline-block">
               Useful Links
-              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand"></span>
+              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand" />
             </h3>
             <ul className="space-y-4 pt-2">
               {usefulLinks.map((link) => (
@@ -82,15 +91,15 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* 4. Newsletter & Socials */}
+          {/* Column 4: Newsletter + social icons */}
           <div className="space-y-7">
             <h3 className="text-lg font-bold text-white relative inline-block">
               Newsletter
-              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand"></span>
+              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand" />
             </h3>
-
             <div className="space-y-6 pt-2">
-              {/* Newsletter Input */}
+
+              {/* Email subscription form */}
               <form className="flex w-full items-center" onSubmit={(e) => e.preventDefault()}>
                 <input
                   type="email"
@@ -105,7 +114,7 @@ const Footer = () => {
                 </button>
               </form>
 
-              {/* Social Icons */}
+              {/* Social media icon row */}
               <div className="flex space-x-3">
                 {[Facebook, Twitter, Instagram, Linkedin].map((Icon, idx) => (
                   <a
@@ -122,16 +131,16 @@ const Footer = () => {
 
         </div>
 
-        {/* Bottom Copyright Bar */}
+        {/* ── Copyright Bar ── */}
         <div className="border-t border-white/5 py-8 text-center">
           <p className="text-[13px] text-gray-500 tracking-wide">
-            © {new Date().getFullYear()} copyright by Biliard WordPress Theme by <span className="font-bold text-brand hover:underline cursor-pointer">Freaxy</span>
+            © {new Date().getFullYear()} copyright by Biliard WordPress Theme by{" "}
+            <span className="font-bold text-brand hover:underline cursor-pointer">Freaxy</span>
           </p>
         </div>
       </div>
     </footer>
   );
 };
-
 
 export default Footer;
