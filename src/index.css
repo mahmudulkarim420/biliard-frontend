@@ -95,6 +95,34 @@ body {
     @apply py-16 md:py-24 lg:py-[130px];
   }
 
+  .section-padding-about {
+    @apply py-16 md:py-24 lg:py-[130px] flex flex-col justify-center relative;
+  }
+
+  .section-padding-services {
+    @apply py-16 md:py-24 lg:py-[130px] flex flex-col justify-center relative;
+  }
+
+  /* 
+     Shared standardization logic for About and Services pages
+     Targeting the containing section tags to ensure symmetry.
+  */
+  .about-page-standardized section,
+  .services-page-standardized section {
+    @apply !py-16 md:!py-24 lg:!py-[130px] !block;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    min-height: auto !important;
+  }
+
+  /* 
+     Fixes the Features section overlap specifically for Services Page.
+     This nullifies the negative margin used on the Home page and maintains isolation.
+  */
+  .services-page-standardized div[class*="-mt-"] {
+    @apply !mt-0;
+  }
+
   /* Pairs with .section-padding for consistent horizontal gutters */
   .section-padding-x {
     @apply px-6 sm:px-12 lg:px-24;

@@ -15,7 +15,15 @@ const navLinks = [
       { name: "Home 2", href: "/home-2" },
     ],
   },
-  { name: "Pages", href: "/pages", hasDropdown: true },
+  {
+    name: "Pages",
+    href: "/pages",
+    hasDropdown: true,
+    subLinks: [
+      { name: "About", href: "/about" },
+      { name: "Services", href: "/services" },
+    ],
+  },
   { name: "Feature", href: "/feature", hasDropdown: false },
   { name: "Blog", href: "/blog", hasDropdown: false },
   { name: "Contact", href: "/contact", hasDropdown: false },

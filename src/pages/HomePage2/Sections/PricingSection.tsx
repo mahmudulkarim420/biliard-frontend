@@ -50,24 +50,30 @@ const pricingPlans: PricingPlan[] = [
   },
 ];
 
+interface PricingSectionProps {
+  showBackground?: boolean;
+}
+
 // ─── Component ────────────────────────────────────────────────────────────────
 // Three-column pricing cards on a light grey background. Each card lifts on
 // hover and reveals a brand-colored bottom bar via a scale-x animation.
 // A repeating hexagon SVG pattern is inlined as a background texture.
-const PricingSection = () => {
+const PricingSection = ({ showBackground = true }: PricingSectionProps) => {
   return (
     <section className="relative w-full section-padding-h2 px-6 sm:px-12 lg:px-24 bg-[#f8f9fa] overflow-hidden">
 
       {/* Subtle hexagonal repeating pattern — very low opacity decorative texture */}
-      <div
-        className="absolute inset-0 z-0 pointer-events-none opacity-[0.05]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='103.92304845413264' viewBox='0 0 60 103.92304845413264' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 103.92304845413264l-30-17.32050807568877v-34.64101615137754l30-17.32050807568877 30 17.32050807568877v34.64101615137754z' fill='none' stroke='black' strokeWidth='2'/%3E%3C/svg%3E")`,
-          backgroundSize: "120px 208px",
-          backgroundRepeat: "repeat",
-          backgroundPosition: "center",
-        }}
-      />
+      {showBackground && (
+        <div
+          className="absolute inset-0 z-0 pointer-events-none opacity-[0.05]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='103.92304845413264' viewBox='0 0 60 103.92304845413264' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 103.92304845413264l-30-17.32050807568877v-34.64101615137754l30-17.32050807568877 30 17.32050807568877v34.64101615137754z' fill='none' stroke='black' strokeWidth='2'/%3E%3C/svg%3E")`,
+            backgroundSize: "120px 208px",
+            backgroundRepeat: "repeat",
+            backgroundPosition: "center",
+          }}
+        />
+      )}
 
       <div className="mx-auto max-w-[1200px] relative z-10">
 
