@@ -1,19 +1,28 @@
 // ─── External Libraries ──────────────────────────────────────────────────────
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 // ─── Local Components ─────────────────────────────────────────────────────────
 import Navbar2 from "@/components/shared/Navbar2";
 import Footer from "@/components/shared/Footer";
+import PageTransition from "@/components/shared/PageTransition";
 
 // ─── Layout ───────────────────────────────────────────────────────────────────
 // Root layout for the Home 2 page variant.
-// Wraps routed page content between the shared Navbar2 and Footer.
+// AnimatePresence is keyed by pathname so it can detect route changes and
+// trigger the exit animation before the next page mounts.
 const Home2Layout = () => {
+  const location = useLocation();
+
   return (
     <div className="relative min-h-screen flex flex-col">
       <Navbar2 />
       <main className="flex-1">
-        <Outlet />
+        <AnimatePresence mode="wait">
+          <PageTransition key={location.pathname}>
+            <Outlet />
+          </PageTransition>
+        </AnimatePresence>
       </main>
       <Footer />
     </div>
