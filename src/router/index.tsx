@@ -8,6 +8,7 @@ import Home2Layout from "@/layouts/Home2Layout";
 // ─── Local Pages ──────────────────────────────────────────────────────────────
 import Home from "@/pages/HomePage/Home";
 import Home2 from "@/pages/HomePage2/Home2";
+import AboutPage from "@/pages/HomePage/AboutPage";
 
 // ─── Router Configuration ─────────────────────────────────────────────────────
 // Centralized route tree. Each top-level route uses a layout component that
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
       },
     ],
   },

@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+/* @custom-variant dark (&:where(.dark &)); */
+
+/* tailwind config globals setting */
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 575px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --font-primary: "Instrument Sans", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  --color-primaryColor: #273f2b;
+  --color-secondaryColor: #d9fe8a;
+  --color-textColor: #3c5240;
+  --color-spaceWhite: #f7f9f2;
+  --color-primaryBorder: rgba(60, 82, 64, 0.3);
+  --shadow-card: 73px 0 20px 0 rgba(0, 0, 0, 0),
+    47px 0 19px 0 rgba(0, 0, 0, 0.01), 26px 0 16px 0 rgba(0, 0, 0, 0.05),
+    12px 0 12px 0 rgba(0, 0, 0, 0.09), 3px 0 6px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+html,
+body {
+  scroll-behavior: smooth;
+  font-family: var(--font-secondary);
+}
+
+
+@layer base {
+  h1 {
+    @apply text-white md:text-[84px] md:leading-[94px]  text-[45px] leading-[54px] font-primary font-bold tracking-normal;
+  }
+  h2 {
+    @apply text-primaryColor dark:text-white xl:text-[48px] xl:leading-[60px] md:text-[36px] md:leading-[50px] text-[24px] leading-[32px] font-primary font-semibold tracking-normal;
+  }
+
+  h3 {
+    @apply md:text-[32px] text-[24px] text-primaryColor dark:text-white md:leading-[46px] leading-[32px] font-primary font-semibold;
+  }
+
+  h4 {
+    @apply text-[24px] text-primaryColor dark:text-white font-primary font-semibold leading-[32px] tracking-[-0.24px];
+  }
+
+  h5 {
+    @apply text-[20px] text-primaryColor dark:text-white font-primary font-semibold leading-[30px];
+  }
+
+  h6 {
+    @apply text-[18px] text-textColor dark:text-white font-primary font-normal leading-[26px];
+  }
+  p {
+    @apply text-textColor text-[16px] font-normal leading-6;
+  }
+
+  .section-gap {
+    @apply lg:mt-[130px] md:mt-24 mt-16;
+  }
+  .section-padding {
+    @apply lg:py-[130px] md:py-24 py-16;
+  }
+
+
+
+
+}
+
+button:not(:disabled) {
+  @apply cursor-pointer font-primary;
+}
