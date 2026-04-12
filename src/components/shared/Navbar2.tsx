@@ -8,6 +8,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
+import SearchModal from "./SearchModal";
 
 // --- Static Data ---
 // Navigation link definitions, including optional dropdown sub-links.
@@ -46,6 +47,7 @@ const Navbar2 = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
 
   // Animation Variants
@@ -238,7 +240,10 @@ const Navbar2 = () => {
               )}
             >
               <ShoppingCart className={cn("h-5 w-5 cursor-pointer hover:text-brand", scrolled ? "text-white" : "text-title")} />
-              <Search className={cn("h-5 w-5 cursor-pointer hover:text-brand", scrolled ? "text-white" : "text-title")} />
+              <Search 
+                onClick={() => setIsSearchOpen(true)}
+                className={cn("h-5 w-5 cursor-pointer hover:text-brand", scrolled ? "text-white" : "text-title")} 
+              />
             </div>
 
             {/* Call info block */}
@@ -259,13 +264,21 @@ const Navbar2 = () => {
               </div>
             </div>
 
-            {/* Mobile menu toggle */}
-            <button
-              className={cn("lg:hidden p-2 transition-colors duration-300", scrolled ? "text-white" : "text-title")}
-              onClick={() => setIsOpen(true)}
-            >
-              <Menu className="h-7 w-7" />
-            </button>
+            {/* Mobile actions & menu toggle */}
+            <div className="flex lg:hidden items-center gap-2">
+              <button
+                className={cn("p-2 transition-colors duration-300", scrolled ? "text-white" : "text-title")}
+                onClick={() => setIsSearchOpen(true)}
+              >
+                <Search className="h-6 w-6" />
+              </button>
+              <button
+                className={cn("p-2 transition-colors duration-300", scrolled ? "text-white" : "text-title")}
+                onClick={() => setIsOpen(true)}
+              >
+                <Menu className="h-7 w-7" />
+              </button>
+            </div>
           </div>
         </div>
       </nav>
@@ -360,6 +373,12 @@ const Navbar2 = () => {
           </div>
         </div>
       </aside>
+      
+      {/* Search Modal */}
+      <SearchModal 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+      />
     </header>
   );
 };

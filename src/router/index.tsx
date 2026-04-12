@@ -16,6 +16,7 @@ import PortfolioDetails from "@/pages/PortfolioPage/PortfolioDetails";
 import CareerPage from "@/pages/CareerPage/CareerPage";
 import BlogPage from "@/pages/BlogPage/BlogPage";
 import BlogDetailsPage from "@/pages/BlogPage/BlogDetailsPage";
+import NotFound from "@/pages/NotFound/NotFound";
 
 // ─── Router Configuration ─────────────────────────────────────────────────────
 // Centralized route tree. Each top-level route uses a layout component that
@@ -72,5 +73,9 @@ export const router = createBrowserRouter([
         element: <Home2 />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);

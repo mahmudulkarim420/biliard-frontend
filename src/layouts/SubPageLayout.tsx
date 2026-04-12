@@ -4,6 +4,7 @@ import Footer from "@/components/shared/Footer";
 import PageHeader from "@/components/shared/PageHeader";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import Preloader from "@/components/shared/Preloader";
+import CustomCursor from "@/components/shared/CustomCursor";
 // If you want page transitions integrated into this wrapper
 import { useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -24,6 +25,7 @@ const SubPageLayout = ({ title, breadcrumb, children }: SubPageLayoutProps) => {
 
   return (
     <div className="relative min-h-screen flex flex-col">
+      <CustomCursor />
       <Preloader />
       <Navbar />
       
