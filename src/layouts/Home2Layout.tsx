@@ -8,6 +8,7 @@ import Footer from "@/components/shared/Footer";
 import PageTransition from "@/components/shared/PageTransition";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import Preloader from "@/components/shared/Preloader";
+import CustomCursor from "@/components/shared/CustomCursor";
 
 // ─── Layout ───────────────────────────────────────────────────────────────────
 // Root layout for the Home 2 page variant.
@@ -18,6 +19,7 @@ const Home2Layout = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col">
+      <CustomCursor />
       <Preloader />
       <Navbar2 />
       <main className="flex-1">

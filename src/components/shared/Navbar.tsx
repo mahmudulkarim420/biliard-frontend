@@ -7,6 +7,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
+import SearchModal from "./SearchModal";
 
 // --- Static Data ---
 const navLinks = [
@@ -40,6 +41,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const location = useLocation();
 
   const dropdownVariants = {
@@ -178,7 +180,10 @@ const Navbar = () => {
                   <button className="text-gray-300 hover:text-white">
                     <ShoppingCart className="h-5 w-5" />
                   </button>
-                  <button className="text-gray-300 hover:text-white">
+                  <button 
+                    onClick={() => setIsSearchOpen(true)}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
                     <Search className="h-5 w-5" />
                   </button>
                 </div>
@@ -196,13 +201,21 @@ const Navbar = () => {
                 </div>
               </div>
 
-              {/* Mobile Toggle */}
-              <button
-                className="lg:hidden h-10 w-10 flex items-center justify-center rounded-full border border-white/20 text-white"
-                onClick={() => setIsOpen(true)}
-              >
-                <Menu className="h-6 w-6" />
-              </button>
+              {/* Mobile Toggle & Search */}
+              <div className="flex lg:hidden items-center gap-3">
+                <button
+                  className="h-10 w-10 flex items-center justify-center rounded-full border border-white/20 text-white"
+                  onClick={() => setIsSearchOpen(true)}
+                >
+                  <Search className="h-5 w-5" />
+                </button>
+                <button
+                  className="h-10 w-10 flex items-center justify-center rounded-full border border-white/20 text-white"
+                  onClick={() => setIsOpen(true)}
+                >
+                  <Menu className="h-5 w-5" />
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -303,6 +316,12 @@ const Navbar = () => {
           </div>
         </div>
       </aside>
+
+      {/* Search Modal */}
+      <SearchModal 
+        isOpen={isSearchOpen} 
+        onClose={() => setIsSearchOpen(false)} 
+      />
     </>
   );
 };
