@@ -1,8 +1,12 @@
 import { useParams, Link } from "react-router-dom";
 import SubPageLayout from "@/layouts/SubPageLayout";
 import { initialBlogPosts } from "@/lib/blog-data";
-import { User, MessageSquare, ArrowLeft, Share2, Facebook, Twitter, Linkedin } from "lucide-react";
+import { 
+  User, MessageSquare, ChevronLeft, ChevronRight, 
+  Check, Quote, Twitter, Facebook, Globe
+} from "lucide-react";
 import BlogSidebar from "./BlogSidebar";
+import icon1 from "@/assets/icon.png";
 
 /**
  * Blog Details Page
@@ -10,13 +14,16 @@ import BlogSidebar from "./BlogSidebar";
  * Demonstrates dynamic routing for Blog posts:
  * 1. Uses useParams() to identify the current post.
  * 2. Reuses the BlogSidebar for consistent layout.
- * 3. Provides deep-dive content for specifically selected articles.
+ * 3. Provides deep-dive content for specifically selected articles matching high-fidelity designs.
  */
 const BlogDetailsPage = () => {
   const { id } = useParams<{ id: string }>();
   
-  // Find the post based on the dynamic ID from the URL
-  const post = initialBlogPosts.find((item) => item.id.toString() === id);
+  const postIndex = initialBlogPosts.findIndex((item) => item.id.toString() === id);
+  const post = initialBlogPosts[postIndex];
+
+  const prevPost = postIndex > 0 ? initialBlogPosts[postIndex - 1] : null;
+  const nextPost = postIndex < initialBlogPosts.length - 1 ? initialBlogPosts[postIndex + 1] : null;
 
   if (!post) {
     return (
@@ -42,63 +49,161 @@ const BlogDetailsPage = () => {
               {/* ── Left Column: Article Content ── */}
               <div className="lg:col-span-8">
 
-                {/* Main Article Header */}
-                <div className="rounded-[24px] overflow-hidden shadow-xl mb-12">
-                   <img 
+                {/* Main Article Header with Date Badge */}
+                <div className="relative rounded-[5px] overflow-hidden mb-8">
+                  <img 
                     src={post.image} 
                     alt={post.title} 
-                    className="w-full h-auto object-cover"
-                   />
+                    className="w-full h-auto object-cover grayscale brightness-90 transition-all duration-700 hover:grayscale-0 hover:brightness-100"
+                  />
+                  <div className="absolute top-5 left-5 bg-[#ff3838] text-white px-4 py-2 flex items-center gap-2 rounded-sm shadow-xl z-20">
+                    <span className="text-2xl font-black">{post.date}</span>
+                    <span className="text-[10px] font-bold leading-tight uppercase whitespace-pre-line">
+                      {post.monthYear}
+                    </span>
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-6 mb-8 text-[14px] font-bold text-gray-400 uppercase tracking-widest">
-                   <div className="flex items-center gap-2">
-                     <User className="w-5 h-5 text-brand" />
-                     <span className="text-title lowercase italic">by {post.author}</span>
-                   </div>
-                   <div className="flex items-center gap-2">
-                     <MessageSquare className="w-4 h-4 text-brand" />
-                     <span className="text-title">{post.comments}</span>
-                   </div>
+                {/* Post Meta */}
+                <div className="flex items-center gap-6 mb-6 text-[13px] font-medium text-gray-500">
+                  <div className="flex items-center gap-2 group cursor-pointer hover:text-brand transition-colors">
+                    <User className="w-4 h-4 text-[#ff3838]" />
+                    <span className="text-title/70 text-[14px] font-bold">{post.author}</span>
+                  </div>
+                  <div className="flex items-center gap-2 group cursor-pointer hover:text-brand transition-colors">
+                    <MessageSquare className="w-4 h-4 text-[#ff3838]" />
+                    <span className="text-title/70 text-[14px] font-bold">{post.comments}</span>
+                  </div>
                 </div>
 
-                <h2 className="text-[34px] md:text-[46px] font-extrabold text-title leading-[1.2] mb-10 tracking-tight">
+                <h2 className="text-[28px] md:text-[34px] font-bold text-title leading-[1.3] mb-8 tracking-tight">
                   {post.title}
                 </h2>
 
-                <div className="prose max-w-none text-desc text-lg leading-[1.8] flex flex-col gap-6">
+                <div className="text-desc text-[16px] leading-[1.7] flex flex-col gap-6 mb-10">
                   <p>
-                    {post.description || "The digital landscape is constantly shifting, but the fundamentals of quality and engagement remain the same. This article explores how modern agencies are adapting to these changes by focusing on user-centric design and scalable technology solutions."}
+                    In a few seconds, our A.I. will generate amazing results that you can copy, paste & publish. No matter your native tongue, write creatively and clearly in 25+ languages. Applications are like the lifeblood of mobile phones and tablets today. The true potential of your mobile phone is harnessed.
                   </p>
                   
-                  <blockquote className="border-l-4 border-brand bg-gray-50 p-8 rounded-r-2xl my-8">
-                    <p className="text-title font-bold italic text-2xl leading-relaxed">
-                      "Design is not just what it looks like and feels like. Design is how it works. Our goal is to create products that feel as good as they look."
-                    </p>
-                    <cite className="block mt-4 text-brand font-bold not-italic">— Agency Design Director</cite>
-                  </blockquote>
+                  {/* Styled Blockquote Section */}
+                  <div className="relative bg-[#f6f6f6] p-10 md:p-14 rounded-[5px] my-4 overflow-hidden group">
+                    <div className="absolute left-6 top-6 opacity-80">
+                      <img src={icon1} alt="Quote Icon" className="w-20 h-auto" />
+                    </div>
+                    <div className="relative z-10 pl-5 border-l-4 border-[#ff3838]/20">
+                      <p className="text-title font-medium text-[16px] md:text-[18px] leading-relaxed mb-4 italic">
+                        technology has become super advanced. Even normal people are getting themselves enrolled in coding and programming.
+                      </p>
+                      <span className="text-[#ff3838] font-bold text-[14px] uppercase tracking-widest">Andrew Himmer</span>
+                    </div>
+                  </div>
 
-                  <p>
-                    Whether you are a startup looking for your first brand identity or an established corporation seeking a digital transformation, our team is equipped to handle the complexities of modern design challenges. We believe in data-driven decisions paired with intuitive creativity.
-                  </p>
+                  <h3 className="text-2xl font-bold text-title mt-6 mb-2 tracking-tight">4 Tips To Put Your Creativity On The Development?</h3>
+                  <p>In a few seconds, our A.I. will generate amazing results that you can copy, paste & publish. No matter your native tongue, write creatively and clearly in 25+ languages. Applications.</p>
                   
-                  <p>
-                    Successfully navigating the industry requires a relentless focus on the end-user. By understanding their pain points and aspirations, we can build tools that truly solve problems and create lasting impact.
-                  </p>
+                  <ul className="flex flex-col gap-4 mt-2">
+                    {[
+                      "Normal People Are Getting Themselves Enrolled In Coding And Programming",
+                      "Creating Applications On Their Own. An App Developer Earns",
+                      "If Seen From A Business Point Of View, Has A Lot Of Scope"
+                    ].map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-4 group">
+                        <div className="mt-1 flex items-center justify-center w-5 h-5 rounded-full bg-white shadow-sm transition-colors border border-gray-100">
+                           <Check className="w-3 h-3 text-[#ff3838] stroke-[4px]" />
+                        </div>
+                        <span className="text-title font-bold text-[15px] opacity-80 group-hover:opacity-100 transition-opacity">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
-                {/* Social Share */}
-                <div className="mt-16 pt-10 border-t border-gray-100 flex flex-wrap items-center justify-between gap-6">
-                   <div className="flex items-center gap-4">
-                      <span className="font-bold text-title">Share this post:</span>
-                      <div className="flex gap-3">
-                         {[Facebook, Twitter, Linkedin, Share2].map((Icon, i) => (
-                           <button key={i} className="w-10 h-10 rounded-full border border-gray-100 flex items-center justify-center text-gray-400 hover:bg-brand hover:text-white hover:border-brand transition-all">
-                              <Icon className="h-4 w-4" />
-                           </button>
-                         ))}
-                      </div>
+                {/* Tags & Social row */}
+                <div className="mt-12 py-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6">
+                   <div className="flex flex-wrap items-center gap-3">
+                      {["Software", "App", "Technology"].map((tag) => (
+                        <button key={tag} className="px-6 py-2 bg-[#f6f6f6] text-[12px] font-bold text-title hover:bg-[#ff3838] hover:text-white transition-all rounded-sm uppercase tracking-widest">
+                          {tag}
+                        </button>
+                      ))}
                    </div>
+                   <div className="flex items-center gap-3">
+                      <button className="w-10 h-10 border border-gray-100 flex items-center justify-center rounded-full bg-[#ff3838] text-white hover:bg-title transition-all shadow-md">
+                        <Twitter className="w-4 h-4 fill-current" />
+                      </button>
+                      <button className="w-10 h-10 border border-gray-100 flex items-center justify-center rounded-full bg-[#ff3838] text-white hover:bg-title transition-all shadow-md">
+                        <Facebook className="w-4 h-4 fill-current" />
+                      </button>
+                      <button className="w-10 h-10 border border-gray-100 flex items-center justify-center rounded-full bg-[#ff3838] text-white hover:bg-title transition-all shadow-md">
+                        <Globe className="w-4 h-4" />
+                      </button>
+                   </div>
+                </div>
+
+                {/* Previous/Next Post Navigation */}
+                <div className="grid grid-cols-2 mt-10 gap-x-1">
+                   {prevPost && (
+                     <Link to={`/blog/${prevPost.id}`} className="group flex items-center gap-4 bg-white border border-gray-100 p-6 hover:bg-gray-50 transition-all rounded-l-md">
+                        <ChevronLeft className="w-5 h-5 text-gray-400 group-hover:text-[#ff3838] transition-colors" />
+                        <div className="hidden sm:block shrink-0 w-16 h-16 rounded overflow-hidden shadow-sm">
+                           <img src={prevPost.image} className="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110" />
+                        </div>
+                        <div className="flex flex-col gap-1">
+                           <h4 className="text-[13px] md:text-[15px] font-bold text-title leading-tight line-clamp-2 transition-colors group-hover:text-[#ff3838]">
+                             UX writing: Copy is an integral part
+                           </h4>
+                           <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
+                             {prevPost.date} Jan 2024
+                           </span>
+                        </div>
+                     </Link>
+                   )}
+                   {nextPost && (
+                     <Link to={`/blog/${nextPost.id}`} className="group flex items-center justify-end text-right gap-4 bg-white border border-gray-100 p-6 hover:bg-gray-50 transition-all rounded-r-md">
+                        <div className="flex flex-col gap-1">
+                           <h4 className="text-[13px] md:text-[15px] font-bold text-title leading-tight line-clamp-2 transition-colors group-hover:text-[#ff3838]">
+                             UX writing: Copy is an integral part
+                           </h4>
+                           <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
+                             {nextPost.date} Jan 2024
+                           </span>
+                        </div>
+                        <div className="hidden sm:block shrink-0 w-16 h-16 rounded overflow-hidden shadow-sm">
+                           <img src={nextPost.image} className="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110" />
+                        </div>
+                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#ff3838] transition-colors" />
+                     </Link>
+                   )}
+                </div>
+
+                {/* Leave a Reply Section */}
+                <div className="mt-20">
+                   <h3 className="text-[26px] font-black text-title mb-2 tracking-tight">Leave A Reply</h3>
+                   <p className="text-[14px] text-gray-500 mb-10">Your email address will not be published. Required fields are marked <span className="text-[#ff3838] font-bold">*</span></p>
+
+                   <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                         <input 
+                           type="text" 
+                           placeholder="Your Name *" 
+                           className="bg-[#f6f6f6] border-none px-6 py-4 rounded-sm text-[14px] font-bold text-title outline-none focus:ring-1 focus:ring-[#ff3838]/30 transition-all placeholder:text-gray-400" 
+                         />
+                         <input 
+                           type="email" 
+                           placeholder="Your Mail *" 
+                           className="bg-[#f6f6f6] border-none px-6 py-4 rounded-sm text-[14px] font-bold text-title outline-none focus:ring-1 focus:ring-[#ff3838]/30 transition-all placeholder:text-gray-400" 
+                         />
+                      </div>
+                      <textarea 
+                        rows={6}
+                        placeholder="Your Comment *" 
+                        className="bg-[#f6f6f6] border-none px-6 py-6 rounded-sm text-[14px] font-bold text-title outline-none focus:ring-1 focus:ring-[#ff3838]/30 transition-all placeholder:text-gray-400 resize-none"
+                      />
+                      <div>
+                        <button className="bg-[#ff3838] text-white px-10 py-5 rounded-[4px] font-black text-[12px] uppercase tracking-widest hover:bg-title transition-all shadow-xl hover:-translate-y-1 active:scale-95 active:translate-y-0">
+                          Post Comment
+                        </button>
+                      </div>
+                   </form>
                 </div>
 
               </div>
