@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
 import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import PageHeader from "@/components/shared/PageHeader";
@@ -17,6 +17,10 @@ interface SubPageLayoutProps {
 
 const SubPageLayout = ({ title, breadcrumb, children }: SubPageLayoutProps) => {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="relative min-h-screen flex flex-col">

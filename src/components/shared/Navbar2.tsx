@@ -3,7 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import {
   Menu, X, ChevronDown, ShoppingCart, Search,
   Mail, MapPin, Twitter, Facebook, Instagram, Linkedin, Phone,
+  ArrowRight, LayoutGrid, Info, Settings,
 } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/logo.png";
 
@@ -14,19 +16,23 @@ const navLinks = [
     name: "Home",
     href: "/",
     hasDropdown: true,
-    subLinks: [{ name: "Home", href: "/" }],
+    subLinks: [
+      { name: "Home Style 1", href: "/", icon: LayoutGrid },
+      { name: "Home Style 2", href: "/home-2", icon: LayoutGrid },
+    ],
   },
   {
     name: "Pages",
     href: "/pages",
     hasDropdown: true,
     subLinks: [
-      { name: "About Us", href: "/about" },
-      { name: "Our Team", href: "/team" },
-      { name: "Pricing", href: "/pricing" },
+      { name: "About Us", href: "/about", icon: Info },
+      { name: "Services", href: "/services", icon: Settings },
+      { name: "Services Single", href: "/service-details", icon: Settings },
+      { name: "Our Portfolio", href: "/portfolio", icon: LayoutGrid },
     ],
   },
-  { name: "Feature", href: "/feature", hasDropdown: false },
+  { name: "Career", href: "/career", hasDropdown: false },
   { name: "Blog", href: "/blog", hasDropdown: false },
   { name: "Contact", href: "/contact", hasDropdown: false },
 ];
@@ -39,7 +45,43 @@ const Navbar2 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileDropdown, setMobileDropdown] = useState<string | null>(null);
   const location = useLocation();
+
+  // Animation Variants
+  const dropdownVariants = {
+    hidden: { 
+      opacity: 0, 
+      y: 15, 
+      scale: 0.95,
+      filter: "blur(4px)",
+      transition: { duration: 0.2, ease: "easeInOut" }
+    },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      scale: 1,
+      filter: "blur(0px)",
+      transition: { 
+        duration: 0.3, 
+        ease: "easeOut",
+        staggerChildren: 0.05,
+        delayChildren: 0.1
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: 10,
+      scale: 0.95,
+      filter: "blur(4px)",
+      transition: { duration: 0.2, ease: "easeInOut" }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -10 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.3 } }
+  };
 
   // --- Effects ---
   // Tracks scroll position to toggle the sticky condensed navbar style.
@@ -121,7 +163,7 @@ const Navbar2 = () => {
                 <Link
                   to={link.href}
                   className={cn(
-                    "flex items-center gap-1 text-[14px] font-bold transition-all duration-300",
+                    "flex items-center gap-1 text-[16px] font-bold transition-all duration-300",
                     location.pathname === link.href
                       ? "text-brand"
                       : scrolled ? "text-gray-300 hover:text-brand" : "text-title hover:text-brand"
@@ -139,21 +181,51 @@ const Navbar2 = () => {
                 </Link>
 
                 {/* Dropdown panel */}
-                {link.hasDropdown && activeDropdown === link.name && (
-                  <div className="absolute top-full left-0 pt-4 w-48 transition-all animate-in fade-in slide-in-from-top-2 duration-300">
-                    <div className="bg-white shadow-2xl border border-gray-100 py-3 rounded-lg overflow-hidden">
-                      {link.subLinks?.map((sub) => (
-                        <Link
-                          key={sub.name}
-                          to={sub.href}
-                          className="block px-6 py-2.5 text-[13px] font-bold text-title hover:bg-gray-50 hover:text-brand transition-colors"
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
+                <AnimatePresence>
+                  {link.hasDropdown && activeDropdown === link.name && (
+                    <motion.div
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                      variants={dropdownVariants}
+                      className="absolute top-full left-0 pt-4 w-64 z-[60]"
+                    >
+                      {/* Arrow Indicator */}
+                      <div className={cn(
+                        "absolute top-2 left-6 w-3 h-3 rotate-45 border-t border-l",
+                        scrolled 
+                          ? "bg-[#09090b]/90 border-white/10" 
+                          : "bg-white border-black/5 shadow-[-1px_-1px_1px_rgba(0,0,0,0.02)]"
+                      )} />
+
+                      <div className={cn(
+                        "relative overflow-hidden rounded-xl border p-2",
+                        "backdrop-blur-2xl shadow-[0_20px_50px_-12px_rgba(0,0,0,0.5),0_0_20px_rgba(0,0,0,0.1)]",
+                        scrolled 
+                          ? "bg-[#0c0c0e]/95 border-white/10" 
+                          : "bg-[#0c0c0e]/98 border-white/10 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.8)]"
+                      )}>
+                        {link.subLinks?.map((sub) => (
+                          <motion.div key={sub.name} variants={itemVariants}>
+                            <Link
+                              to={sub.href}
+                              className={cn(
+                                "group/item flex items-center justify-between px-4 py-3 rounded-lg text-[14px] font-bold transition-all duration-300",
+                                "text-gray-300 hover:bg-brand/10 hover:text-brand"
+                              )}
+                            >
+                              <div className="flex items-center gap-3">
+                                {sub.icon && <sub.icon className="h-4 w-4 opacity-70 group-hover/item:text-brand transition-colors" />}
+                                <span>{sub.name}</span>
+                              </div>
+                              <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 text-brand" />
+                            </Link>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>
@@ -223,16 +295,57 @@ const Navbar2 = () => {
           </div>
 
           {/* Mobile nav links */}
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-2">
             {navLinks.map((link) => (
-              <div key={link.name}>
-                <Link
-                  to={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-xl font-bold text-title hover:text-brand transition-colors"
-                >
-                  {link.name}
-                </Link>
+              <div key={link.name} className="border-b border-gray-50 last:border-none pb-2">
+                <div className="flex items-center justify-between">
+                  <Link
+                    to={link.href}
+                    onClick={() => !link.hasDropdown && setIsOpen(false)}
+                    className={cn(
+                      "text-lg font-bold py-2 transition-colors",
+                      location.pathname === link.href ? "text-brand" : "text-title hover:text-brand"
+                    )}
+                  >
+                    {link.name}
+                  </Link>
+                  {link.hasDropdown && (
+                    <button
+                      onClick={() => setMobileDropdown(mobileDropdown === link.name ? null : link.name)}
+                      className="p-2 bg-gray-50 rounded-lg"
+                    >
+                      <ChevronDown
+                        className={cn(
+                          "h-5 w-5 transition-transform duration-300",
+                          mobileDropdown === link.name && "rotate-180"
+                        )}
+                      />
+                    </button>
+                  )}
+                </div>
+
+                <AnimatePresence>
+                  {link.hasDropdown && mobileDropdown === link.name && (
+                    <motion.div
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      className="overflow-hidden bg-gray-50/50 rounded-xl mt-1"
+                    >
+                      {link.subLinks?.map((sub) => (
+                        <Link
+                          key={sub.name}
+                          to={sub.href}
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center gap-3 px-4 py-3 text-[14px] font-bold text-title hover:text-brand transition-colors"
+                        >
+                          {sub.icon && <sub.icon className="h-4 w-4 text-brand/70" />}
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
           </div>
