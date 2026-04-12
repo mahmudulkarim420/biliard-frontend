@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import {
   Menu, X, ChevronDown, ShoppingCart, Search,
   Mail, MapPin, Twitter, Facebook, Instagram, Linkedin, Phone,
-  ArrowRight, LayoutGrid, Info, Settings,
+  ArrowRight
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -17,8 +17,8 @@ const navLinks = [
     href: "/",
     hasDropdown: true,
     subLinks: [
-      { name: "Home Style 1", href: "/", icon: LayoutGrid },
-      { name: "Home Style 2", href: "/home-2", icon: LayoutGrid },
+      { name: "Home Style 1", href: "/" },
+      { name: "Home Style 2", href: "/home-2" },
     ],
   },
   {
@@ -26,10 +26,10 @@ const navLinks = [
     href: "/pages",
     hasDropdown: true,
     subLinks: [
-      { name: "About Us", href: "/about", icon: Info },
-      { name: "Services", href: "/services", icon: Settings },
-      { name: "Services Single", href: "/service-details", icon: Settings },
-      { name: "Our Portfolio", href: "/portfolio", icon: LayoutGrid },
+      { name: "About Us", href: "/about" },
+      { name: "Services", href: "/services" },
+      { name: "Services Single", href: "/service-details" },
+      { name: "Our Portfolio", href: "/portfolio" },
     ],
   },
   { name: "Career", href: "/career", hasDropdown: false },
@@ -214,10 +214,7 @@ const Navbar2 = () => {
                                 "text-gray-300 hover:bg-brand/10 hover:text-brand"
                               )}
                             >
-                              <div className="flex items-center gap-3">
-                                {sub.icon && <sub.icon className="h-4 w-4 opacity-70 group-hover/item:text-brand transition-colors" />}
-                                <span>{sub.name}</span>
-                              </div>
+                              <span>{sub.name}</span>
                               <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 text-brand" />
                             </Link>
                           </motion.div>
@@ -339,7 +336,6 @@ const Navbar2 = () => {
                           onClick={() => setIsOpen(false)}
                           className="flex items-center gap-3 px-4 py-3 text-[14px] font-bold text-title hover:text-brand transition-colors"
                         >
-                          {sub.icon && <sub.icon className="h-4 w-4 text-brand/70" />}
                           {sub.name}
                         </Link>
                       ))}

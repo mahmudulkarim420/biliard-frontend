@@ -24,10 +24,10 @@ const navLinks = [
     href: "/pages",
     hasDropdown: true,
     subLinks: [
-      { name: "About Us", href: "/about", icon: Info },
-      { name: "Services", href: "/services", icon: Settings },
-      { name: "Services Single", href: "/service-details", icon: Settings },
-      { name: "Our Portfolio", href: "/portfolio", icon: LayoutGrid },
+      { name: "About Us", href: "/about" },
+      { name: "Services", href: "/services" },
+      { name: "Services Single", href: "/service-details" },
+      { name: "Our Portfolio", href: "/portfolio" },
     ],
   },
   { name: "Career", href: "/career", hasDropdown: false },
@@ -158,10 +158,7 @@ const Navbar = () => {
                                     to={sub.href}
                                     className="group/item flex items-center justify-between px-4 py-3 rounded-lg text-[14px] font-bold text-gray-300 transition-all duration-300 hover:bg-brand/10 hover:text-brand"
                                   >
-                                    <div className="flex items-center gap-3">
-                                      {sub.icon && <sub.icon className="h-4 w-4 opacity-70 group-hover/item:text-brand transition-colors" />}
-                                      <span>{sub.name}</span>
-                                    </div>
+                                    <span>{sub.name}</span>
                                     <ArrowRight className="h-3.5 w-3.5 opacity-0 -translate-x-2 group-hover/item:opacity-100 group-hover/item:translate-x-0 transition-all duration-300 text-brand" />
                                   </Link>
                                 </motion.div>
@@ -284,7 +281,6 @@ const Navbar = () => {
                         onClick={() => setIsOpen(false)}
                         className="flex items-center gap-3 px-4 py-3 text-[14px] font-bold text-title hover:text-brand transition-colors"
                       >
-                        {sub.icon && <sub.icon className="h-4 w-4 text-brand/70" />}
                         {sub.name}
                       </Link>
                     ))}
