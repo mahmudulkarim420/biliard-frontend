@@ -24,7 +24,7 @@ const Preloader = () => {
             filter: "blur(20px)",
             transition: { duration: 1, ease: [0.43, 0.13, 0.23, 0.96] } 
           }}
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[#09090b]"
+          className="fixed inset-0 z-9999 flex flex-col items-center justify-center bg-[#09090b]"
         >
           {/* Background Ambient Glow */}
           <motion.div 
@@ -33,7 +33,7 @@ const Preloader = () => {
               opacity: [0.3, 0.5, 0.3]
             }}
             transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-            className="absolute h-[500px] w-[500px] rounded-full bg-brand/5 blur-[120px]"
+            className="absolute h-125 w-125 rounded-full bg-brand/5 blur-[120px]"
           />
 
           <div className="relative">
@@ -73,7 +73,7 @@ const Preloader = () => {
               <motion.div 
                 animate={{ rotate: 360 }}
                 transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-                className="absolute inset-0 rounded-full bg-gradient-to-tr from-brand/20 to-transparent blur-2xl"
+                className="absolute inset-0 rounded-full bg-linear-to-tr from-brand/20 to-transparent blur-2xl"
               />
 
               <div className="relative h-44 w-44 md:h-56 md:w-56 overflow-hidden">
@@ -93,7 +93,7 @@ const Preloader = () => {
                 
                 {/* Shine Effect over logo */}
                 <motion.div 
-                  className="absolute inset-0 z-10 w-1/2 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12"
+                  className="absolute inset-0 z-10 w-1/2 bg-linear-to-r from-transparent via-white/10 to-transparent -skew-x-12"
                   animate={{ left: ["-100%", "200%"] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
                 />
@@ -101,7 +101,7 @@ const Preloader = () => {
 
               {/* Minimalist Progress Indicator */}
               <div className="mt-16 flex flex-col items-center gap-4">
-                <div className="h-[1px] w-64 md:w-80 overflow-hidden bg-white/5">
+                <div className="h-px w-64 md:w-80 overflow-hidden bg-white/5">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: "100%" }}

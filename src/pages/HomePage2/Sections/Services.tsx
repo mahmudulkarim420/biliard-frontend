@@ -127,7 +127,7 @@ const Services = () => {
         </svg>
       </div>
 
-      <div className="mx-auto max-w-[1200px] relative z-10">
+      <div className="mx-auto max-w-300 relative z-10">
 
         {/* ── Section Header ── */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">

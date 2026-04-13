@@ -63,7 +63,7 @@ const BlogPage = () => {
                           <img 
                             src={post.image} 
                             alt={post.title} 
-                            className="w-full h-[350px] md:h-[450px] object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0"
+                            className="w-full h-88 md:h-112 object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0"
                           />
                           <div className="absolute top-6 left-6 bg-brand text-white flex items-center gap-2 px-4 py-2 rounded-sm shadow-md z-10">
                             <span className="text-3xl font-black">{post.date}</span>

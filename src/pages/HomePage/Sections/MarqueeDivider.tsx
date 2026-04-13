@@ -6,7 +6,7 @@ const MarqueeDivider = () => {
   const words = ["Software", "Web Design", "Development", "UI/UX Design", "Branding"];
 
   return (
-    <section className="relative z-10 flex w-full overflow-x-hidden bg-white pt-[50px] pb-[210px] sm:pb-[290px] lg:pb-[350px]">
+    <section className="relative z-10 flex w-full overflow-x-hidden bg-white pt-13 pb-52 sm:pb-72 lg:pb-88">
 
       {/* Keyframe definition — injected inline to avoid a separate CSS file dependency */}
       <style>{`

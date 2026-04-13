@@ -29,7 +29,7 @@ const teamMembers: TeamMember[] = [
 const Team = () => {
   return (
     <section className="w-full bg-white section-padding section-padding-x overflow-hidden">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-300">
 
         {/* ── Section Header ── */}
         <div className="mb-16 text-center lg:mb-24">
@@ -54,7 +54,7 @@ const Team = () => {
               }`}
             >
               {/* Image container — lifts and gains shadow on hover */}
-              <div className="relative mb-8 aspect-[3/4] w-full overflow-hidden rounded-[20px] bg-gray-100 shadow-sm transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2">
+              <div className="relative mb-8 aspect-3/4 w-full overflow-hidden rounded-[20px] bg-gray-100 shadow-sm transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -80,7 +80,7 @@ const Team = () => {
 
               {/* Name and role — left-border accent grows taller and wider on hover */}
               <div className="flex items-center gap-4 px-1">
-                <div className="h-[35px] w-[2px] shrink-0 bg-brand transition-all duration-500 ease-in-out group-hover:h-[45px] group-hover:w-[4px]" />
+                <div className="h-8.75 w-0.5 shrink-0 bg-brand transition-all duration-500 ease-in-out group-hover:h-11.15 group-hover:w-1" />
                 <div className="flex flex-col justify-center">
                   <h4 className="text-[19px] font-extrabold text-gray-900 transition-colors duration-300 group-hover:text-brand">
                     {member.name}

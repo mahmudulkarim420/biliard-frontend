@@ -104,7 +104,7 @@ const Navbar = () => {
               : "w-[95%] lg:w-[calc(100%-260px)] rounded-full border border-white/20 bg-white/10 py-4 backdrop-blur-md"
           )}
         >
-          <div className="mx-auto max-w-[1200px] px-6">
+          <div className="mx-auto max-w-300 px-6">
             <div className="flex items-center justify-between">
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-2">
@@ -148,7 +148,7 @@ const Navbar = () => {
                             animate="visible"
                             exit="exit"
                             variants={dropdownVariants}
-                            className="absolute top-full left-0 pt-4 w-64 z-[60]"
+                            className="absolute top-full left-0 pt-4 w-64 z-60"
                           >
                             {/* Arrow Indicator */}
                             <div className="absolute top-2 left-6 w-3 h-3 rotate-45 border-t border-l bg-[#0c0c0e]/95 border-white/10" />
@@ -224,7 +224,7 @@ const Navbar = () => {
       {/* Mobile Drawer */}
       <div
         className={cn(
-          "fixed inset-0 z-[60] bg-black/60 backdrop-blur-sm transition-opacity duration-500 lg:hidden",
+          "fixed inset-0 z-60 bg-black/60 backdrop-blur-sm transition-opacity duration-500 lg:hidden",
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         )}
         onClick={() => setIsOpen(false)}
@@ -232,7 +232,7 @@ const Navbar = () => {
 
       <aside
         className={cn(
-          "fixed top-0 right-0 z-[70] h-full w-[300px] bg-white p-8 transition-transform duration-500 ease-in-out lg:hidden shadow-2xl",
+          "fixed top-0 right-0 z-70 h-full w-75 bg-white p-8 transition-transform duration-500 ease-in-out lg:hidden shadow-2xl",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

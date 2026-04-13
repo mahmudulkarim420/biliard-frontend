@@ -7,7 +7,7 @@ const ProgressBar = ({ label, percentage }: { label: string; percentage: number 
   const [width, setWidth] = useState(0);
   const ref = useRef(null);
 
-  // স্ক্রল করে সেকশনে আসলে অ্যানিমেশন শুরু হবে
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -30,10 +30,10 @@ const ProgressBar = ({ label, percentage }: { label: string; percentage: number 
       </div>
 
       {/* Progress Track */}
-      <div className="relative w-full h-[7px] bg-gray-100 rounded-full">
+      <div className="relative w-full h-1.75 bg-gray-100 rounded-full">
         {/* Animated Fill Bar */}
         <div
-          className="relative h-full bg-brand transition-all duration-[1500ms] ease-out rounded-full"
+          className="relative h-full bg-brand transition-all duration-1500 ease-out rounded-full"
           style={{ width: `${width}%` }}
         >
           {/* Tooltip: Positioned exactly at the end of the bar */}
@@ -58,14 +58,14 @@ const AboutExperience = () => {
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           
           {/* --- Images Section (Asymmetrical with Hover Effect) --- */}
-          <div className="flex-1 flex gap-6 w-full lg:max-w-[550px]">
+          <div className="flex-1 flex gap-6 w-full lg:max-w-138">
             {/* Left Image: Pushed UP */}
             <div className="flex-1 lg:-mt-10 transition-all duration-500 hover:-translate-y-2">
               <div className="overflow-hidden rounded-sm shadow-2xl group">
                 <img
                   src={imgOffice1}
                   alt="Team Collaboration"
-                  className="w-full h-[450px] md:h-[550px] object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
+                  className="w-full h-112 md:h-112 object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
                 />
               </div>
             </div>
@@ -76,14 +76,14 @@ const AboutExperience = () => {
                 <img
                   src={imgOffice2}
                   alt="Creative Workspace"
-                  className="w-full h-[450px] md:h-[550px] object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
+                  className="w-full h-112 md:h-112 object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110"
                 />
               </div>
             </div>
           </div>
 
           {/* --- Content Section --- */}
-          <div className="flex-1 max-w-[600px]">
+          <div className="flex-1 max-w-150">
             <p className="text-brand font-bold uppercase tracking-[0.3em] text-[12px] mb-4">
               ABOUT US
             </p>
@@ -98,7 +98,7 @@ const AboutExperience = () => {
             </p>
 
             {/* Progress Bars Container */}
-            <div className="max-w-[500px] pt-8">
+            <div className="max-w-125 pt-8">
               <ProgressBar label="Digital marketing" percentage={70} />
               <ProgressBar label="App Development" percentage={95} />
               <ProgressBar label="App Design" percentage={80} />

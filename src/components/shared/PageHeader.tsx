@@ -15,7 +15,7 @@ const PageHeader = ({ title, breadcrumb, className }: PageHeaderProps) => {
   return (
     <section
       className={cn(
-        "relative w-full flex flex-col justify-center min-h-[450px] md:min-h-[550px] lg:min-h-[650px] overflow-hidden bg-gray-950 py-20",
+        "relative w-full flex flex-col justify-center min-h-112 md:min-h-138 lg:min-h-162 overflow-hidden bg-gray-950 py-20",
         className
       )}
     >
@@ -28,7 +28,7 @@ const PageHeader = ({ title, breadcrumb, className }: PageHeaderProps) => {
         />
         {/* Two-layer overlay: a solid dark scrim + a bottom-to-top gradient for content legibility */}
         <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-40" />
+        <div className="absolute inset-0 bg-linear-to-t from-gray-950 via-transparent to-transparent opacity-40" />
       </div>
 
       {/* ── Layer 2: Brand red shape accents ── */}
@@ -41,7 +41,7 @@ const PageHeader = ({ title, breadcrumb, className }: PageHeaderProps) => {
       </div>
 
       {/* Content Container */}
-      <div className="max-w-[1200px] mx-auto w-full px-6 relative z-20">
+      <div className="max-w-300 mx-auto w-full px-6 relative z-20">
         <div className="flex flex-col items-start gap-3">
           {/* Title */}
           <h1 className="text-white text-[36px] md:text-[52px] lg:text-[64px] font-bold leading-tight tracking-tight animate-in slide-in-from-bottom-5 duration-700">

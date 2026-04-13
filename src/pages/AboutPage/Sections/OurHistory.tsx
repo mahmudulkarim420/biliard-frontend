@@ -28,7 +28,7 @@ const OurHistory = () => {
           
           {/* ── Left Column: Heading ── */}
           <div className="w-full lg:w-5/12">
-            {/* sticky ব্যবহার করা হয়েছে যাতে স্ক্রল করার সময় টাইটেলটি জায়গায় ফিক্সড থাকে */}
+            
             <div className="sticky top-32">
               <p className="text-brand font-bold uppercase tracking-[0.2em] text-[12px] mb-4">
                 OUR HISTORY
@@ -48,13 +48,13 @@ const OurHistory = () => {
                 <div key={index} className="relative pl-8 md:pl-12 pb-16 last:pb-0 group">
                   
                   {/* Timeline Dot (Red) */}
-                  <div className="absolute left-[-5.5px] top-[18px] h-[10px] w-[10px] rounded-full bg-brand ring-4 ring-[#f8f9fa] transition-transform duration-300 group-hover:scale-125" />
+                  <div className="absolute left-[-5.5px] top-4.5 h-2.5 w-2.5 rounded-full bg-brand ring-4 ring-[#f8f9fa] transition-transform duration-300 group-hover:scale-125" />
                   
                   {/* Outline Year Text */}
                   <h3 
                     className="text-5xl md:text-[64px] font-black tracking-wide text-transparent mb-5 leading-none"
                     style={{ 
-                      WebkitTextStroke: "1px var(--color-brand)", // ব্র্যান্ড কালারের আউটলাইন
+                      WebkitTextStroke: "1px var(--color-brand)", 
                       fontFamily: 'var(--font-title)' 
                     }}
                   >
@@ -67,7 +67,7 @@ const OurHistory = () => {
                   </h4>
                   
                   {/* Description */}
-                  <p className="text-desc text-[15px] leading-[1.8] max-w-[550px]">
+                  <p className="text-desc text-[15px] leading-[1.8] max-w-138">
                     {item.description}
                   </p>
 

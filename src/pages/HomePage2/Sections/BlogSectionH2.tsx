@@ -58,7 +58,7 @@ const partners = [partnerLogo1, partnerLogo2, partnerLogo3, partnerLogo4, partne
 const BlogSectionH2 = () => {
   return (
     <section className="bg-white section-padding-h2 section-padding-x w-full">
-      <div className="max-w-[1200px] mx-auto text-center">
+      <div className="max-w-300 mx-auto text-center">
 
         <p className="text-brand text-[11px] font-bold uppercase tracking-[0.2em] mb-4">
           LATEST BLOG
@@ -71,7 +71,7 @@ const BlogSectionH2 = () => {
           {blogs.map((blog) => (
             <div key={blog.id} className="group cursor-pointer">
 
-              <div className="relative overflow-hidden rounded-lg h-[280px] mb-[-60px] z-0">
+              <div className="relative overflow-hidden rounded-lg h-70 -mb-15 z-0">
                 <img
                   src={blog.image}
                   alt={blog.title}
@@ -107,20 +107,20 @@ const BlogSectionH2 = () => {
 
         <div className="pt-12 border-t border-gray-100">
           <div className="flex items-center justify-between gap-4 mb-12 overflow-hidden">
-            <div className="h-[1px] bg-gray-200 flex-1" />
+            <div className="h-px bg-gray-200 flex-1" />
             <p className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] whitespace-nowrap px-6">
               Some of the partners & clients worked with
             </p>
-            <div className="h-[1px] bg-gray-200 flex-1" />
+            <div className="h-px bg-gray-200 flex-1" />
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-[64px] opacity-60 grayscale transition-all duration-300 hover:opacity-100">
+          <div className="flex flex-wrap items-center justify-center gap-16 opacity-60 grayscale transition-all duration-300 hover:opacity-100">
             {partners.map((partner, idx) => (
               <img
                 key={idx}
                 src={partner}
                 alt={`Partner ${idx + 1}`}
-                className="h-[60px] w-[170px] object-contain cursor-default transition-all duration-300 hover:grayscale-0"
+                className="h-15 w-42 object-contain cursor-default transition-all duration-300 hover:grayscale-0"
               />
             ))}
           </div>

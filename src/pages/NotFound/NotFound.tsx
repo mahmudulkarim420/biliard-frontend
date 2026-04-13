@@ -186,13 +186,13 @@ const NotFound = () => {
       <motion.div style={{ x: bgX, y: bgY }} className="pointer-events-none absolute inset-0">
         {/* Glow orbs */}
         <motion.div
-          className="absolute -top-48 -left-48 w-[700px] h-[700px] rounded-full"
+          className="absolute -top-48 -left-48 w-175 h-175 rounded-full"
           style={{ background: "radial-gradient(circle, rgba(255,59,48,0.07) 0%, transparent 65%)" }}
           animate={{ scale: [1, 1.18, 1] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute -bottom-48 -right-48 w-[600px] h-[600px] rounded-full"
+                className="absolute -bottom-48 -right-48 w-150 h-150 rounded-full"
           style={{ background: "radial-gradient(circle, rgba(255,59,48,0.05) 0%, transparent 65%)" }}
           animate={{ scale: [1, 1.22, 1] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
@@ -247,7 +247,7 @@ const NotFound = () => {
 
       {/* ── Scan line ── */}
       <motion.div
-        className="pointer-events-none absolute left-0 right-0 h-px bg-gradient-to-r from-transparent via-brand/20 to-transparent"
+        className="pointer-events-none absolute left-0 right-0 h-px bg-linear-to-r from-transparent via-brand/20 to-transparent"
         animate={{ top: ["0%", "100%"] }}
         transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
       />
@@ -255,7 +255,7 @@ const NotFound = () => {
       {/* ════════════════════════════════════════
           LAYER 2 — 3-D scene (mouse tilt)
       ════════════════════════════════════════ */}
-      <div style={{ perspective: "1100px" }} className="relative z-10 w-full max-w-[820px] px-6">
+      <div style={{ perspective: "1100px" }} className="relative z-10 w-full max-w-205 px-6">
         <motion.div
           style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
           initial={{ opacity: 0, scale: 0.88 }}
@@ -370,7 +370,7 @@ const NotFound = () => {
             <motion.div
               animate={{ scale: [1, 1.7, 1], opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="h-2.5 w-2.5 rounded-full bg-brand flex-shrink-0"
+              className="h-2.5 w-2.5 rounded-full bg-brand shrink-0"
             />
             <motion.div
               className="h-px bg-brand/40 rounded-full"
@@ -408,7 +408,7 @@ const NotFound = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.75, duration: 0.65, ease: expo }}
             style={{ transform: "translateZ(25px)" }}
-            className="text-[15px] md:text-[17px] leading-[1.8] text-desc max-w-[500px] mb-10"
+            className="text-[15px] md:text-[17px] leading-[1.8] text-desc max-w-125 mb-10"
           >
             The page you are looking for might have been removed, had its name
             changed, or is temporarily unavailable.
@@ -430,7 +430,7 @@ const NotFound = () => {
               >
                 {/* Shimmer */}
                 <motion.span
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/25 to-transparent -skew-x-12"
+                  className="absolute inset-0 bg-linear-to-r from-transparent via-white/25 to-transparent -skew-x-12"
                   animate={{ x: ["-120%", "220%"] }}
                   transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut", repeatDelay: 0.6 }}
                 />

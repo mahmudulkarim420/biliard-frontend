@@ -14,7 +14,7 @@ const Portfolio = () => {
 
   return (
     <section className="relative w-full bg-white section-padding section-padding-x">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-300">
 
         {/* ── Section Header + Category Filter ── */}
         <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
@@ -35,7 +35,7 @@ const Portfolio = () => {
                   {activeCategory === category && (
                     <motion.div
                       layoutId="underline"
-                      className="absolute -bottom-1 left-0 h-[2px] w-full bg-brand"
+                      className="absolute -bottom-1 left-0 h-0.5 w-full bg-brand"
                     />
                   )}
                 </button>
@@ -62,7 +62,7 @@ const Portfolio = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.4, ease: "easeInOut" }}
-                  className="group relative aspect-[4/3] w-full overflow-hidden rounded-[20px] bg-gray-100 cursor-pointer"
+                  className="group relative aspect-4/3 w-full overflow-hidden rounded-[20px] bg-gray-100 cursor-pointer"
                 >
                   <img
                     src={item.image}

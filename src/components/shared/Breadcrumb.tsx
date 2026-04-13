@@ -11,7 +11,7 @@ const Breadcrumb = ({ title, className }: BreadcrumbProps) => {
   return (
     <section 
       className={cn(
-        "relative w-full h-[350px] md:h-[450px] overflow-hidden flex items-center",
+        "relative w-full h-88 md:h-112 overflow-hidden flex items-center",
         className
       )}
     >
@@ -23,7 +23,7 @@ const Breadcrumb = ({ title, className }: BreadcrumbProps) => {
 
       {/* Content Container */}
       <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-[700px]">
+        <div className="max-w-175">
           {/* Animated Header */}
           <div className="overflow-hidden">
             <h2 className="text-white text-5xl font-bold tracking-tight mb-3 animate-in slide-in-from-bottom duration-700">

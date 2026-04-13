@@ -12,7 +12,7 @@ import DiscoverMoreBtn from "@/components/shared/DiscoverMoreBtn";
 // text content.
 const Hero = () => {
   return (
-    <section className="relative w-full min-h-[500px] md:min-h-[650px] lg:min-h-[850px] flex items-center justify-center overflow-hidden bg-[#09090b] section-padding-h2">
+    <section className="relative w-full min-h-125 md:min-h-162 lg:min-h-212 flex items-center justify-center overflow-hidden bg-[#09090b] section-padding-h2">
 
       {/* ── Layer 1: Grayscale base photo ── */}
       <div className="absolute inset-0 z-0">
@@ -44,8 +44,8 @@ const Hero = () => {
       </div>
 
       {/* ── Content ── */}
-      <div className="relative z-20 container mx-auto px-6 text-center pt-[96px] lg:pt-[140px]">
-        <div className="max-w-[1000px] mx-auto">
+      <div className="relative z-20 container mx-auto px-6 text-center pt-24 lg:pt-35">
+        <div className="max-w-250 mx-auto">
 
           {/* Eyebrow label */}
           <div className="mb-2 md:mb-6 flex justify-center">

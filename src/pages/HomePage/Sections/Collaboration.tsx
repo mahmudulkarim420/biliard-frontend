@@ -93,11 +93,11 @@ const Collaboration = () => {
           backgroundPosition: "0 0",
         }}
       />
-      <div className="pointer-events-none absolute -right-40 top-0 h-[600px] w-[600px] rounded-full bg-white/[0.02] blur-[100px]" />
-      <div className="pointer-events-none absolute -left-40 bottom-0 h-[500px] w-[500px] rounded-full bg-white/[0.02] blur-[100px]" />
+      <div className="pointer-events-none absolute -right-40 top-0 h-150 w-150 rounded-full bg-white/2 blur-[100px]" />
+      <div className="pointer-events-none absolute -left-40 bottom-0 h-125 w-125 rounded-full bg-white/2 blur-[100px]" />
 
       {/* ── Part 1: Animated Stat Counters ── */}
-      <div className="relative z-10 mx-auto max-w-[1200px] px-6 sm:px-12 lg:px-2 pb-[110px]">
+      <div className="relative z-10 mx-auto max-w-300 px-6 sm:px-12 lg:px-2 pb-28">
         <div className="grid grid-cols-2 gap-y-12 md:grid-cols-4 gap-x-4 lg:gap-x-8">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center text-center md:items-start md:text-left">
@@ -113,7 +113,7 @@ const Collaboration = () => {
               <p className="text-[10px] font-bold uppercase mt-3 tracking-[0.2em] text-gray-400">
                 {stat.label}
               </p>
-              <div className="mt-5 hidden h-[1px] w-full bg-gray-800 md:block" />
+              <div className="mt-5 hidden h-px w-full bg-gray-800 md:block" />
             </div>
           ))}
         </div>
@@ -121,10 +121,10 @@ const Collaboration = () => {
 
       {/* ── Part 2: Full-Bleed White Card ── */}
       {/* Intentionally breaks out of the max-width container to extend flush left. */}
-      <div className="relative z-20 flex w-full max-w-[1450px] mr-auto flex-col overflow-visible bg-white shadow-2xl lg:flex-row">
+      <div className="relative z-20 flex w-full max-w-362 mr-auto flex-col overflow-visible bg-white shadow-2xl lg:flex-row">
 
         {/* Left panel: grayscale image + floating award badge */}
-        <div className="relative w-full min-h-[400px] lg:w-[45%] lg:min-h-auto">
+        <div className="relative w-full min-h-100 lg:w-[45%] lg:min-h-auto">
           <img
             src={bg}
             alt="Team collaborating in office"
@@ -133,7 +133,7 @@ const Collaboration = () => {
           <div className="absolute inset-0 bg-black/5" />
 
           {/* Floating brand-colored award card — protrudes to the right on desktop */}
-          <div className="absolute bottom-0 right-0 z-20 flex aspect-square w-[220px] flex-col items-center justify-center bg-brand p-6 text-center text-white shadow-2xl lg:bottom-24 lg:right-[-30px] lg:w-[260px]">
+          <div className="absolute bottom-0 right-0 z-20 flex aspect-square w-55 flex-col items-center justify-center bg-brand p-6 text-center text-white shadow-2xl lg:bottom-24 lg:-right-7.5 lg:w-65">
             <div>
               <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M20.0292 54.3418L3.125 75.0001L18.75 78.1251L25 96.8751L41.4333 70.8001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -164,7 +164,7 @@ const Collaboration = () => {
 
           {/* Dashed vertical connector running behind the step number circles */}
           <div className="relative flex flex-col gap-10">
-            <div className="absolute bottom-[20px] left-[19px] top-[20px] w-px border-l-[1.5px] border-dashed border-gray-300" />
+            <div className="absolute bottom-5 left-5 top-5 w-px border-l-[1.5px] border-dashed border-gray-300" />
 
             {steps.map((step, index) => (
               <div key={index} className="group relative z-10 flex gap-6 sm:gap-8">

@@ -52,11 +52,11 @@ const FaqContact = () => {
           alt="Background pattern"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a0a0c]/80 via-[#0a0a0c]/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-[#0a0a0c]/80 via-[#0a0a0c]/40 to-transparent" />
       </div>
 
       {/* Subtle dot-grid pattern — decorative, left panel only */}
-      <div className="absolute left-0 top-0 h-full w-[400px] z-[1] pointer-events-none opacity-10">
+      <div className="absolute left-0 top-0 h-full w-100 z-1 pointer-events-none opacity-10">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="dotPattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
@@ -67,12 +67,12 @@ const FaqContact = () => {
         </svg>
       </div>
 
-      <div className="mx-auto max-w-[1200px] relative z-10">
+      <div className="mx-auto max-w-300 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
           {/* ── Left: FAQ Accordion ── */}
           <div className="w-full">
-            <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-[#ff3b30]">
+            <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-brand">
               FAQS
             </p>
             <h2 className="mb-12 text-4xl font-bold leading-[1.2] text-white sm:text-5xl lg:text-[50px] tracking-tight">
@@ -95,7 +95,7 @@ const FaqContact = () => {
                       <span className="text-[15px] font-bold text-white">
                         {faq.question}
                       </span>
-                      <span className="ml-4 flex-shrink-0 text-white">
+                      <span className="ml-4 shrink-0 text-white">
                         {isOpen ? <Minus className="h-5 w-5" /> : <Plus className="h-5 w-5" />}
                       </span>
                     </button>
@@ -128,32 +128,32 @@ const FaqContact = () => {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full border-b border-gray-200 bg-transparent py-3 text-[14px] text-gray-900 placeholder:text-gray-400 focus:border-[#ff3b30] focus:outline-none transition-colors"
+                  className="w-full border-b border-gray-200 bg-transparent py-3 text-[14px] text-gray-900 placeholder:text-gray-400 focus:border-brand focus:outline-none transition-colors"
                 />
                 <input
                   type="email"
                   placeholder="Your Mail"
-                  className="w-full border-b border-gray-200 bg-transparent py-3 text-[14px] text-gray-900 placeholder:text-gray-400 focus:border-[#ff3b30] focus:outline-none transition-colors"
+                  className="w-full border-b border-gray-200 bg-transparent py-3 text-[14px] text-gray-900 placeholder:text-gray-400 focus:border-brand focus:outline-none transition-colors"
                 />
                 <input
                   type="tel"
                   placeholder="Phone Number"
-                  className="w-full border-b border-gray-200 bg-transparent py-3 text-[14px] text-gray-900 placeholder:text-gray-400 focus:border-[#ff3b30] focus:outline-none transition-colors"
+                  className="w-full border-b border-gray-200 bg-transparent py-3 text-[14px] text-gray-900 placeholder:text-gray-400 focus:border-brand focus:outline-none transition-colors"
                 />
                 <input
                   type="text"
                   placeholder="Subject"
-                  className="w-full border-b border-gray-200 bg-transparent py-3 text-[14px] text-gray-900 placeholder:text-gray-400 focus:border-[#ff3b30] focus:outline-none transition-colors"
+                  className="w-full border-b border-gray-200 bg-transparent py-3 text-[14px] text-gray-900 placeholder:text-gray-400 focus:border-brand focus:outline-none transition-colors"
                 />
                 <textarea
                   placeholder="Your Message"
                   rows={2}
-                  className="w-full border-b border-gray-200 bg-transparent py-3 text-[14px] text-gray-900 placeholder:text-gray-400 focus:border-[#ff3b30] focus:outline-none transition-colors resize-none"
+                  className="w-full border-b border-gray-200 bg-transparent py-3 text-[14px] text-gray-900 placeholder:text-gray-400 focus:border-brand focus:outline-none transition-colors resize-none"
                 />
 
                 <button
                   type="button"
-                  className="mt-6 w-full bg-[#ff3b30] py-4 text-[13px] font-bold text-white transition-all hover:bg-[#e6352b] active:scale-[0.98] shadow-lg shadow-[#ff3b30]/20 rounded-sm"
+                  className="mt-6 w-full bg-brand py-4 text-[13px] font-bold text-white transition-all hover:bg-[#e6352b] active:scale-[0.98] shadow-lg shadow-brand/20 rounded-sm"
                 >
                   Send Message
                 </button>

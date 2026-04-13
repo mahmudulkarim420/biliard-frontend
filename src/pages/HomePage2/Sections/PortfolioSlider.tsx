@@ -37,7 +37,7 @@ const PortfolioMarquee = () => {
     <section className="bg-white section-padding-h2 overflow-hidden">
 
       {/* ── Section Header ── */}
-      <div className="mx-auto max-w-[1200px] text-center mb-16 px-6">
+      <div className="mx-auto max-w-300 text-center mb-16 px-6">
         <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-brand">
           OUR PORTFOLIO
         </p>
@@ -61,7 +61,7 @@ const PortfolioMarquee = () => {
           {duplicatedItems.map((item, index) => (
             <div
               key={index}
-              className="relative w-[300px] sm:w-[350px] aspect-[4/5] rounded-3xl overflow-hidden group cursor-pointer shrink-0"
+              className="relative w-75 sm:w-88 aspect-4/5 rounded-3xl overflow-hidden group cursor-pointer shrink-0"
             >
               {/* Grayscale image — color reveals on hover */}
               <img

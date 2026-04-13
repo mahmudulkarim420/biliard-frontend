@@ -61,11 +61,11 @@ const FeaturesSection = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-[1200px]">
+      <div className="relative z-10 mx-auto max-w-300">
 
         {/* ── Video Banner ── */}
         {/* Pulls upward with a negative margin to overlap the bottom of the Hero section. */}
-        <div className="group relative z-30 -mt-44 sm:-mt-64 lg:-mt-[320px] mb-20 h-[300px] sm:h-[400px] lg:h-[550px] w-full overflow-hidden bg-gray-950 shadow-2xl rounded-sm">
+        <div className="group relative z-30 -mt-44 sm:-mt-64 lg:-mt-80 mb-20 h-75 sm:h-100 lg:h-138 w-full overflow-hidden bg-gray-950 shadow-2xl rounded-sm">
           <img
             src={bg}
             alt="Agency team"
@@ -77,7 +77,7 @@ const FeaturesSection = () => {
             <div className="hidden sm:block flex-1" />
 
             <div className="flex flex-col items-center sm:items-end gap-6 sm:gap-10">
-              <h2 className="max-w-[300px] sm:max-w-[500px] text-2xl font-bold leading-tight text-white mb-2 sm:mb-0 sm:text-5xl lg:text-7xl text-center sm:text-right">
+              <h2 className="max-w-75 sm:max-w-125 text-2xl font-bold leading-tight text-white mb-2 sm:mb-0 sm:text-5xl lg:text-7xl text-center sm:text-right">
                 We creating unique <br className="hidden lg:block" /> brand agency
               </h2>
 
@@ -159,7 +159,7 @@ const FeaturesSection = () => {
             </div>
 
             {/* Tab content panel — cross-fades between tabs via AnimatePresence "wait" mode */}
-            <div className="min-h-[250px] bg-white p-8 shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100">
+            <div className="min-h-62 bg-white p-8 shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
@@ -177,7 +177,7 @@ const FeaturesSection = () => {
                       {tabData[activeTab].list.map((item, index) => (
                         <li key={index} className="flex items-center gap-3 text-[13px] font-bold text-gray-800">
                           <div className="flex h-5 w-5 items-center justify-center rounded-full bg-brand/10">
-                            <Check className="h-3 w-3 text-brand stroke-[4]" />
+                            <Check className="h-3 w-3 text-brand stroke-4" />
                           </div>
                           {item}
                         </li>
@@ -200,7 +200,7 @@ const FeaturesSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
+            className="fixed inset-0 z-100 flex items-center justify-center bg-black/90 p-4"
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}

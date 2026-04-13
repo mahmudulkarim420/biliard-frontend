@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
-import bgMain from "@/assets/over (1).png"; // তোমার ইমেজ পাথ
+import bgMain from "@/assets/over (1).png";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface StatItem {
@@ -76,7 +76,7 @@ const StatCounter = () => {
       </div>
 
       {/* ── Content ── */}
-      <div className="relative z-10 container mx-auto px-6 max-w-[1200px]">
+      <div className="relative z-10 container mx-auto px-6 max-w-300">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-16 gap-x-8">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center md:items-start group">
@@ -98,8 +98,8 @@ const StatCounter = () => {
               </p>
 
               {/* Bottom Subtle Line */}
-              <div className="mt-8 h-[1px] w-full bg-white/[0.05] relative overflow-hidden">
-                <div className="absolute inset-0 bg-[#ff3b30] translate-x-[-100%] group-hover:translate-x-[0%] transition-transform duration-700 ease-in-out" />
+              <div className="mt-8 h-px w-full bg-white/5 relative overflow-hidden">
+                <div className="absolute inset-0 bg-brand -translate-x-full group-hover:translate-x-[0%] transition-transform duration-700 ease-in-out" />
               </div>
 
             </div>

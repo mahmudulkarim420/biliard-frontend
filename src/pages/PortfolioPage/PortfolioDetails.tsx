@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import SubPageLayout from "@/layouts/SubPageLayout";
 import { portfolioData } from "@/lib/portfolio-data";
-import { Check, Globe, DollarSign, Tag, Users } from "lucide-react";
+import { Check } from "lucide-react";
 import mainImage from "@/assets/img (18).png";
 import detailImageOne from "@/assets/img (19).png";
 import detailImageTwo from "@/assets/img (20).png";
@@ -9,7 +9,6 @@ import detailImageTwo from "@/assets/img (20).png";
 const PortfolioDetails = () => {
   const { id } = useParams<{ id: string }>();
 
-  // URL প্যারামিটার অনুযায়ী প্রজেক্ট খুঁজে বের করা
   const project = portfolioData.find((item) => item.id.toString() === id);
 
   if (!project) {
@@ -30,7 +29,7 @@ const PortfolioDetails = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
 
-          <div className="max-w-[1200px] mx-auto">
+          <div className="max-w-300 mx-auto">
             
             {/* ── Top Header Section ── */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-16">
@@ -94,7 +93,7 @@ const PortfolioDetails = () => {
 
             {/* ── Solution Section ── */}
             <div className="mb-20">
-              <div className="max-w-[950px]">
+              <div className="max-w-238">
                 <h3 className="text-[28px] md:text-[36px] font-extrabold text-title mb-6 tracking-tight">
                   Our Solution
                 </h3>
@@ -104,10 +103,10 @@ const PortfolioDetails = () => {
                 
                 {/* Two Supporting Images */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                  <div className="rounded-[16px] overflow-hidden h-[250px] shadow-lg">
+                  <div className="rounded-2xl overflow-hidden h-62 shadow-lg">
                     <img src={detailImageOne} alt="Visual 1" className="w-full h-full object-cover" />
                   </div>
-                  <div className="rounded-[16px] overflow-hidden h-[250px] shadow-lg">
+                  <div className="rounded-2xl overflow-hidden h-62 shadow-lg">
                     <img src={detailImageTwo} alt="Visual 2" className="w-full h-full object-cover" />
                   </div>
                 </div>

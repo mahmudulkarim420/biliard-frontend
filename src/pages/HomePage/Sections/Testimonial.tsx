@@ -54,7 +54,7 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <section className="relative flex min-h-[500px] w-full items-center overflow-hidden bg-neutral-950 section-padding lg:min-h-[600px]">
+    <section className="relative flex min-h-125 w-full items-center overflow-hidden bg-neutral-950 section-padding lg:min-h-150">
 
       {/* ── Background Image Layer ── */}
       {/* Cross-fades between testimonial images using AnimatePresence "wait" mode. */}
@@ -76,13 +76,13 @@ const Testimonial = () => {
         <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1200px] px-6 sm:px-12 lg:px-24">
+      <div className="relative z-10 mx-auto w-full max-w-300 px-6 sm:px-12 lg:px-24">
         <div className="relative mx-auto flex w-full max-w-4xl flex-col">
 
           {/* Large decorative quote mark — positioned behind the content */}
           <div className="pointer-events-none absolute -left-4 -top-8 z-0 opacity-30 sm:-left-12 sm:-top-16 md:-left-24 md:-top-28">
             <svg
-              className="h-24 w-24 fill-brand sm:h-40 sm:w-40 md:h-[320px] md:w-[320px]"
+              className="h-24 w-24 fill-brand sm:h-40 sm:w-40 md:h-80 md:w-[320px]"
               viewBox="0 0 24 24"
             >
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
@@ -91,7 +91,7 @@ const Testimonial = () => {
 
           {/* ── Testimonial Text Slider ── */}
           {/* Content slides in from the right and exits to the left on each change. */}
-          <div className="relative z-20 flex flex-col pl-2 sm:pl-10 md:pl-[80px]">
+          <div className="relative z-20 flex flex-col pl-2 sm:pl-10 md:pl-20">
             <AnimatePresence mode="wait">
               <motion.div
                 key={`content-${currentIndex}`}

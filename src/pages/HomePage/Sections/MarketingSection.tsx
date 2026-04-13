@@ -50,7 +50,7 @@ const MarketingSection = () => {
 
   return (
     <section className="bg-gray-100 section-padding section-padding-x w-full overflow-hidden">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="max-w-300 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
         {/* ── Left: Service Offer List ── */}
         {/* Slides in from the left on first viewport entry. */}

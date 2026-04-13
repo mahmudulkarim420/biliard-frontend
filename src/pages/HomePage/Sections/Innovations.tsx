@@ -112,11 +112,11 @@ const Innovations = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-[1200px]">
+      <div className="relative z-10 mx-auto max-w-300">
 
         {/* ── Section Header ── */}
-        <div className="mb-[40px] flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <h2 className="max-w-[500px] text-4xl font-semibold leading-[1.1] text-white md:text-5xl lg:text-[52px]">
+        <div className="mb-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+          <h2 className="max-w-125 text-4xl font-semibold leading-[1.1] text-white md:text-5xl lg:text-[52px]">
             Creative problem solving innovations
           </h2>
 
@@ -134,11 +134,11 @@ const Innovations = () => {
 
         {/* ── Service Cards Grid ── */}
         {/* 1 col → 2 col → 4 col responsive layout. Each card lifts on hover. */}
-        <div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-7.5 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative flex flex-col overflow-hidden rounded-[2rem] p-8 pb-10 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/70 bg-gradient-to-tl ${service.isActive
+              className={`group relative flex flex-col overflow-hidden rounded-4xl p-8 pb-10 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/70 bg-linear-to-tl ${service.isActive
                   ? "from-[#222430] to-[#15161c] shadow-2xl shadow-black/60"
                   : "from-[#1a1b24] to-[#0c0d11] hover:from-[#1d1e29] hover:to-[#111218]"
                 }`}
@@ -169,7 +169,7 @@ const Innovations = () => {
 
               {/* Icon + title — icon glows red and scales on hover */}
               <div className="relative z-10 mt-auto">
-                <div className="mb-6 origin-left text-[#ff3b30] transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,59,48,0.5)]">
+                <div className="mb-6 origin-left text-brand transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,59,48,0.5)]">
                   {service.icon}
                 </div>
                 <h3 className="whitespace-pre-line text-[16px] sm:text-[17px] font-semibold leading-snug text-gray-100">

@@ -75,7 +75,7 @@ const PricingSection = ({ showBackground = true }: PricingSectionProps) => {
         />
       )}
 
-      <div className="mx-auto max-w-[1200px] relative z-10">
+      <div className="mx-auto max-w-300 relative z-10">
 
         {/* ── Section Header ── */}
         <div className="text-center mb-20">
@@ -98,7 +98,7 @@ const PricingSection = ({ showBackground = true }: PricingSectionProps) => {
               <img
                 src={cardShapeImg}
                 alt=""
-                className="absolute -top-20 right-0 w-[600px] h-[600px] object-cover object-right-top pointer-events-none z-0"
+                className="absolute -top-20 right-0 w-150 h-150 object-cover object-top-right pointer-events-none z-0"
               />
 
               {/* Brand-colored bottom bar — animates in on hover via scale-x */}
@@ -127,7 +127,7 @@ const PricingSection = ({ showBackground = true }: PricingSectionProps) => {
                     {feature.active ? (
                       <Check className="h-4 w-4 text-[#22c55e] stroke-[4px]" />
                     ) : (
-                      <X className="h-4 w-4 text-[#ff3b30] stroke-[4px]" />
+                      <X className="h-4 w-4 text-brand stroke-[4px]" />
                     )}
                     <span className="text-[14px] font-bold text-desc">
                       {feature.text}

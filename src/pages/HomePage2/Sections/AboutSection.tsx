@@ -21,14 +21,14 @@ const FEATURE_POINTS = [
 const AboutSection = () => {
   return (
     <section className="relative w-full bg-white section-padding-h2 px-6 sm:px-12 lg:px-24 overflow-hidden">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-300">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
           {/* ── Left Column: Image Composition ── */}
           <div className="relative w-full lg:w-1/2 mb-16 lg:mb-0">
 
             {/* Primary grayscale image */}
-            <div className="relative z-10 w-[85%] mx-auto lg:mx-0 aspect-[4/5] overflow-hidden rounded-sm">
+            <div className="relative z-10 w-[85%] mx-auto lg:mx-0 aspect-4/5 overflow-hidden rounded-sm">
               <img
                 src={aboutMain}
                 alt="Office workspace"
@@ -40,7 +40,7 @@ const AboutSection = () => {
             <div className="absolute top-0 right-4 h-48 w-4 bg-brand z-0 hidden sm:block" />
 
             {/* Secondary image — overlaps the primary at bottom-right */}
-            <div className="absolute bottom-4 sm:bottom-12 right-0 sm:right-4 lg:right-0 z-20 w-[48%] aspect-square border-8 sm:border-[12px] border-white shadow-2xl overflow-hidden rounded-sm">
+            <div className="absolute bottom-4 sm:bottom-12 right-0 sm:right-4 lg:right-0 z-20 w-[48%] aspect-square border-8 sm:border-12 border-white shadow-2xl overflow-hidden rounded-sm">
               <img
                 src={aboutSub}
                 alt="Team collaboration"

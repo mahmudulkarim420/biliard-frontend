@@ -39,7 +39,7 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-md"
+            className="fixed inset-0 z-100 bg-black/60 backdrop-blur-md"
           />
 
           {/* Search Panel */}
@@ -48,9 +48,9 @@ const SearchModal = ({ isOpen, onClose }: SearchModalProps) => {
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed top-0 left-0 w-full z-[101] bg-[#0c0c0e] border-b border-white/10 px-6 py-12 md:py-20 lg:py-24"
+            className="fixed top-0 left-0 w-full z-101 bg-[#0c0c0e] border-b border-white/10 px-6 py-12 md:py-20 lg:py-24"
           >
-            <div className="max-w-[1000px] mx-auto relative">
+            <div className="max-w-250 mx-auto relative">
               {/* Close Button */}
               <button
                 onClick={onClose}

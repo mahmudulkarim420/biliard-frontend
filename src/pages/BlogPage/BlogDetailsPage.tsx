@@ -199,7 +199,7 @@ const BlogDetailsPage = () => {
                         className="bg-[#f6f6f6] border-none px-6 py-6 rounded-sm text-[14px] font-bold text-title outline-none focus:ring-1 focus:ring-[#ff3838]/30 transition-all placeholder:text-gray-400 resize-none"
                       />
                       <div className="w-full">
-                        <button className="w-full sm:w-auto bg-[#ff3838] text-white px-10 py-5 rounded-[4px] font-black text-[12px] uppercase tracking-widest hover:bg-title transition-all shadow-xl hover:-translate-y-1 active:scale-95 active:translate-y-0">
+                        <button className="w-full sm:w-auto bg-[#ff3838] text-white px-10 py-5 rounded-sm font-black text-[12px] uppercase tracking-widest hover:bg-title transition-all shadow-xl hover:-translate-y-1 active:scale-95 active:translate-y-0">
                           Post Comment
                         </button>
                       </div>

@@ -104,7 +104,7 @@ const Navbar2 = () => {
           scrolled ? "-translate-y-full opacity-0 h-0" : "translate-y-0 opacity-100 h-auto"
         )}
       >
-        <div className="max-w-[1200px] mx-auto px-6 flex justify-between items-center">
+        <div className="max-w-300 mx-auto px-6 flex justify-between items-center">
 
           {/* Contact details */}
           <div className="flex items-center gap-8 text-[12px] text-gray-400 font-medium">
@@ -134,11 +134,11 @@ const Navbar2 = () => {
         className={cn(
           "w-full transition-all duration-500 border-b",
           scrolled
-            ? "bg-[#09090b]/95 backdrop-blur-md pt-10 pb-6 shadow-xl border-white/10 -mt-[44px] lg:-mt-[44px]"
+            ? "bg-[#09090b]/95 backdrop-blur-md pt-10 pb-6 shadow-xl border-white/10 -mt-11 lg:-mt-11"
             : "bg-white py-7 border-transparent"
         )}
       >
-        <div className="max-w-[1200px] mx-auto px-6 flex items-center justify-between">
+        <div className="max-w-300 mx-auto px-6 flex items-center justify-between">
 
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 shrink-0">
@@ -190,7 +190,7 @@ const Navbar2 = () => {
                       animate="visible"
                       exit="exit"
                       variants={dropdownVariants}
-                      className="absolute top-full left-0 pt-4 w-64 z-[60]"
+                      className="absolute top-full left-0 pt-4 w-64 z-60"
                     >
                       {/* Arrow Indicator */}
                       <div className={cn(
@@ -287,7 +287,7 @@ const Navbar2 = () => {
       {/* Slides in from the right on mobile when the hamburger is pressed. */}
       <aside
         className={cn(
-          "fixed top-0 right-0 z-[110] h-full w-[300px] bg-white shadow-2xl transition-transform duration-500 lg:hidden",
+          "fixed top-0 right-0 z-110 h-full w-75 bg-white shadow-2xl transition-transform duration-500 lg:hidden",
           isOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

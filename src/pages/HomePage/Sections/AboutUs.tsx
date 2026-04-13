@@ -12,7 +12,7 @@ import DiscoverMoreBtn from "@/components/shared/DiscoverMoreBtn";
 const AboutUs = () => {
   return (
     <section className="bg-white section-padding section-padding-x">
-      <div className="mx-auto max-w-[1200px]">
+      <div className="mx-auto max-w-300">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24">
 
           {/* ── Left Column: Staggered Image Grid ── */}
@@ -21,7 +21,7 @@ const AboutUs = () => {
           <div className="relative flex gap-6">
             {/* Left image — positioned higher */}
             <div className="w-1/2">
-              <div className="relative h-[450px] w-full overflow-hidden">
+              <div className="relative h-112 w-full overflow-hidden">
                 <img
                   src={img1}
                   alt="Team working"
@@ -32,7 +32,7 @@ const AboutUs = () => {
 
             {/* Right image — offset downward via top margin */}
             <div className="mt-20 w-1/2">
-              <div className="relative h-[450px] w-full overflow-hidden bg-gray-100">
+              <div className="relative h-112 w-full overflow-hidden bg-gray-100">
                 <img
                   src={img2}
                   alt="Office environment"
@@ -51,7 +51,7 @@ const AboutUs = () => {
             </p>
 
             {/* Section heading */}
-            <h2 className="mb-8 max-w-[400px] text-4xl font-bold leading-[1.1] text-title md:text-4xl">
+            <h2 className="mb-8 max-w-100 text-4xl font-bold leading-[1.1] text-title md:text-4xl">
               We Empower Clients to be loved
             </h2>
 

@@ -23,7 +23,7 @@ const Hero = () => {
         />
         {/* Two-layer overlay: a solid dark scrim + a bottom-to-top gradient for content legibility */}
         <div className="absolute inset-0 bg-black/30 sm:bg-black/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-transparent to-transparent opacity-70" />
+        <div className="absolute inset-0 bg-linear-to-t from-gray-950 via-transparent to-transparent opacity-70" />
       </div>
 
       {/* ── Layer 2: Brand red shape accents ── */}
@@ -38,8 +38,8 @@ const Hero = () => {
 
       {/* ── Content ── */}
       <div className="relative z-20 w-full mt-16 md:mt-20 lg:mt-24 py-16 sm:py-20 lg:py-32 px-6 sm:px-12 lg:px-24">
-        <div className="mx-auto w-full max-w-[1200px]">
-          <div className="max-w-[650px]">
+        <div className="mx-auto w-full max-w-300">
+          <div className="max-w-162">
 
             {/* Eyebrow label */}
             <div className="mb-4 sm:mb-6 flex items-center gap-3">

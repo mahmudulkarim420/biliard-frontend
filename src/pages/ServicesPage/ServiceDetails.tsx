@@ -72,7 +72,7 @@ const ServiceDetails = () => {
               </span>
               
               {/* Main Title */}
-              <h2 className="text-[38px] md:text-[54px] font-extrabold text-title mb-12 max-w-[800px] leading-[1.1] tracking-tight">
+              <h2 className="text-[38px] md:text-[54px] font-extrabold text-title mb-12 max-w-200 leading-[1.1] tracking-tight">
                 We Offer wide range <br className="hidden md:block" /> of brand identity
               </h2>
               
@@ -106,14 +106,14 @@ const ServiceDetails = () => {
             </div>
 
             {/* ── Banner Image with Text Overlay ── */}
-            <div className="relative rounded-[16px] overflow-hidden mb-24 group">
+            <div className="relative rounded-2xl overflow-hidden mb-24 group">
               <img 
                 src={img} 
                 alt="Digital Team Collaboration" 
-                className="w-full h-[400px] md:h-[500px] object-cover grayscale brightness-50 transition-transform duration-1000 group-hover:scale-105"
+                className="w-full h-100 md:h-125 object-cover grayscale brightness-50 transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 flex items-center justify-center p-6 text-center z-10 pointer-events-none">
-                <h3 className="text-white text-[28px] md:text-[54px] font-bold max-w-[650px] leading-[1.4] tracking-tight">
+                <h3 className="text-white text-[28px] md:text-[54px] font-bold max-w-162 leading-[1.4] tracking-tight">
                   You’ll support the execution of graphic and digital design projects
                 </h3>
               </div>
@@ -141,9 +141,9 @@ const ServiceDetails = () => {
                   </span>
 
                   {/* Bottom Divider */}
-                  <div className="w-full h-[1px] bg-gray-200 relative overflow-hidden">
+                  <div className="w-full h-px bg-gray-200 relative overflow-hidden">
                      {/* Hover Animated Line */}
-                     <div className="absolute inset-0 bg-[#ff3b30] -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
+                     <div className="absolute inset-0 bg-brand -translate-x-full group-hover:translate-x-0 transition-transform duration-500" />
                   </div>
 
                 </div>

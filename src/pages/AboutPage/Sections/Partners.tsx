@@ -15,7 +15,7 @@ const Partners = () => {
         {/* Header with Horizontal Lines */}
         <div className="flex items-center gap-6 mb-16">
           <div className="flex-1 h-[1.5px] bg-gray-100" />
-          <p className="text-[12px] md:text-[16px] font-bold text-desc uppercase tracking-[0.1em] whitespace-nowrap px-2">
+          <p className="text-[12px] md:text-[16px] font-bold text-desc uppercase tracking-widest whitespace-nowrap px-2">
             Some of the partners & clients worked with
           </p>
           <div className="flex-1 h-[1.5px] bg-gray-100" />

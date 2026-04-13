@@ -32,7 +32,7 @@ const Footer = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-[1200px] px-6 sm:px-12 lg:px-24 lg:max-w-[1200px] box-content">
+      <div className="relative z-10 mx-auto max-w-300 px-6 sm:px-12 lg:px-24 lg:max-w-300 box-content">
 
         {/* ── Main Footer Grid ── */}
         <div className="grid grid-cols-1 gap-12 pb-20 md:grid-cols-2 lg:grid-cols-4">
@@ -54,7 +54,7 @@ const Footer = () => {
           <div className="space-y-7">
             <h3 className="text-lg font-bold text-white relative inline-block">
               Contact Us
-              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand" />
+              <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-brand" />
             </h3>
             <div className="space-y-4 pt-2">
               <p className="text-sm leading-relaxed text-gray-400">
@@ -75,7 +75,7 @@ const Footer = () => {
           <div className="space-y-7">
             <h3 className="text-lg font-bold text-white relative inline-block">
               Useful Links
-              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand" />
+              <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-brand" />
             </h3>
             <ul className="space-y-4 pt-2">
               {usefulLinks.map((link) => (
@@ -95,7 +95,7 @@ const Footer = () => {
           <div className="space-y-7">
             <h3 className="text-lg font-bold text-white relative inline-block">
               Newsletter
-              <span className="absolute -bottom-2 left-0 w-8 h-[2px] bg-brand" />
+              <span className="absolute -bottom-2 left-0 w-8 h-0.5 bg-brand" />
             </h3>
             <div className="space-y-6 pt-2">
 
@@ -108,7 +108,7 @@ const Footer = () => {
                 />
                 <button
                   type="submit"
-                  className="flex h-[46px] w-[54px] shrink-0 items-center justify-center rounded-r-md bg-brand transition-all hover:bg-brand/90 hover:shadow-lg hover:shadow-brand/20"
+                  className="flex h-12 w-14 shrink-0 items-center justify-center rounded-r-md bg-brand transition-all hover:bg-brand/90 hover:shadow-lg hover:shadow-brand/20"
                 >
                   <Send className="h-4 w-4 text-white" />
                 </button>
