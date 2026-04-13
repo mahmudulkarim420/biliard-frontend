@@ -26,10 +26,10 @@ const SubPageLayout = ({ title, breadcrumb, children }: SubPageLayoutProps) => {
       <CustomCursor />
       <Preloader />
       <Navbar />
-      
+
       {/* Dynamic Page Header for internal pages */}
       <PageHeader title={title} breadcrumb={breadcrumb} />
-      
+
       <main className="flex-1">
         <AnimatePresence mode="wait">
           <PageTransition key={location.pathname}>
@@ -37,7 +37,7 @@ const SubPageLayout = ({ title, breadcrumb, children }: SubPageLayoutProps) => {
           </PageTransition>
         </AnimatePresence>
       </main>
-      
+
       <Footer />
       <ScrollToTop />
     </div>

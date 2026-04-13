@@ -26,7 +26,7 @@ const ScrollRestoration = () => {
 
     // Also trigger after a short delay to catch any layout shifts during transitions
     const timeoutId = setTimeout(scroll, 10);
-    
+
     return () => clearTimeout(timeoutId);
   }, [pathname]);
 
