@@ -6,10 +6,10 @@ const ContactPage = () => {
       <div className="bg-white">
         
         <section className="section-padding">
-          <div className=" max-w-[1200px] mx-auto">
+          <div className="container-custom">
             
             {/* ── Top Section: Info & Form ── */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start mb-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start mb-16 md:mb-24">
               
               {/* Left Column: Contact Info */}
               <div>
@@ -87,7 +87,7 @@ const ContactPage = () => {
                   </div>
                   
                   <div className="md:col-span-2 mt-4">
-                    <button className="bg-[#ff3b30] text-white px-8 py-3 rounded-md font-bold text-[14px] hover:bg-title transition-colors shadow-sm">
+                    <button className="w-full sm:w-auto bg-brand text-white px-10 py-4 rounded-md font-bold text-[14px] uppercase tracking-wider hover:bg-title transition-all shadow-md hover:-translate-y-1 active:scale-95">
                       Send Message
                     </button>
                   </div>
