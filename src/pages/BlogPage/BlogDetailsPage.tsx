@@ -42,7 +42,7 @@ const BlogDetailsPage = () => {
     <SubPageLayout title="Latest Blog" breadcrumb={`Home / Blog / Latest Blog`}>
       <div className="blog-details-page bg-white">
         <section className="section-padding">
-          <div className="max-w-[1200px] mx-auto">
+          <div className="container-custom">
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               
@@ -65,7 +65,7 @@ const BlogDetailsPage = () => {
                 </div>
 
                 {/* Post Meta */}
-                <div className="flex items-center gap-6 mb-6 text-[13px] font-medium text-gray-500">
+                <div className="flex flex-wrap items-center gap-4 md:gap-6 mb-6 text-[13px] font-medium text-gray-500">
                   <div className="flex items-center gap-2 group cursor-pointer hover:text-brand transition-colors">
                     <User className="w-4 h-4 text-[#ff3838]" />
                     <span className="text-title/70 text-[14px] font-bold">{post.author}</span>
@@ -86,12 +86,12 @@ const BlogDetailsPage = () => {
                   </p>
                   
                   {/* Styled Blockquote Section */}
-                  <div className="relative bg-[#f6f6f6] p-10 md:p-14 rounded-[5px] my-4 overflow-hidden group">
+                  <div className="relative bg-[#f6f6f6] p-8 md:p-14 rounded-[5px] my-4 overflow-hidden group">
                     <div className="absolute left-6 top-6 opacity-80">
-                      <img src={icon1} alt="Quote Icon" className="w-20 h-auto" />
+                      <img src={icon1} alt="Quote Icon" className="w-16 md:w-20 h-auto" />
                     </div>
                     <div className="relative z-10 pl-5 border-l-4 border-[#ff3838]/20">
-                      <p className="text-title font-medium text-[16px] md:text-[18px] leading-relaxed mb-4 italic">
+                      <p className="text-title font-medium text-[15px] md:text-[18px] leading-relaxed mb-4 italic">
                         technology has become super advanced. Even normal people are getting themselves enrolled in coding and programming.
                       </p>
                       <span className="text-[#ff3838] font-bold text-[14px] uppercase tracking-widest">Andrew Himmer</span>
@@ -118,10 +118,10 @@ const BlogDetailsPage = () => {
                 </div>
 
                 {/* Tags & Social row */}
-                <div className="mt-12 py-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div className="mt-12 py-8 border-t border-gray-100 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                    <div className="flex flex-wrap items-center gap-3">
                       {["Software", "App", "Technology"].map((tag) => (
-                        <button key={tag} className="px-6 py-2 bg-[#f6f6f6] text-[12px] font-bold text-title hover:bg-[#ff3838] hover:text-white transition-all rounded-sm uppercase tracking-widest">
+                        <button key={tag} className="px-5 md:px-6 py-2 bg-[#f6f6f6] text-[11px] md:text-[12px] font-bold text-title hover:bg-[#ff3838] hover:text-white transition-all rounded-sm uppercase tracking-widest">
                           {tag}
                         </button>
                       ))}
@@ -140,10 +140,10 @@ const BlogDetailsPage = () => {
                 </div>
 
                 {/* Previous/Next Post Navigation */}
-                <div className="grid grid-cols-2 mt-10 gap-x-1">
+                <div className="grid grid-cols-1 md:grid-cols-2 mt-10 gap-4">
                    {prevPost && (
-                     <Link to={`/blog/${prevPost.id}`} className="group flex items-center gap-4 bg-white border border-gray-100 p-6 hover:bg-gray-50 transition-all rounded-l-md">
-                        <ChevronLeft className="w-5 h-5 text-gray-400 group-hover:text-[#ff3838] transition-colors" />
+                     <Link to={`/blog/${prevPost.id}`} className="group flex items-center gap-4 bg-white border border-gray-100 p-6 hover:bg-gray-50 transition-all rounded-md">
+                        <ChevronLeft className="w-5 h-5 shrink-0 text-gray-400 group-hover:text-[#ff3838] transition-colors" />
                         <div className="hidden sm:block shrink-0 w-16 h-16 rounded overflow-hidden shadow-sm">
                            <img src={prevPost.image} className="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110" />
                         </div>
@@ -158,7 +158,7 @@ const BlogDetailsPage = () => {
                      </Link>
                    )}
                    {nextPost && (
-                     <Link to={`/blog/${nextPost.id}`} className="group flex items-center justify-end text-right gap-4 bg-white border border-gray-100 p-6 hover:bg-gray-50 transition-all rounded-r-md">
+                     <Link to={`/blog/${nextPost.id}`} className="group flex items-center justify-between md:justify-end text-right gap-4 bg-white border border-gray-100 p-6 hover:bg-gray-50 transition-all rounded-md">
                         <div className="flex flex-col gap-1">
                            <h4 className="text-[13px] md:text-[15px] font-bold text-title leading-tight line-clamp-2 transition-colors group-hover:text-[#ff3838]">
                              UX writing: Copy is an integral part
@@ -170,7 +170,7 @@ const BlogDetailsPage = () => {
                         <div className="hidden sm:block shrink-0 w-16 h-16 rounded overflow-hidden shadow-sm">
                            <img src={nextPost.image} className="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110" />
                         </div>
-                        <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#ff3838] transition-colors" />
+                        <ChevronRight className="w-5 h-5 shrink-0 text-gray-400 group-hover:text-[#ff3838] transition-colors" />
                      </Link>
                    )}
                 </div>
@@ -198,8 +198,8 @@ const BlogDetailsPage = () => {
                         placeholder="Your Comment *" 
                         className="bg-[#f6f6f6] border-none px-6 py-6 rounded-sm text-[14px] font-bold text-title outline-none focus:ring-1 focus:ring-[#ff3838]/30 transition-all placeholder:text-gray-400 resize-none"
                       />
-                      <div>
-                        <button className="bg-[#ff3838] text-white px-10 py-5 rounded-[4px] font-black text-[12px] uppercase tracking-widest hover:bg-title transition-all shadow-xl hover:-translate-y-1 active:scale-95 active:translate-y-0">
+                      <div className="w-full">
+                        <button className="w-full sm:w-auto bg-[#ff3838] text-white px-10 py-5 rounded-[4px] font-black text-[12px] uppercase tracking-widest hover:bg-title transition-all shadow-xl hover:-translate-y-1 active:scale-95 active:translate-y-0">
                           Post Comment
                         </button>
                       </div>
