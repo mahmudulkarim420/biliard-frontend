@@ -13,6 +13,7 @@ import { Home, ArrowRight, Compass } from "lucide-react";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import CustomCursor from "@/components/shared/CustomCursor";
 import Preloader from "@/components/shared/Preloader";
+import ScrollRestoration from "@/components/shared/ScrollRestoration";
 
 // ─── Local Assets ─────────────────────────────────────────────────────────────
 import logo from "@/assets/logo.png";
@@ -154,10 +155,6 @@ const NotFound = () => {
   const fgX = useSpring(useTransform(mouseX, [0, W], [-8, 8]), { stiffness: 50, damping: 20 });
   const fgY = useSpring(useTransform(mouseY, [0, H], [-8, 8]), { stiffness: 50, damping: 20 });
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
   const handleMouseMove = (e: React.MouseEvent) => {
     mouseX.set(e.clientX);
     mouseY.set(e.clientY);
@@ -168,6 +165,7 @@ const NotFound = () => {
       className="relative min-h-screen flex items-center justify-center bg-[#fafafa] overflow-hidden"
       onMouseMove={handleMouseMove}
     >
+      <ScrollRestoration />
       <CustomCursor />
       <Preloader />
 

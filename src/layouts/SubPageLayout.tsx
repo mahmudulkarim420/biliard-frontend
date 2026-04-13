@@ -9,6 +9,7 @@ import CustomCursor from "@/components/shared/CustomCursor";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import PageTransition from "@/components/shared/PageTransition";
+import ScrollRestoration from "@/components/shared/ScrollRestoration";
 
 interface SubPageLayoutProps {
   title: string;
@@ -19,12 +20,9 @@ interface SubPageLayoutProps {
 const SubPageLayout = ({ title, breadcrumb, children }: SubPageLayoutProps) => {
   const location = useLocation();
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location.pathname]);
-
   return (
     <div className="relative min-h-screen flex flex-col">
+      <ScrollRestoration />
       <CustomCursor />
       <Preloader />
       <Navbar />

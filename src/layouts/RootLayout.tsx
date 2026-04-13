@@ -9,6 +9,7 @@ import PageTransition from "@/components/shared/PageTransition";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 import Preloader from "@/components/shared/Preloader";
 import CustomCursor from "@/components/shared/CustomCursor";
+import ScrollRestoration from "@/components/shared/ScrollRestoration";
 
 // ─── Layout ───────────────────────────────────────────────────────────────────
 // Root layout for the primary Home page.
@@ -19,6 +20,7 @@ const RootLayout = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col">
+      <ScrollRestoration />
       <CustomCursor />
       <Preloader />
       <Navbar />
