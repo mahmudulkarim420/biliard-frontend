@@ -108,9 +108,17 @@ const BlogPage = () => {
                     </div>
                   )}
                 </div>
+              </div>
 
-                {totalPages > 1 && (
-                  <div className="flex items-center gap-2 mt-16">
+              {/* ── Right Column: Sidebar ── */}
+              <div className="lg:col-span-4 lg:row-span-2">
+                <BlogSidebar searchQuery={searchQuery} onSearchChange={handleSearchChange} />
+              </div>
+
+              {/* ── Pagination Column: Stays at bottom on mobile/tablet ── */}
+              {totalPages > 1 && (
+                <div className="lg:col-span-8">
+                  <div className="flex items-center gap-2">
                     <button 
                       onClick={(e) => { e.preventDefault(); goToPage(currentPage - 1); }}
                       disabled={currentPage === 1}
@@ -149,13 +157,8 @@ const BlogPage = () => {
                       <ChevronRight className="w-4 h-4" />
                     </button>
                   </div>
-                )}
-              </div>
-
-              {/* ── Right Column: Sidebar ── */}
-              <div className="lg:col-span-4">
-                <BlogSidebar searchQuery={searchQuery} onSearchChange={handleSearchChange} />
-              </div>
+                </div>
+              )}
 
             </div>
             
