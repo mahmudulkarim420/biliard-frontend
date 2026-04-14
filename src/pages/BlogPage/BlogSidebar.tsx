@@ -8,7 +8,7 @@ interface BlogSidebarProps {
 
 const BlogSidebar = ({ searchQuery, onSearchChange }: BlogSidebarProps) => {
   return (
-    <div className="bg-[#fcfcfc] border border-gray-100 rounded-[20px] p-8 lg:p-10 shadow-sm sticky top-32">
+    <div className="  p-8 lg:p-10  sticky top-32">
       
       {/* Search Bar */}
       <div className="relative mb-12">
@@ -17,7 +17,7 @@ const BlogSidebar = ({ searchQuery, onSearchChange }: BlogSidebarProps) => {
           placeholder="Search posts..." 
           value={searchQuery || ""}
           onChange={onSearchChange}
-          className="w-full bg-[#f4f4f5] border-none outline-none py-4 pl-6 pr-12 rounded-md text-[14px] text-title font-medium focus:ring-1 focus:ring-brand/30 transition-all placeholder:text-gray-400"
+          className="w-full bg-[#F2F4F8] border-none outline-none py-4 pl-6 pr-12 rounded-md text-[14px] text-title font-medium focus:ring-1 focus:ring-brand/30 transition-all placeholder:text-gray-400"
         />
         <Search className="absolute right-5 top-1/2 -translate-y-1/2 w-4 h-4 text-title" />
       </div>
@@ -53,8 +53,8 @@ const BlogSidebar = ({ searchQuery, onSearchChange }: BlogSidebarProps) => {
           {categories.map((cat, idx) => (
             <li key={idx} className="group cursor-pointer">
               <div className="flex items-center gap-3">
-                <ChevronRight className={`w-3 h-3 transition-colors ${cat.active ? 'text-brand' : 'text-brand group-hover:text-brand'}`} />
-                <span className={`text-[15px] font-medium transition-colors ${cat.active ? 'text-title' : 'text-gray-500 group-hover:text-title'}`}>
+                <ChevronRight className={`w-5 h-5 transition-colors text-brand`}   />
+                <span className={`text-[15px] font-medium transition-colors text-desc hover:text-brand`}>
                   {cat.name}
                 </span>
                 <span className="text-[13px] text-gray-400 ml-1">({cat.count})</span>

@@ -42,7 +42,7 @@ const BlogDetailsPage = () => {
     <SubPageLayout title="Latest Blog" breadcrumb={`Home / Blog / Latest Blog`}>
       <div className="blog-details-page bg-white">
         <section className="section-padding">
-          <div className="container-custom">
+          <div className="max-w-300 mx-auto">
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               
@@ -54,7 +54,7 @@ const BlogDetailsPage = () => {
                   <img 
                     src={post.image} 
                     alt={post.title} 
-                    className="w-full h-auto object-cover grayscale brightness-90 transition-all duration-700 hover:grayscale-0 hover:brightness-100"
+                    className="w-full h-[350px] object-cover grayscale brightness-90 transition-all duration-700 hover:grayscale-0 hover:brightness-100"
                   />
                   <div className="absolute top-5 left-5 bg-[#ff3838] text-white px-4 py-2 flex items-center gap-2 rounded-sm shadow-xl z-20">
                     <span className="text-2xl font-black">{post.date}</span>
@@ -76,22 +76,22 @@ const BlogDetailsPage = () => {
                   </div>
                 </div>
 
-                <h2 className="text-[28px] md:text-[34px] font-bold text-title leading-[1.3] mb-8 tracking-tight">
+                <h2 className="text-[28px] md:text-[34px] font-semibold text-title leading-[1.3] mb-8 tracking-tight">
                   {post.title}
                 </h2>
 
                 <div className="text-desc text-[16px] leading-[1.7] flex flex-col gap-6 mb-10">
-                  <p>
+                  <p className="leading-[2]">
                     In a few seconds, our A.I. will generate amazing results that you can copy, paste & publish. No matter your native tongue, write creatively and clearly in 25+ languages. Applications are like the lifeblood of mobile phones and tablets today. The true potential of your mobile phone is harnessed.
                   </p>
                   
                   {/* Styled Blockquote Section */}
-                  <div className="relative bg-[#f6f6f6] p-8 md:p-14 rounded-[5px] my-4 overflow-hidden group">
+                  <div className="relative bg-[#F8F7FC] p-8 md:p-14 rounded-[5px] my-4 overflow-hidden group">
                     <div className="absolute left-6 top-6 opacity-80">
                       <img src={icon1} alt="Quote Icon" className="w-16 md:w-20 h-auto" />
                     </div>
                     <div className="relative z-10 pl-5 border-l-4 border-[#ff3838]/20">
-                      <p className="text-title font-medium text-[15px] md:text-[18px] leading-relaxed mb-4 italic">
+                      <p className="text-desc font-medium text-[15px] md:text-[18px] leading-relaxed mb-4 italic">
                         technology has become super advanced. Even normal people are getting themselves enrolled in coding and programming.
                       </p>
                       <span className="text-[#ff3838] font-bold text-[14px] uppercase tracking-widest">Andrew Himmer</span>
@@ -99,9 +99,9 @@ const BlogDetailsPage = () => {
                   </div>
 
                   <h3 className="text-2xl font-bold text-title mt-6 mb-2 tracking-tight">4 Tips To Put Your Creativity On The Development?</h3>
-                  <p>In a few seconds, our A.I. will generate amazing results that you can copy, paste & publish. No matter your native tongue, write creatively and clearly in 25+ languages. Applications.</p>
+                  <p className="leading-[2]">In a few seconds, our A.I. will generate amazing results that you can copy, paste & publish. No matter your native tongue, write creatively and clearly in 25+ languages. Applications.</p>
                   
-                  <ul className="flex flex-col gap-4 mt-2">
+                  <ul className="flex flex-col gap-6 mt-2">
                     {[
                       "Normal People Are Getting Themselves Enrolled In Coding And Programming",
                       "Creating Applications On Their Own. An App Developer Earns",
