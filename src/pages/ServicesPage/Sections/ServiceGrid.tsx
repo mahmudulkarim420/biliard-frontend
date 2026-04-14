@@ -16,7 +16,7 @@ const services = [
 
 const ServiceGrid = () => {
   return (
-    <section className="bg-[#fafafa] section-padding-services">
+    <section className="bg-[#fafafa] pt-[130px] pb-80">
       <div className="max-w-300 mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7.5">
           {services.map((service, index) => {

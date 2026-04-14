@@ -60,7 +60,7 @@ interface PricingSectionProps {
 // A repeating hexagon SVG pattern is inlined as a background texture.
 const PricingSection = ({ showBackground = true }: PricingSectionProps) => {
   return (
-    <section className="relative w-full section-padding-h2 px-6 sm:px-12 lg:px-24 bg-[#f8f9fa] overflow-hidden">
+    <section className="relative w-full section-padding bg-[#f8f9fa] overflow-hidden">
 
       {/* Subtle hexagonal repeating pattern — very low opacity decorative texture */}
       {showBackground && (

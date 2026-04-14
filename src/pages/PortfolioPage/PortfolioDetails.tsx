@@ -26,7 +26,7 @@ const PortfolioDetails = () => {
 
   return (
     <SubPageLayout title="Portfolio Details" breadcrumb={`Home / Portfolio / ${project.title}`}>
-      <section className="section-padding bg-white">
+      <section className="pt-[130px] pb-[50px] bg-white">
         <div className="">
 
           <div className="max-w-300 mx-auto">

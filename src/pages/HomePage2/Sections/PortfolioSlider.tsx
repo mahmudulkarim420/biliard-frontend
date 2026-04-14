@@ -93,7 +93,7 @@ const PortfolioMarquee = () => {
   };
 
   return (
-    <section className="bg-white section-padding-h2 overflow-hidden">
+    <section className="bg-white section-padding overflow-hidden">
       {/* ── Section Header ── */}
       <div className="mx-auto max-w-300 text-center mb-16 px-6">
         <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-brand">

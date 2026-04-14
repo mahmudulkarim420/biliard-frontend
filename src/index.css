@@ -16,11 +16,8 @@
 
   /* Colors Configuration */
   --color-brand: #ff3b30;
-  /* Your standard brand red */
   --color-title: #0f172a;
-  /* Slate 950 vibe for titles */
   --color-desc: #64748b;
-  /* Slate 500 vibe for descriptions */
   --color-primaryColor: #273f2b;
   --color-secondaryColor: #d9fe8a;
   --color-textColor: #3c5240;
@@ -38,105 +35,60 @@ body {
   scroll-behavior: smooth;
   font-family: var(--font-body);
   background-color: var(--color-spaceWhite);
-  /* Hide default cursor on desktop */
+
   @media (pointer: fine) {
     cursor: none;
   }
 }
 
 @layer base {
-
   /* Global Headings Reset */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
+  h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-title);
     color: var(--color-title);
     letter-spacing: -0.02em;
   }
 
-  /* Specific Heading Adjustments */
-  h1 {
-    @apply text-[45px] leading-[54px] md:text-[64px] md:leading-[74px] lg:text-[84px] lg:leading-[94px] font-extrabold;
+  h1 { 
+    @apply text-[45px] leading-[54px] md:text-[64px] md:leading-[74px] lg:text-[84px] lg:leading-[94px] font-extrabold; 
   }
 
-  h2 {
-    @apply text-[32px] leading-[40px] md:text-[44px] md:leading-[52px] lg:text-[54px] lg:leading-[64px] font-bold;
+  h2 { 
+    @apply text-[32px] leading-[40px] md:text-[44px] md:leading-[52px] lg:text-[54px] lg:leading-[64px] font-bold; 
   }
 
-  h3 {
-    @apply text-[28px] leading-[36px] md:text-[32px] md:leading-[42px] font-bold;
+  h3 { 
+    @apply text-[28px] leading-[36px] md:text-[32px] md:leading-[42px] font-bold; 
   }
 
-  h4 {
-    @apply text-[24px] leading-[32px] font-bold;
+  h4 { 
+    @apply text-[24px] leading-[32px] font-bold; 
   }
 
-  /* Body/Paragraph Text Adjustment */
-  p {
-    @apply font-body text-[16px] md:text-[18px] leading-[1.6] text-desc font-normal;
+  /* Body Text Adjustment */
+  p { 
+    @apply font-body text-[16px] md:text-[18px] leading-[1.6] text-desc font-normal; 
   }
 
-  /* Global Classes */
-  .section-gap {
-    @apply lg:mt-[120px] md:mt-24 mt-16;
-  }
+  /* ── Standardized Spacing Utilities ── */
 
-  /* ── Standard section vertical padding ──────────────────────────────────
-     py-16 (64px)  → mobile
-     md:py-24 (96px) → tablet
-     lg:py-[120px]  → desktop
-     Apply this to every section's outermost <section> tag for perfect rhythm.
-  ──────────────────────────────────────────────────────────────────────── */
+  /**
+   * 1. Global Section Padding
+   */
   .section-padding {
-    @apply py-16 md:py-24 lg:py-[120px];
-  }
-
-  .section-padding-h2 {
     @apply py-16 md:py-24 lg:py-[130px];
   }
 
-  .section-padding-about {
-    @apply py-16 md:py-24 lg:py-[130px] flex flex-col justify-center relative;
+  /**
+   * 2. Global Section Gap
+   */
+  .section-gap {
+    @apply mt-16 md:mt-24 lg:mt-[130px];
   }
 
-  .section-padding-services {
-    @apply py-16 md:py-24 lg:py-[130px] flex flex-col justify-center relative;
-  }
-
-  /* 
-     Shared standardization logic for About and Services pages
-     Targeting the containing section tags to ensure symmetry.
-  */
-  .about-page-standardized section,
-  .services-page-standardized section {
-    @apply !py-16 md:!py-24 lg:!py-[130px] !block;
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    min-height: auto !important;
-  }
-
-  /* 
-     Fixes the Features section overlap specifically for Services Page.
-     This nullifies the negative margin used on the Home page and maintains isolation.
-  */
-  .services-page-standardized div[class*="-mt-"] {
-    @apply !mt-0;
-  }
-
-  /* Pairs with .section-padding for consistent horizontal gutters */
-  .section-padding-x {
-    @apply px-6 sm:px-12 lg:px-24;
-  }
-
-  .container-custom {
-    @apply max-w-[1200px] mx-auto px-6 sm:px-12 lg:px-24;
-  }
 }
 
+/* Button Global Styles */
 button:not(:disabled) {
   @apply cursor-pointer font-title transition-all duration-300;
 }

@@ -11,7 +11,7 @@ import DiscoverMoreBtn from "@/components/shared/DiscoverMoreBtn";
 // Images begin in grayscale and reveal color on hover.
 const AboutUs = () => {
   return (
-    <section className="bg-white section-padding section-padding-x">
+    <section className="bg-white section-padding">
       <div className="mx-auto max-w-300">
         <div className="grid grid-cols-1 items-center gap-16 lg:grid-cols-2 lg:gap-24">
 

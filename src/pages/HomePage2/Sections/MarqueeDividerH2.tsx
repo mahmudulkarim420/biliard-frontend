@@ -8,7 +8,7 @@ const MarqueeDividerH2 = () => {
   const words = ["Software", "Web Design", "Development", "UI/UX Design", "Branding"];
 
   return (
-    <section className="relative z-10 flex w-full overflow-x-hidden bg-white section-padding-h2">
+    <section className="relative z-10 flex w-full overflow-x-hidden section-padding bg-white">
 
       {/* Keyframe definition — injected inline to avoid a separate CSS file dependency */}
       <style>{`

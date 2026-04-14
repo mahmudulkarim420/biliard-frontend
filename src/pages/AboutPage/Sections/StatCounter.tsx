@@ -47,7 +47,7 @@ const Counter = ({ value, duration = 2.5 }: CounterProps) => {
 // ─── Main Component ───────────────────────────────────────────────────────────
 const StatCounter = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-[#0a0a0f] section-padding-about">
+    <section className="relative w-full overflow-hidden bg-[#0a0a0f] section-padding">
       
       {/* ── Background Image Layer ── */}
       <div className="absolute inset-0 z-0 pointer-events-none">

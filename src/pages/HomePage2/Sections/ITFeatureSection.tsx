@@ -28,7 +28,7 @@ const ITFeatureSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative w-full bg-white section-padding-h2 px-6 sm:px-12 lg:px-24 overflow-hidden">
+    <section className="relative w-full bg-white pb-[130px] pt-[50px] overflow-hidden">
       <div className="mx-auto max-w-300">
 
         {/* ── Section Header ── */}

@@ -62,7 +62,7 @@ const partners = [partnerLogo1, partnerLogo2, partnerLogo3, partnerLogo4, partne
 // A partner logo strip with a decorative ruled centerline sits below the grid.
 const BlogSection = () => {
   return (
-    <section className="bg-white section-padding section-padding-x w-full">
+    <section className="bg-white section-padding w-full">
       <div className="max-w-300 mx-auto text-center">
 
         {/* ── Section Header ── */}

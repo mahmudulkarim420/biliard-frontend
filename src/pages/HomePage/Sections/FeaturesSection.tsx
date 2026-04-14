@@ -43,7 +43,7 @@ const FeaturesSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative z-20 w-full bg-slate-50 section-padding section-padding-x">
+    <section className="relative z-20 w-full bg-slate-50 section-padding">
 
       {/* Hexagonal repeating SVG pattern */}
       <div

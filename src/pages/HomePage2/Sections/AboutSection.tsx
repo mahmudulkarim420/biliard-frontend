@@ -20,7 +20,7 @@ const FEATURE_POINTS = [
 // stat card on the right.
 const AboutSection = () => {
   return (
-    <section className="relative w-full bg-white section-padding-h2 px-6 sm:px-12 lg:px-24 overflow-hidden">
+    <section className="relative w-full bg-white pt-[130px]  overflow-hidden">
       <div className="mx-auto max-w-300">
         <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 

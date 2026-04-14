@@ -9,8 +9,8 @@ const Partners = () => {
   const partners = [brand1, brand2, brand3, brand4, brand5];
 
   return (
-    <section className="bg-white section-padding-about">
-      <div className="container-custom">
+    <section className="bg-white section-padding">
+      <div className="max-w-300 mx-auto">
         
         {/* Header with Horizontal Lines */}
         <div className="flex items-center gap-6 mb-16">

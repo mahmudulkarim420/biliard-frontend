@@ -41,7 +41,7 @@ const FaqContact = () => {
   };
 
   return (
-    <section className="relative w-full bg-[#0a0a0c] section-padding-h2 px-6 sm:px-12 lg:px-24 overflow-hidden">
+    <section className="relative w-full bg-[#0a0a0c] section-padding overflow-hidden">
 
       {/* ── Background Layers ── */}
 

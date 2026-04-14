@@ -114,13 +114,13 @@ const services: ServiceItem[] = [
 // ─── Component ────────────────────────────────────────────────────────────────
 const Services = () => {
   return (
-    <section className="relative z-20 w-full bg-[#F3F3F3] section-padding-h2 px-6 sm:px-12 lg:px-24 overflow-hidden rounded-t-[50px]">
+    <section className="relative z-20 w-full bg-[#F3F3F3] section-padding overflow-hidden rounded-t-[50px]">
 
       {/* ── Background Image Pattern Layer ── */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-100">
-        <img 
-          src={bgPattern} 
-          alt="Background Texture" 
+        <img
+          src={bgPattern}
+          alt="Background Texture"
           className="w-full h-full object-cover grayscale"
         />
       </div>

@@ -57,7 +57,7 @@ const partners = [partnerLogo1, partnerLogo2, partnerLogo3, partnerLogo4, partne
 
 const BlogSectionH2 = () => {
   return (
-    <section className="bg-white section-padding-h2 section-padding-x w-full">
+    <section className="bg-white section-padding w-full">
       <div className="max-w-300 mx-auto text-center">
 
         <p className="text-brand text-[11px] font-bold uppercase tracking-[0.2em] mb-4">

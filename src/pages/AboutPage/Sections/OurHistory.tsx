@@ -22,8 +22,8 @@ const historyData = [
 // ─── Component ────────────────────────────────────────────────────────────────
 const OurHistory = () => {
   return (
-    <section className="section-padding-about bg-[#F3F3F3]">
-      <div className="container-custom">
+    <section className="section-padding bg-[#F3F3F3]">
+      <div className="max-w-300 mx-auto">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           
           {/* ── Left Column: Heading ── */}
