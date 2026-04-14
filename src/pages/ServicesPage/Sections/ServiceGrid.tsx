@@ -17,19 +17,19 @@ const services = [
 const ServiceGrid = () => {
   return (
     <section className="bg-[#fafafa] pt-[130px] pb-80">
-      <div className="max-w-300 mx-auto px-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7.5">
+      <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] mx-auto px-5 md:px-8 xl:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 xl:gap-10">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <Link
                 key={index}
                 to={`/services/${service.id}`}
-                className="group bg-white border border-gray-200 rounded-[20px] p-8 md:p-10 transition-all duration-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2 flex flex-col min-h-[300px]"
+                className="group bg-white border border-gray-200 rounded-[20px] p-8 md:p-10 xl:p-12 transition-all duration-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2 flex flex-col min-h-[300px] xl:min-h-[350px]"
               >
                 {/* ── Outline Number ── */}
                 <h3
-                  className="text-[60px] md:text-[100px] font-black leading-none mb-12 transition-transform duration-500 group-hover:scale-105 origin-left select-none"
+                  className="text-[60px] md:text-[100px] xl:text-[120px] font-black leading-none mb-12 xl:mb-16 transition-transform duration-500 group-hover:scale-105 origin-left select-none"
                   style={{
                     WebkitTextStroke: "1px #e2e8f0",
                     color: "transparent",
@@ -45,7 +45,7 @@ const ServiceGrid = () => {
                 </div>
 
                 {/* ── Title ── */}
-                <h4 className="text-[17px] md:text-[19px] font-extrabold text-title leading-[1.3] transition-colors duration-300 group-hover:text-brand mt-auto">
+                <h4 className="text-[17px] md:text-[19px] xl:text-[22px] font-extrabold text-title leading-[1.3] transition-colors duration-300 group-hover:text-brand mt-auto">
                   {service.title.split('\n').map((line, i) => (
                     <React.Fragment key={i}>
                       {line}<br />

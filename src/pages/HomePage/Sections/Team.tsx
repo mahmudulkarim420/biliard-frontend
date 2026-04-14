@@ -29,23 +29,23 @@ const teamMembers: TeamMember[] = [
 const Team = () => {
   return (
     <section className="w-full bg-white section-padding overflow-hidden">
-      <div className="mx-auto max-w-300">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
 
         {/* ── Section Header ── */}
         <div className="mb-16 text-center lg:mb-24">
-          <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
+          <p className="mb-4 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.2em] text-brand">
             OUR TEAM
           </p>
-          <h2 className="text-4xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-[56px] tracking-tight">
+          <h2 className="text-[36px] md:text-5xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] font-bold leading-tight text-gray-900 tracking-tight">
             Dedicated team
-            <br />
+            <br className="hidden md:block" />
             members
           </h2>
         </div>
 
         {/* ── Team Cards Grid ── */}
         {/* Odd-indexed cards shift down via lg:mt-16 to create a staggered layout. */}
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8 xl:gap-10">
           {teamMembers.map((member, index) => (
             <div
               key={index}

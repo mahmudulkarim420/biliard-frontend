@@ -35,7 +35,7 @@ body {
   scroll-behavior: smooth;
   font-family: var(--font-body);
   background-color: var(--color-spaceWhite);
-
+  /* Desktop এ কাস্টম কার্সারের জন্য */
   @media (pointer: fine) {
     cursor: none;
   }
@@ -49,41 +49,42 @@ body {
     letter-spacing: -0.02em;
   }
 
+  /* ── Fluid Typography for all Devices (incl. XL) ── */
   h1 { 
-    @apply text-[45px] leading-[54px] md:text-[64px] md:leading-[74px] lg:text-[84px] lg:leading-[94px] font-extrabold; 
+    @apply text-[40px] sm:text-[55px] md:text-[70px] lg:text-[84px] xl:text-[95px] 2xl:text-[110px] leading-[1.1] font-extrabold; 
   }
 
   h2 { 
-    @apply text-[32px] leading-[40px] md:text-[44px] md:leading-[52px] lg:text-[54px] lg:leading-[64px] font-bold; 
+    @apply text-[30px] sm:text-[38px] md:text-[46px] lg:text-[54px] xl:text-[62px] 2xl:text-[72px] leading-[1.15] font-bold; 
   }
 
   h3 { 
-    @apply text-[28px] leading-[36px] md:text-[32px] md:leading-[42px] font-bold; 
+    @apply text-[24px] sm:text-[28px] md:text-[32px] xl:text-[36px] font-bold; 
   }
 
   h4 { 
-    @apply text-[24px] leading-[32px] font-bold; 
+    @apply text-[20px] sm:text-[22px] md:text-[24px] xl:text-[26px] font-bold; 
   }
 
   /* Body Text Adjustment */
   p { 
-    @apply font-body text-[16px] md:text-[18px] leading-[1.6] text-desc font-normal; 
+    @apply font-body text-[15px] md:text-[16px] xl:text-[18px] leading-[1.6] text-desc font-normal; 
   }
 
-  /* ── Standardized Spacing Utilities ── */
+  /* ── Standardized Spacing Utilities (XL Optimized) ── */
 
   /**
    * 1. Global Section Padding
    */
   .section-padding {
-    @apply py-16 md:py-24 lg:py-[130px];
+    @apply py-16 md:py-24 lg:py-[120px] xl:py-[140px] 2xl:py-[160px];
   }
 
   /**
    * 2. Global Section Gap
    */
   .section-gap {
-    @apply mt-16 md:mt-24 lg:mt-[130px];
+    @apply mt-16 md:mt-24 lg:mt-[120px] xl:mt-[140px];
   }
 
 }

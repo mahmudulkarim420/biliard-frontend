@@ -63,23 +63,23 @@ const partners = [partnerLogo1, partnerLogo2, partnerLogo3, partnerLogo4, partne
 const BlogSection = () => {
   return (
     <section className="bg-white section-padding w-full">
-      <div className="max-w-300 mx-auto text-center">
+      <div className="max-w-300 mx-auto text-center xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
 
         {/* ── Section Header ── */}
-        <p className="text-brand text-[11px] font-bold uppercase tracking-[0.2em] mb-4">
+        <p className="text-brand text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.2em] mb-4">
           LATEST BLOG
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16">
+        <h2 className="text-[36px] md:text-5xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] font-bold text-gray-900 mb-12 md:mb-16 tracking-tight">
           Latest Blog & News
         </h2>
 
         {/* ── Blog Cards Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 lg:mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-10 mb-16 lg:mb-20 text-left">
           {blogs.map((blog) => (
             <div key={blog.id} className="group cursor-pointer">
 
               {/* Image container — overlaps the content card below via negative bottom margin */}
-              <div className="relative overflow-hidden rounded-lg h-70 -mb-15 z-0">
+              <div className="relative overflow-hidden rounded-lg h-70 xl:h-[350px] 2xl:h-[400px] -mb-15 z-0">
                 <img
                   src={blog.image}
                   alt={blog.title}
@@ -87,8 +87,8 @@ const BlogSection = () => {
                 />
                 {/* Date badge — brand-colored pill anchored to the top-left corner */}
                 <div className="absolute top-6 left-6 bg-brand text-white p-3 px-4 rounded-sm flex items-center gap-2 shadow-lg">
-                  <span className="text-2xl font-bold leading-none">{blog.date}</span>
-                  <div className="flex flex-col text-[10px] font-bold uppercase leading-tight text-left">
+                  <span className="text-2xl xl:text-3xl font-bold leading-none">{blog.date}</span>
+                  <div className="flex flex-col text-[10px] xl:text-[12px] font-bold uppercase leading-tight text-left">
                     <span>Jun</span>
                     <span>2024</span>
                   </div>
@@ -96,18 +96,18 @@ const BlogSection = () => {
               </div>
 
               {/* Content card — floats over the image, lifts on hover */}
-              <div className="relative z-10 mx-4 bg-white p-8 rounded-lg shadow-[0_15px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_rgba(255,59,48,0.08)]">
-                <div className="flex items-center gap-6 text-[12px] text-gray-400 font-medium mb-4">
+              <div className="relative z-10 mx-4 md:mx-5 xl:mx-8 bg-white p-8 xl:p-10 rounded-lg shadow-[0_15px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_rgba(255,59,48,0.08)]">
+                <div className="flex items-center gap-6 text-[12px] xl:text-[14px] text-gray-400 font-medium mb-4">
                   <div className="flex items-center gap-2">
-                    <User className="w-3.5 h-3.5 text-brand" />
+                    <User className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-brand" />
                     <span>{blog.author}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MessageSquare className="w-3.5 h-3.5 text-brand" />
+                    <MessageSquare className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-brand" />
                     <span>{blog.comments}</span>
                   </div>
                 </div>
-                <h3 className="text-[18px] font-bold text-gray-900 leading-snug text-left group-hover:text-brand transition-colors">
+                <h3 className="text-[18px] sm:text-[20px] xl:text-[24px] font-bold text-gray-900 leading-snug text-left group-hover:text-brand transition-colors">
                   {blog.title}
                 </h3>
               </div>
@@ -120,7 +120,7 @@ const BlogSection = () => {
         <div className="pt-12 border-t border-gray-100">
           <div className="flex items-center justify-between gap-4 mb-12 overflow-hidden">
             <div className="h-px bg-gray-200 flex-1" />
-            <p className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] whitespace-nowrap px-6">
+            <p className="text-[10px] sm:text-[11px] xl:text-[13px] font-bold text-gray-400 uppercase tracking-[0.2em] whitespace-nowrap px-4 md:px-6">
               Some of the partners & clients worked with
             </p>
             <div className="h-px bg-gray-200 flex-1" />

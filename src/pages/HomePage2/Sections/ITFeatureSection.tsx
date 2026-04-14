@@ -29,11 +29,11 @@ const ITFeatureSection = () => {
 
   return (
     <section className="relative w-full bg-white pb-[130px] pt-[50px] overflow-hidden">
-      <div className="mx-auto max-w-300">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
 
         {/* ── Section Header ── */}
-        <div className="flex flex-col md:flex-row justify-start items-start md:items-center gap-10 md:gap-24 mb-20">
-          <h2 className="text-4xl font-black leading-[1.2] text-title sm:text-5xl lg:text-[54px] tracking-tight max-w-2xl">
+        <div className="flex flex-col md:flex-row justify-start items-start md:items-center gap-10 md:gap-24 xl:gap-32 mb-20 xl:mb-28">
+          <h2 className="text-[32px] sm:text-5xl lg:text-[54px] xl:text-[64px] 2xl:text-[72px] font-black leading-[1.2] text-title tracking-tight max-w-2xl xl:max-w-4xl">
             There are many <br className="hidden md:block" />
             variations of passages <br className="hidden md:block" />
             of available but majority
@@ -122,10 +122,10 @@ const ITFeatureSection = () => {
 
           {/* Right: Descriptive copy + features checklist */}
           <div className="w-full">
-            <h4 className="text-xl sm:text-2xl font-bold text-title mb-6 leading-tight max-w-lg">
+            <h4 className="text-xl sm:text-2xl xl:text-[32px] font-bold text-title mb-6 leading-tight max-w-lg xl:max-w-2xl">
               Creating a concise and effective design studio brief is crucial for outlining your business
             </h4>
-            <p className="text-[14px] leading-relaxed text-desc mb-10 max-w-lg">
+            <p className="text-[14px] xl:text-[16px] leading-relaxed text-desc mb-10 max-w-lg xl:max-w-2xl">
               That a reader will be distracted by the readable content of a page when looking at established fact that a reader will be by the readable content.
             </p>
 
@@ -143,7 +143,7 @@ const ITFeatureSection = () => {
 
                   {/* Feature title and description */}
                   <div>
-                    <h5 className="text-[17px] font-bold text-title mb-1">
+                    <h5 className="text-[17px] xl:text-[20px] font-bold text-title mb-1">
                       {feature.title}
                     </h5>
                     <p className="text-[14px] text-desc">

@@ -64,7 +64,9 @@ const PortfolioMarquee = () => {
     
     const container = scrollRef.current;
     const { scrollLeft, scrollWidth, clientWidth } = container;
-    const scrollAmount = 350; // approximate width of card + gap
+    
+    const firstCard = container.children[0] as HTMLElement;
+    const scrollAmount = firstCard ? firstCard.offsetWidth + 32 : 350; // card width + gap-8 (32px)
 
     if (direction === "left") {
       // If at the very beginning, jump instantly to the middle set
@@ -95,11 +97,11 @@ const PortfolioMarquee = () => {
   return (
     <section className="bg-white section-padding overflow-hidden">
       {/* ── Section Header ── */}
-      <div className="mx-auto max-w-300 text-center mb-16 px-6">
-        <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-brand">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 text-center mb-16">
+        <p className="mb-4 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.3em] text-brand">
           OUR PORTFOLIO
         </p>
-        <h2 className="text-4xl font-black text-title sm:text-5xl lg:text-[54px] tracking-tight">
+        <h2 className="text-[36px] md:text-5xl lg:text-[54px] xl:text-[64px] 2xl:text-[72px] font-black text-title tracking-tight">
           Our Fascinating Work
         </h2>
       </div>
@@ -115,7 +117,7 @@ const PortfolioMarquee = () => {
           {duplicatedItems.map((item, index) => (
             <div
               key={index}
-              className="relative w-75 sm:w-88 aspect-4/5 rounded-3xl overflow-hidden group cursor-pointer shrink-0 snap-start"
+              className="relative w-75 sm:w-88 xl:w-[400px] 2xl:w-[450px] aspect-4/5 rounded-3xl overflow-hidden group cursor-pointer shrink-0 snap-start"
             >
               <img
                 src={item.image}
@@ -124,9 +126,9 @@ const PortfolioMarquee = () => {
               />
 
               <div className="absolute inset-x-0 bottom-0 p-8 flex flex-col items-center opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 z-10">
-                <div className="bg-white px-8 py-5 rounded-2xl shadow-2xl w-max text-center">
-                  <h4 className="text-lg font-bold text-title whitespace-nowrap">{item.title}</h4>
-                  <p className="text-xs text-brand font-bold uppercase tracking-wider mt-1">{item.category}</p>
+                <div className="bg-white px-8 xl:px-10 py-5 xl:py-6 rounded-2xl shadow-2xl w-max text-center">
+                  <h4 className="text-lg xl:text-xl 2xl:text-2xl font-bold text-title whitespace-nowrap">{item.title}</h4>
+                  <p className="text-[12px] xl:text-[14px] text-brand font-bold uppercase tracking-wider mt-1">{item.category}</p>
                 </div>
               </div>
 
@@ -147,19 +149,19 @@ const PortfolioMarquee = () => {
       <div className="flex justify-center items-center gap-4 mt-8 px-6">
         <button
           onClick={() => onButtonClick("left")}
-          className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-200 text-title hover:bg-brand hover:text-white hover:border-brand transition-all duration-300 active:scale-95 z-20 relative"
+          className="w-12 h-12 xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-full border border-gray-200 text-title hover:bg-brand hover:text-white hover:border-brand transition-all duration-300 active:scale-95 z-20 relative"
           aria-label="Previous"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 xl:w-6 xl:h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
           </svg>
         </button>
         <button
           onClick={() => onButtonClick("right")}
-          className="w-12 h-12 flex items-center justify-center rounded-full border border-gray-200 text-title hover:bg-brand hover:text-white hover:border-brand transition-all duration-300 active:scale-95 z-20 relative"
+          className="w-12 h-12 xl:w-14 xl:h-14 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-full border border-gray-200 text-title hover:bg-brand hover:text-white hover:border-brand transition-all duration-300 active:scale-95 z-20 relative"
           aria-label="Next"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 xl:w-6 xl:h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
           </svg>
         </button>

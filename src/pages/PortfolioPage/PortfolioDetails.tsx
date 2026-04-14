@@ -29,7 +29,7 @@ const PortfolioDetails = () => {
       <section className="pt-[130px] pb-[50px] bg-white">
         <div className="">
 
-          <div className="max-w-300 mx-auto">
+          <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
             
             {/* ── Top Header Section ── */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-16">

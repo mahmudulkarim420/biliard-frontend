@@ -54,10 +54,10 @@ const FeaturesSection = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-300">
+      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
 
         {/* ── Video Banner ── */}
-        <div className="group relative z-30 -mt-44 sm:-mt-64 lg:-mt-80 mb-20 h-75 sm:h-100 lg:h-138 w-full overflow-hidden bg-gray-950 shadow-2xl rounded-sm">
+        <div className="group relative z-30 -mt-24 sm:-mt-64 lg:-mt-80 mb-12 md:mb-20 xl:mb-24 h-75 sm:h-100 lg:h-138 xl:h-[600px] 2xl:h-[700px] w-full overflow-hidden bg-gray-950 shadow-2xl rounded-sm">
           <img
             src={bg}
             alt="Agency team"
@@ -69,23 +69,23 @@ const FeaturesSection = () => {
             <div className="hidden sm:block flex-1" />
 
             {/* Changed items-center/end to items-start for left alignment */}
-            <div className="flex flex-col items-start gap-6 sm:gap-10 sm:w-[500px]">
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-6 sm:gap-10 sm:w-[500px] xl:w-[600px] 2xl:w-[700px]">
 
               {/* Heading: Left aligned, 3 lines */}
-              <h2 className="text-3xl font-bold leading-[1.2] text-white sm:text-5xl lg:text-[64px] text-left">
-                We creating <br />
-                unique brand <br />
+              <h2 className="text-[32px] sm:text-5xl lg:text-[64px] xl:text-[76px] 2xl:text-[84px] font-bold leading-[1.1] text-white tracking-tight">
+                We creating <br className="hidden sm:block" />
+                unique brand <br className="hidden xl:block" />
                 agency
               </h2>
 
               {/* Play button */}
-              <div className="relative mt-4">
+              <div className="relative mt-2 md:mt-4">
                 <div className="absolute inset-0 animate-ping rounded-full bg-white/20" />
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white text-brand shadow-2xl transition-transform hover:scale-110 active:scale-95 sm:h-20 sm:w-20 lg:h-24 lg:w-24"
+                  className="relative flex h-16 w-16 items-center justify-center rounded-full bg-white text-brand shadow-2xl transition-transform hover:scale-110 active:scale-95 sm:h-20 sm:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28"
                 >
-                  <Play className="ml-1 h-6 w-6 fill-current sm:h-8 sm:w-8 lg:h-10 lg:w-10" />
+                  <Play className="ml-1 h-6 w-6 fill-current sm:h-8 sm:w-8 lg:h-10 lg:w-10 xl:h-12 xl:w-12" />
                 </button>
               </div>
             </div>
@@ -93,25 +93,25 @@ const FeaturesSection = () => {
         </div>
 
         {/* ── Content: Progress Bar (Left) + Tab Panel (Right) ── */}
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
+        <div className="grid grid-cols-1 gap-12 md:gap-16 lg:grid-cols-2 xl:gap-24 w-full">
           {/* Left: Section copy + animated skill bar */}
-          <div>
-            <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
+          <div className="text-center lg:text-left flex flex-col items-center lg:items-start xl:max-w-[90%] lg:mr-auto">
+            <p className="mb-3 text-[11px] md:text-[13px] xl:text-[14px] font-bold uppercase tracking-[0.2em] text-brand">
               Innovative Ideas
             </p>
-            <h2 className="mb-6 text-3xl font-bold leading-tight text-title md:text-4xl lg:text-[42px]">
-              We Offer You A <br /> Digital Platform
+            <h2 className="mb-6 text-[36px] md:text-4xl lg:text-[42px] xl:text-[54px] 2xl:text-[64px] font-bold leading-[1.1] tracking-tight text-title">
+              We Offer You A <br className="hidden xl:block" /> Digital Platform
             </h2>
-            <p className="mb-10 text-[15px] leading-relaxed text-desc">
+            <p className="mb-10 text-[14px] md:text-[15px] xl:text-[18px] leading-relaxed text-desc max-w-full lg:max-w-[90%]">
               It is a long established fact that a reader will be distracted by the readable content of a page when looking at established fact.
             </p>
 
-            <div className="w-full max-w-md">
-              <div className="mb-3 flex justify-between">
-                <span className="text-sm font-bold text-title uppercase tracking-wide">Digital Marketing</span>
-                <span className="text-sm font-bold text-brand">85%</span>
+            <div className="w-full max-w-full md:max-w-md xl:max-w-lg">
+              <div className="mb-3 flex justify-between px-2 lg:px-0">
+                <span className="text-[12px] md:text-sm xl:text-[16px] font-bold text-title uppercase tracking-wide">Digital Marketing</span>
+                <span className="text-[12px] md:text-sm xl:text-[16px] font-bold text-brand">85%</span>
               </div>
-              <div className="h-2 w-full rounded-full bg-gray-200 overflow-hidden">
+              <div className="h-2 xl:h-3 w-full rounded-full bg-gray-200 overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   whileInView={{ width: "85%" }}
@@ -125,12 +125,12 @@ const FeaturesSection = () => {
 
           {/* Right: Tab selector + animated tab content panel */}
           <div>
-            <div className="mb-8 flex flex-wrap gap-3">
+            <div className="mb-8 flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3">
               {(Object.keys(tabData) as TabKey[]).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`relative px-7 py-3 text-[12px] font-bold uppercase tracking-wider transition-all duration-500 ${activeTab === tab ? "text-white" : "bg-white text-gray-600 hover:text-brand"
+                  className={`relative px-5 md:px-7 py-3 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-wider transition-all duration-500 rounded-lg lg:rounded-none overflow-hidden ${activeTab === tab ? "text-white" : "bg-white text-gray-600 hover:text-brand"
                     }`}
                 >
                   <AnimatePresence>
@@ -150,7 +150,7 @@ const FeaturesSection = () => {
               ))}
             </div>
 
-            <div className="min-h-62 bg-white p-8 shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100">
+            <div className="min-h-[280px] xl:min-h-[320px] bg-white p-6 md:p-8 xl:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 rounded-xl lg:rounded-none">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
@@ -159,16 +159,16 @@ const FeaturesSection = () => {
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
                 >
-                  <p className="mb-8 text-[14px] leading-relaxed text-gray-500">{tabData[activeTab].text}</p>
+                  <p className="mb-8 text-[14px] md:text-[15px] xl:text-[16px] leading-relaxed text-gray-500">{tabData[activeTab].text}</p>
                   <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
-                    <div className="h-28 w-40 shrink-0 overflow-hidden rounded-sm grayscale transition-all duration-500">
+                    <div className="h-28 w-full sm:w-40 xl:h-36 xl:w-48 shrink-0 overflow-hidden rounded-md grayscale transition-all duration-500">
                       <img src={tabData[activeTab].image} alt="visual" className="h-full w-full object-cover" />
                     </div>
-                    <ul className="flex flex-col gap-3">
+                    <ul className="flex flex-col gap-3 xl:gap-4">
                       {tabData[activeTab].list.map((item, index) => (
-                        <li key={index} className="flex items-center gap-3 text-[13px] font-bold text-gray-800">
-                          <div className="flex h-5 w-5 items-center justify-center rounded-full bg-brand/10">
-                            <Check className="h-3 w-3 text-brand stroke-4" />
+                         <li key={index} className="flex items-center gap-3 text-[13px] md:text-[14px] xl:text-[16px] font-bold text-gray-800">
+                          <div className="flex h-5 w-5 xl:h-6 xl:w-6 items-center justify-center rounded-full bg-brand/10 shrink-0">
+                            <Check className="h-3 w-3 xl:h-4 xl:w-4 text-brand stroke-[3px]" />
                           </div>
                           {item}
                         </li>

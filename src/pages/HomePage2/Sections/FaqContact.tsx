@@ -67,16 +67,16 @@ const FaqContact = () => {
         </svg>
       </div>
 
-      <div className="mx-auto max-w-300 relative z-10">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
           {/* ── Left: FAQ Accordion ── */}
           <div className="w-full">
-            <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-brand">
+            <p className="mb-4 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.3em] text-brand">
               FAQS
             </p>
-            <h2 className="mb-12 text-4xl font-bold leading-[1.2] text-white sm:text-5xl lg:text-[50px] tracking-tight">
-              There are many <br /> variations of
+            <h2 className="mb-12 text-[36px] md:text-5xl lg:text-[54px] xl:text-[64px] 2xl:text-[72px] font-bold leading-[1.2] text-white tracking-tight">
+              There are many <br className="hidden md:block" /> variations of
             </h2>
 
             {/* Accordion list — uses CSS grid-rows trick for smooth height animation */}

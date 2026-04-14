@@ -83,44 +83,48 @@ const ServiceDetails = () => {
 
         {/* Detail Content Section */}
         <section className="section-padding bg-white">
-          <div className="max-w-300 mx-auto">
+          <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
 
             {/* ── Header & Text Area ── */}
-            <div className="mb-20">
+            <div className="mb-16 md:mb-20 xl:mb-24">
               {/* Eyebrow Label */}
-              <span className="text-brand text-[12px] font-bold tracking-[0.2em] uppercase mb-4 block">
-                Brand strategy & art direction
+              <span className="text-brand text-[12px] md:text-[14px] xl:text-[16px] font-bold tracking-[0.2em] uppercase mb-4 block text-center lg:text-left">
+                {label}
               </span>
 
               {/* Main Title — dynamic per service */}
-              <h2 className="text-[38px] md:text-[54px] font-bold text-title mb-12 max-w-150 leading-[1.1] tracking-tight">
-                We Offer wide range
-                <br />
-                <span>of brand identity</span>
+              <h2 className="text-[38px] md:text-[54px] xl:text-[64px] 2xl:text-[76px] font-bold text-title mb-8 md:mb-12 max-w-full md:max-w-150 xl:max-w-[800px] 2xl:max-w-[1000px] leading-[1.1] tracking-tight text-center lg:text-left mx-auto lg:mx-0">
+                {titleLine1}
+                {titleLine2 && (
+                  <>
+                    <br className="hidden md:block" />
+                    <span>{titleLine2}</span>
+                  </>
+                )}
               </h2>
 
               {/* Two Column Layout: Paragraphs & List */}
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+              <div className="grid grid-cols-1 gap-8 md:gap-10 lg:grid-cols-12 xl:gap-16 items-start">
 
                 {/* Left: Paragraphs */}
-                <div className="lg:col-span-7 flex flex-col gap-6">
-                  <p className="text-desc text-[16px] leading-[1.8]">
+                <div className="lg:col-span-7 flex flex-col gap-6 xl:gap-8 text-center lg:text-left">
+                  <p className="text-desc text-[16px] md:text-[18px] xl:text-[20px] 2xl:text-[22px] leading-[1.8]">
                     It is a long established fact that a reader will be distracted by the readable content of a page when looking at
                     established fact that a reader will be by the readable content of a page when looking at the Creative Director
                     and development team to blend user needs.
                   </p>
-                  <p className="text-desc text-[16px] leading-[1.8]">
+                  <p className="text-desc text-[16px] md:text-[18px] xl:text-[20px] 2xl:text-[22px] leading-[1.8]">
                     Business goals into seamless, effective design experiences. You will need to demonstrate a fundamental
                     understanding of design principles, an openness to learn and take direction, along with a strong.
                   </p>
                 </div>
 
                 {/* Right: Feature List */}
-                <div className="lg:col-span-5 lg:pl-10 flex flex-col gap-4">
+                <div className="lg:col-span-5 lg:pl-10 flex flex-col gap-4 text-left mx-auto lg:mx-0">
                   {serviceList.map((item, index) => (
                     <div key={index} className="flex items-center gap-4 group">
-                      <span className="text-title font-semibold text-lg transition-colors group-hover:text-brand">+</span>
-                      <span className="font-semibold text-title text-[16px] transition-colors group-hover:text-brand">{item}</span>
+                      <span className="text-title font-semibold text-[18px] xl:text-[22px] transition-colors group-hover:text-brand">+</span>
+                      <span className="font-semibold text-title text-[16px] md:text-[18px] xl:text-[20px] transition-colors group-hover:text-brand">{item}</span>
                     </div>
                   ))}
                 </div>
@@ -129,27 +133,27 @@ const ServiceDetails = () => {
             </div>
 
             {/* ── Banner Image with Text Overlay ── */}
-            <div className="relative rounded-xl overflow-hidden mb-24 group">
+            <div className="relative rounded-xl overflow-hidden mb-16 md:mb-24 group w-full mx-auto">
               <img
                 src={img}
                 alt="Digital Team Collaboration"
-                className="w-full h-100 md:h-full object-cover grayscale brightness-50 transition-transform duration-1000 group-hover:scale-105"
+                className="w-full h-[300px] md:h-[450px] lg:h-[500px] xl:h-[650px] 2xl:h-[750px] object-cover grayscale brightness-50 transition-transform duration-1000 group-hover:scale-105"
               />
-              <div className="absolute inset-0 flex items-center justify-center p-6 text-center z-10 pointer-events-none">
-                <h3 className="text-white text-[28px] md:text-[54px] font-bold max-w-162 leading-[1.4] tracking-tight">
-                  You'll support the execution of graphic and digital design projects
+              <div className="absolute inset-0 flex items-center justify-center p-6 md:p-10 text-center z-10 pointer-events-none">
+                <h3 className="text-white text-[28px] md:text-[44px] lg:text-[54px] xl:text-[64px] 2xl:text-[72px] font-bold max-w-full md:max-w-[800px] xl:max-w-[1000px] leading-[1.4] tracking-tight">
+                  You'll support the execution of <br className="hidden xl:block" /> graphic and digital design projects
                 </h3>
               </div>
             </div>
 
             {/* ── Stats Section (Outline Style) ── */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
+            <div className="grid grid-cols-2 gap-y-10 gap-x-6 md:grid-cols-4 md:gap-8 xl:gap-16 w-full mx-auto">
               {stats.map((stat, idx) => (
                 <div key={idx} className="flex flex-col items-center md:items-start group">
 
                   {/* Outline Number */}
                   <h3
-                    className="mb-5 text-[54px] md:text-[80px] font-black tracking-wide text-transparent leading-none transition-opacity duration-300 group-hover:opacity-70"
+                    className="mb-3 md:mb-5 text-[46px] md:text-[60px] lg:text-[80px] xl:text-[96px] 2xl:text-[110px] font-black tracking-wide text-transparent leading-none transition-opacity duration-300 group-hover:opacity-70"
                     style={{
                       WebkitTextStroke: "1px #ff3b30",
                       fontFamily: 'var(--font-title, sans-serif)'
@@ -159,7 +163,7 @@ const ServiceDetails = () => {
                   </h3>
 
                   {/* Label */}
-                  <span className="text-[10px] md:text-[11px] font-bold tracking-[0.2em] text-gray-500 uppercase mb-5">
+                  <span className="text-[10px] md:text-[11px] xl:text-[13px] 2xl:text-[14px] font-bold tracking-[0.2em] text-gray-500 uppercase mb-3 md:mb-5">
                     {stat.label}
                   </span>
 

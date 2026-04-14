@@ -103,7 +103,7 @@ const Navbar2 = () => {
                     scrolled ? "-translate-y-full opacity-0 h-0" : "translate-y-0 opacity-100 h-auto"
                 )}
             >
-                <div className="max-w-300 mx-auto px-6 flex justify-between items-center">
+                <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1400px] mx-auto px-5 md:px-8 xl:px-0 flex justify-center lg:justify-between items-center">
 
                     {/* Contact details */}
                     <div className="flex items-center gap-8 text-[12px] text-gray-400 font-medium">
@@ -137,7 +137,7 @@ const Navbar2 = () => {
                         : "bg-white py-5 border-transparent"
                 )}
             >
-                <div className="max-w-300 mx-auto px-6 flex items-center justify-between">
+                <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1400px] mx-auto px-5 md:px-8 xl:px-0 flex items-center justify-between">
 
                     {/* Logo */}
                     <Link to="/" className="flex items-center space-x-2 shrink-0">

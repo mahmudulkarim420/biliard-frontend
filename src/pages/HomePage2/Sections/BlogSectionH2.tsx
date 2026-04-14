@@ -58,20 +58,20 @@ const partners = [partnerLogo1, partnerLogo2, partnerLogo3, partnerLogo4, partne
 const BlogSectionH2 = () => {
   return (
     <section className="bg-white section-padding w-full">
-      <div className="max-w-300 mx-auto text-center">
+      <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] mx-auto text-center px-5 md:px-8 xl:px-0">
 
-        <p className="text-brand text-[11px] font-bold uppercase tracking-[0.2em] mb-4">
+        <p className="text-brand text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.2em] mb-4">
           LATEST BLOG
         </p>
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-16">
-          Latest Blog & News
+        <h2 className="text-[36px] md:text-5xl lg:text-[54px] xl:text-[64px] 2xl:text-[72px] font-bold text-gray-900 mb-12 md:mb-16 tracking-tight max-w-full lg:max-w-[800px] xl:max-w-[1000px] mx-auto">
+          Latest Blog & <br className="hidden xl:block" /> News
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 lg:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 xl:gap-14 2xl:gap-16 mb-16 lg:mb-20 text-left">
           {blogs.map((blog) => (
             <div key={blog.id} className="group cursor-pointer">
 
-              <div className="relative overflow-hidden rounded-lg h-70 -mb-15 z-0">
+              <div className="relative overflow-hidden rounded-lg h-70 xl:h-80 -mb-15 z-0">
                 <img
                   src={blog.image}
                   alt={blog.title}
@@ -86,18 +86,18 @@ const BlogSectionH2 = () => {
                 </div>
               </div>
 
-              <div className="relative z-10 mx-4 bg-white p-8 rounded-lg shadow-[0_15px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_rgba(255,59,48,0.08)]">
-                <div className="flex items-center gap-6 text-[12px] text-gray-400 font-medium mb-4">
+              <div className="relative z-10 mx-4 bg-white p-6 xl:p-8 rounded-lg shadow-[0_15px_40px_rgba(0,0,0,0.06)] transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-[0_20px_50px_rgba(255,59,48,0.08)]">
+                <div className="flex items-center gap-4 xl:gap-6 text-[12px] xl:text-[14px] text-gray-400 font-medium mb-4">
                   <div className="flex items-center gap-2">
-                    <User className="w-3.5 h-3.5 text-brand" />
+                    <User className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-brand" />
                     <span>{blog.author}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <MessageSquare className="w-3.5 h-3.5 text-brand" />
+                    <MessageSquare className="w-3.5 h-3.5 xl:w-4 xl:h-4 text-brand" />
                     <span>{blog.comments}</span>
                   </div>
                 </div>
-                <h3 className="text-[18px] font-bold text-gray-900 leading-snug text-left group-hover:text-brand transition-colors">
+                <h3 className="text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] font-bold text-gray-900 leading-snug text-left group-hover:text-brand transition-colors">
                   {blog.title}
                 </h3>
               </div>
@@ -106,21 +106,21 @@ const BlogSectionH2 = () => {
         </div>
 
         <div className="pt-12 border-t border-gray-100">
-          <div className="flex items-center justify-between gap-4 mb-12 overflow-hidden">
-            <div className="h-px bg-gray-200 flex-1" />
-            <p className="text-[11px] font-bold text-gray-400 uppercase tracking-[0.2em] whitespace-nowrap px-6">
-              Some of the partners & clients worked with
+          <div className="flex items-center justify-center lg:justify-between gap-4 mb-12 overflow-hidden">
+            <div className="h-px bg-gray-200 flex-1 hidden md:block" />
+            <p className="text-[10px] md:text-[11px] xl:text-[13px] font-bold text-gray-400 uppercase tracking-[0.2em] text-center md:whitespace-nowrap px-0 md:px-6 w-full md:w-auto">
+              Some of the partners & <br className="md:hidden" /> clients worked with
             </p>
-            <div className="h-px bg-gray-200 flex-1" />
+            <div className="h-px bg-gray-200 flex-1 hidden md:block" />
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-16 opacity-60 grayscale transition-all duration-300 hover:opacity-100">
+          <div className="grid grid-cols-2 lg:flex lg:flex-wrap items-center justify-center gap-8 md:gap-12 xl:gap-16 opacity-60 grayscale transition-all duration-300 hover:opacity-100">
             {partners.map((partner, idx) => (
               <img
                 key={idx}
                 src={partner}
                 alt={`Partner ${idx + 1}`}
-                className="h-15 w-42 object-contain cursor-default transition-all duration-300 hover:grayscale-0"
+                className={`h-10 md:h-12 xl:h-15 w-auto object-contain cursor-default transition-all duration-300 hover:grayscale-0 flex justify-center ${idx === 4 ? "col-span-2 lg:col-span-1" : ""}`}
               />
             ))}
           </div>

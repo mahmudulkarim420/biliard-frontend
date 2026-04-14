@@ -133,16 +133,16 @@ const Services = () => {
         </svg>
       </div>
 
-      <div className="mx-auto max-w-300 relative z-10">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 relative z-10">
 
         {/* ── Section Header ── */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
-          <div className="max-w-xl">
-            <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.3em] text-brand">
+          <div className="max-w-xl xl:max-w-2xl">
+            <p className="mb-4 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.3em] text-brand">
               OUR SERVICES
             </p>
-            <h2 className="text-4xl font-bold leading-[1.1] text-title sm:text-5xl lg:text-[54px] tracking-tight">
-              We Offer You A Digital <br /> Platform
+            <h2 className="text-[36px] md:text-5xl lg:text-[54px] xl:text-[64px] 2xl:text-[72px] font-bold leading-[1.1] text-title tracking-tight">
+              We Offer You A Digital <br className="hidden xl:block" /> Platform
             </h2>
           </div>
 
@@ -156,7 +156,7 @@ const Services = () => {
         </div>
 
         {/* ── Services Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 xl:gap-x-16">
           {services.map((service, index) => (
             <div
               key={index}
@@ -167,7 +167,7 @@ const Services = () => {
               </div>
 
               <div className="flex-1">
-                <h3 className="text-[20px] font-bold leading-tight text-title transition-colors duration-300 group-hover:text-brand">
+                <h3 className="text-[20px] xl:text-[24px] font-bold leading-tight text-title transition-colors duration-300 group-hover:text-brand">
                   {service.title}
                 </h3>
               </div>

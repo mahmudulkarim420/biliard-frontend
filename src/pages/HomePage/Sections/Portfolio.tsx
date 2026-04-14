@@ -14,15 +14,15 @@ const Portfolio = () => {
 
   return (
     <section className="relative w-full bg-white section-padding">
-      <div className="mx-auto max-w-300">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
 
         {/* ── Section Header + Category Filter ── */}
-        <div className="mb-16 flex flex-col justify-between gap-8 md:flex-row md:items-end">
-          <h2 className="text-4xl font-bold leading-none text-gray-900 md:text-5xl lg:text-[56px]">
+        <div className="mb-12 md:mb-16 flex flex-col justify-between gap-6 md:gap-8 md:flex-row md:items-end text-center md:text-left">
+          <h2 className="text-[36px] md:text-4xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] font-bold leading-[1.1] text-gray-900 tracking-tight">
             Our Portfolio
           </h2>
 
-          <ul className="flex flex-wrap gap-x-8 gap-y-4">
+          <ul className="flex flex-wrap justify-center md:justify-end gap-x-6 lg:gap-x-8 gap-y-3 md:gap-y-4">
             {categories.map((category) => (
               <li key={category}>
                 <button
@@ -47,7 +47,7 @@ const Portfolio = () => {
         {/* ── Portfolio Grid ── */}
         <motion.div
           layout
-          className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10"
         >
           <AnimatePresence mode="popLayout">
             {filteredItems.map((item) => (

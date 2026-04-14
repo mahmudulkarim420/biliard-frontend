@@ -37,21 +37,21 @@ const Hero = () => {
       </div>
 
       {/* ── Content ── */}
-      <div className="relative z-20 w-full mt-20 md:mt-20 lg:mt-24 py-12 sm:py-20 lg:py-32 px-6 sm:px-12 lg:px-24">
-        <div className="mx-auto w-full max-w-300">
-          <div className="max-w-162">
+      <div className="relative z-20 w-full mt-20 md:mt-20 lg:mt-24 py-12 sm:py-20 lg:py-32 px-5 md:px-8 xl:px-24 2xl:px-48 text-center sm:text-left">
+        <div className="mx-auto w-full max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px]">
+          <div className="max-w-162 xl:max-w-[800px] 2xl:max-w-[1000px] mx-auto sm:mx-0">
 
             {/* Eyebrow label */}
-            <div className="mb-4 sm:mb-6 flex items-center gap-3">
-              <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-300 sm:text-xs">
+            <div className="mb-4 sm:mb-6 flex items-center justify-center sm:justify-start gap-3">
+              <p className="text-[10px] sm:text-xs xl:text-[14px] font-bold uppercase tracking-[0.3em] text-gray-300 xl:tracking-[0.4em]">
                 Creative Digital Agency
               </p>
             </div>
 
             {/* Main heading */}
-            <h1 className="mb-8 sm:mb-12 text-[42px] font-semibold leading-[1.3] text-white sm:text-7xl lg:text-[85px] tracking-tight">
+            <h1 className="mb-8 sm:mb-12 text-[42px] sm:text-7xl lg:text-[85px] xl:text-[100px] 2xl:text-[120px] font-semibold leading-[1.1] text-white tracking-tight lg:leading-[1.05]">
               Best Digital
-              <br className="block sm:hidden" />
+              <br className="block xl:hidden" />
               <span className="hidden sm:inline"> </span>
               Agency for
               <br />
@@ -59,8 +59,8 @@ const Hero = () => {
             </h1>
 
             {/* CTA button */}
-            <div className="flex flex-col sm:flex-row items-start gap-6">
-              <DiscoverMoreBtn className="sm:px-10 sm:py-5 sm:text-sm" />
+            <div className="flex flex-col sm:flex-row items-center sm:items-start justify-center sm:justify-start gap-6">
+              <DiscoverMoreBtn className="sm:px-10 sm:py-5 sm:text-sm xl:text-[16px] xl:px-12 xl:py-6" />
             </div>
           </div>
         </div>

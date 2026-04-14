@@ -54,7 +54,7 @@ const ProgressBar = ({ label, percentage }: { label: string; percentage: number 
 const AboutExperience = () => {
   return (
     <section className="section-padding bg-white overflow-hidden">
-      <div className="max-w-300 mx-auto">
+      <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           
           {/* --- Images Section (Asymmetrical with Hover Effect) --- */}

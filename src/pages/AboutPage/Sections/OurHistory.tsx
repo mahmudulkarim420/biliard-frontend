@@ -23,7 +23,7 @@ const historyData = [
 const OurHistory = () => {
   return (
     <section className="section-padding bg-[#F3F3F3]">
-      <div className="max-w-300 mx-auto">
+      <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
           
           {/* ── Left Column: Heading ── */}

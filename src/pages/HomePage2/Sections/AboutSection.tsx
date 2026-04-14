@@ -21,8 +21,8 @@ const FEATURE_POINTS = [
 const AboutSection = () => {
   return (
     <section className="relative w-full bg-white pt-[130px]  overflow-hidden">
-      <div className="mx-auto max-w-300">
-        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24 xl:gap-32">
 
           {/* ── Left Column: Image Composition ── */}
           <div className="relative w-full lg:w-1/2 mb-16 lg:mb-0">
@@ -59,12 +59,12 @@ const AboutSection = () => {
               </p>
 
               {/* Section heading */}
-              <h2 className="mb-8 text-4xl font-bold leading-[1.2] text-title sm:text-5xl lg:text-[54px] tracking-tight">
-                We Empower <br /> Clients to be loved
+              <h2 className="mb-8 text-4xl sm:text-5xl lg:text-[54px] xl:text-[64px] 2xl:text-[72px] font-bold leading-[1.2] text-title tracking-tight">
+                We Empower <br className="hidden xl:block" /> Clients to be loved
               </h2>
 
               {/* Introductory body copy */}
-              <p className="mb-10 text-[15px] leading-relaxed text-desc max-w-lg">
+              <p className="mb-10 text-[15px] xl:text-[18px] leading-relaxed text-desc max-w-lg xl:max-w-2xl">
                 It is a long established fact that a reader will be distracted by
                 the readable content of a page when looking at established fact
                 that a reader will be by the readable content of a page when

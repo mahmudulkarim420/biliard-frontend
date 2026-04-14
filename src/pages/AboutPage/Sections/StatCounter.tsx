@@ -76,7 +76,7 @@ const StatCounter = () => {
       </div>
 
       {/* ── Content ── */}
-      <div className="relative z-10 container mx-auto px-6 max-w-300">
+      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-16 gap-x-8">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center md:items-start group">

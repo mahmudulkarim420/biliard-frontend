@@ -54,7 +54,7 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <section className="relative flex min-h-125 w-full items-center overflow-hidden bg-neutral-950 section-padding lg:min-h-150">
+    <section className="relative flex min-h-[400px] md:min-h-125 lg:min-h-150 xl:min-h-[700px] 2xl:min-h-[800px] w-full items-center overflow-hidden bg-neutral-950 section-padding">
 
       {/* ── Background Image Layer ── */}
       {/* Cross-fades between testimonial images using AnimatePresence "wait" mode. */}
@@ -76,8 +76,8 @@ const Testimonial = () => {
         <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-300 px-6 sm:px-12 lg:px-24">
-        <div className="relative mx-auto flex w-full max-w-4xl flex-col">
+      <div className="relative z-10 mx-auto w-full max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+        <div className="relative mx-auto flex w-full max-w-4xl xl:max-w-[1000px] flex-col text-center sm:text-left">
 
           {/* Large decorative quote mark — positioned behind the content */}
           <div className="pointer-events-none absolute -left-4 -top-8 z-0 opacity-30 sm:-left-12 sm:-top-16 md:-left-24 md:-top-28">
@@ -102,16 +102,16 @@ const Testimonial = () => {
                 className="flex flex-col"
               >
                 {/* Quote text */}
-                <h3 className="mb-8 text-[22px] font-bold leading-[1.4] text-white sm:mb-10 sm:text-3xl md:text-[45px] lg:leading-[1.4] tracking-tight">
+                <h3 className="mb-8 text-[22px] font-bold leading-[1.4] text-white sm:mb-10 sm:text-3xl md:text-[45px] xl:text-[54px] 2xl:text-[64px] lg:leading-[1.3] tracking-tight">
                   "{testimonials[currentIndex].text}"
                 </h3>
 
                 {/* Author meta — left brand-border accent */}
-                <div className="flex flex-col gap-1 border-l-[3px] border-brand pl-5 transition-all duration-300">
-                  <h5 className="text-[18px] font-bold text-white tracking-wide sm:text-[20px]">
+                <div className="flex flex-col gap-1 border-l-[3px] border-brand pl-4 md:pl-5 ml-5 sm:ml-0 text-left transition-all duration-300">
+                  <h5 className="text-[18px] sm:text-[20px] xl:text-[24px] font-bold text-white tracking-wide">
                     {testimonials[currentIndex].name}
                   </h5>
-                  <p className="text-[12px] font-medium text-gray-400 sm:text-[14px]">
+                  <p className="text-[12px] sm:text-[14px] xl:text-[16px] font-medium text-gray-400">
                     {testimonials[currentIndex].role}
                   </p>
                 </div>
@@ -120,7 +120,7 @@ const Testimonial = () => {
 
             {/* ── Pagination Dots ── */}
             {/* Active dot stretches wide; inactive dots contract. Clicking jumps to that slide. */}
-            <div className="mt-10 flex items-center gap-2.5 sm:mt-14 sm:gap-3">
+            <div className="mt-10 flex items-center justify-center sm:justify-start gap-2.5 sm:mt-14 sm:gap-3">
               {testimonials.map((_, index) => (
                 <button
                   key={index}

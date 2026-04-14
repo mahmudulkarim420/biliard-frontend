@@ -106,12 +106,12 @@ const Collaboration = () => {
       <div className="pointer-events-none absolute -left-40 bottom-0 h-125 w-125 rounded-full bg-white/2 blur-[100px] z-0" />
 
       {/* ── Part 1: Animated Stat Counters ── */}
-      <div className="relative z-10 mx-auto max-w-300 px-6 sm:px-12 lg:px-2 pb-28">
-        <div className="grid grid-cols-2 gap-y-12 md:grid-cols-4 gap-x-4 lg:gap-x-8">
+      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 pb-20 md:pb-28">
+        <div className="grid grid-cols-2 gap-y-10 gap-x-6 md:grid-cols-4 md:gap-x-8 xl:gap-x-16">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center text-center md:items-start md:text-left">
               <h3
-                className="mb-3 text-5xl font-light tracking-wide text-transparent sm:text-6xl lg:text-[75px]"
+                className="mb-3 text-[46px] md:text-[60px] lg:text-[75px] xl:text-[96px] 2xl:text-[110px] font-light tracking-wide text-transparent"
                 style={{
                   WebkitTextStroke: "1px #ff3b30",
                   fontFamily: 'var(--font-title)'
@@ -119,10 +119,10 @@ const Collaboration = () => {
               >
                 <Counter value={stat.number} />
               </h3>
-              <p className="text-[10px] font-bold uppercase mt-3 tracking-[0.2em] text-gray-400">
+              <p className="text-[10px] md:text-[11px] xl:text-[14px] font-bold uppercase mt-2 md:mt-3 tracking-[0.2em] text-gray-400">
                 {stat.label}
               </p>
-              <div className="mt-5 hidden h-px w-full bg-gray-800 md:block" />
+              <div className="mt-4 md:mt-5 hidden h-px w-full bg-gray-800 md:block" />
             </div>
           ))}
         </div>
@@ -161,31 +161,31 @@ const Collaboration = () => {
         </div>
 
         {/* Right panel: section copy + dashed vertical stepper */}
-        <div className="w-full bg-white px-8 py-16 sm:px-16 lg:w-[55%] lg:py-24 lg:pl-32 lg:pr-24">
-          <p className="mb-4 text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
+        <div className="w-full bg-white px-6 py-12 md:px-12 md:py-16 lg:w-[55%] lg:py-24 lg:pl-32 lg:pr-24 xl:pl-40 xl:py-32 2xl:pl-48">
+          <p className="mb-4 text-[11px] md:text-[13px] xl:text-[14px] font-bold uppercase tracking-[0.2em] text-brand text-center lg:text-left">
             COLLABORATION
           </p>
-          <h2 className="mb-14 text-4xl font-bold leading-[1.1] text-gray-900 md:text-5xl lg:text-[54px] tracking-tight">
+          <h2 className="mb-10 md:mb-14 text-[36px] md:text-5xl lg:text-[54px] xl:text-[64px] 2xl:text-[72px] text-center lg:text-left font-bold leading-[1.1] text-gray-900 tracking-tight max-w-full md:max-w-[800px] xl:max-w-[900px] mx-auto lg:mx-0">
             Help You Grow Your
-            <br />
+            <br className="hidden xl:block" />
             Business
           </h2>
 
           {/* Dashed vertical connector running behind the step number circles */}
-          <div className="relative flex flex-col gap-10">
+          <div className="relative flex flex-col gap-8 md:gap-10 xl:gap-12">
             <div className="absolute bottom-5 left-5 top-5 w-px border-l-[1.5px] border-dashed border-gray-300" />
 
             {steps.map((step, index) => (
-              <div key={index} className="group relative z-10 flex gap-6 sm:gap-8">
+              <div key={index} className="group relative z-10 flex gap-5 md:gap-6 xl:gap-8">
                 {/* Numbered circle — highlights to brand color on hover */}
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-[1.5px] border-gray-300 bg-white text-[13px] font-bold text-gray-500 transition-colors duration-300 group-hover:border-brand group-hover:text-brand">
+                <div className="flex h-10 w-10 xl:h-12 xl:w-12 shrink-0 items-center justify-center rounded-full border-[1.5px] border-gray-300 bg-white text-[13px] xl:text-[15px] font-bold text-gray-500 transition-colors duration-300 group-hover:border-brand group-hover:text-brand">
                   {step.num}
                 </div>
                 <div>
-                  <h4 className="mb-2 text-[16px] font-bold text-gray-900 transition-colors duration-300 group-hover:text-brand">
+                  <h4 className="mb-2 text-[16px] md:text-[18px] xl:text-[22px] font-bold text-gray-900 transition-colors duration-300 group-hover:text-brand">
                     {step.title}
                   </h4>
-                  <p className="text-[14px] leading-relaxed text-gray-500 max-w-sm">
+                  <p className="text-[14px] xl:text-[16px] leading-relaxed text-gray-500 max-w-sm xl:max-w-md">
                     {step.desc}
                   </p>
                 </div>

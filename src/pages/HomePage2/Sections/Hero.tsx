@@ -55,7 +55,7 @@ const Hero = () => {
           </div>
 
           {/* Main heading */}
-          <h1 className="mb-6 md:mb-10 text-[32px] sm:text-6xl md:text-8xl lg:text-[110px] font-extrabold leading-[1.2] md:leading-[1.1] text-white tracking-tight">
+          <h1 className="mb-6 md:mb-10 text-[32px] sm:text-5xl md:text-7xl lg:text-[80px] xl:text-[100px] 2xl:text-[120px] font-extrabold leading-[1.2] md:leading-[1.1] text-white tracking-tight">
             Cost effective <br className="hidden sm:block" />
             <span className="relative">
               & trusted agency

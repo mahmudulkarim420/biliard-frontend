@@ -50,7 +50,7 @@ const MarketingSection = () => {
 
   return (
     <section className="bg-[#F3F3F3] section-padding w-full overflow-hidden">
-      <div className="max-w-300 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+      <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 xl:gap-20 items-start">
 
         {/* ── Left: Service Offer List ── */}
         {/* Slides in from the left on first viewport entry. */}
@@ -59,34 +59,34 @@ const MarketingSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex flex-col"
+          className="flex flex-col text-center lg:text-left mx-auto lg:mx-0 max-w-full md:max-w-150 xl:max-w-[700px]"
         >
-          <span className="text-brand text-[12px] font-bold tracking-[0.2em] mb-4">
+          <span className="text-brand text-[12px] md:text-[14px] xl:text-[16px] font-bold tracking-[0.2em] mb-4">
             OUR OFFER
           </span>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.1] mb-10 tracking-tight">
-            We perform best <br /> digital marketing
+          <h2 className="text-[36px] md:text-5xl lg:text-6xl xl:text-[72px] 2xl:text-[80px] font-bold text-gray-900 leading-[1.1] mb-8 md:mb-10 tracking-tight">
+            We perform best <br className="hidden xl:block" /> digital marketing
           </h2>
 
           {/* Thumbnail + description row */}
-          <div className="flex flex-col md:flex-row gap-8 items-start mb-12">
+          <div className="flex flex-col md:flex-row gap-6 xl:gap-8 items-center lg:items-start mb-10 xl:mb-12">
             <div className="w-full md:w-1/3 shrink-0 overflow-hidden rounded-sm">
               <motion.img
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.6 }}
                 src={img}
                 alt="Team working"
-                className="grayscale object-cover w-full h-32"
+                className="grayscale object-cover w-full h-40 md:h-32 xl:h-40"
               />
             </div>
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-gray-500 text-[14px] md:text-sm xl:text-[16px] leading-relaxed text-center md:text-left">
               It is a long established fact that a reader will be distracted by the readable content of a page when looking at established fact that a reader will be by the readable content of a page.
             </p>
           </div>
 
           {/* Staggered service list — each row animates in on scroll */}
-          <div className="grid grid-cols-1 md:grid-cols-2 border-t border-gray-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 xl:gap-x-10 border-t border-gray-200">
             {services.map((service, idx) => (
               <motion.div
                 key={service.id}
@@ -94,15 +94,15 @@ const MarketingSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1, duration: 0.5 }}
-                className="flex items-center justify-between py-6 pr-6 border-b border-gray-200 group cursor-pointer"
+                className="flex items-center justify-between py-5 xl:py-6 pr-6 border-b border-gray-200 group cursor-pointer"
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-[12px] font-bold text-gray-400">{service.id}.</span>
-                  <span className="text-[15px] font-bold text-gray-900 group-hover:text-brand transition-colors">
+                  <span className="text-[12px] xl:text-[14px] font-bold text-gray-400">{service.id}.</span>
+                  <span className="text-[15px] xl:text-[18px] font-bold text-gray-900 group-hover:text-brand transition-colors">
                     {service.title}
                   </span>
                 </div>
-                <MoveRight className="w-4 h-4 text-gray-400 group-hover:text-brand group-hover:translate-x-1 transition-all" />
+                <MoveRight className="w-4 h-4 xl:w-5 xl:h-5 text-gray-400 group-hover:text-brand group-hover:translate-x-1 transition-all" />
               </motion.div>
             ))}
           </div>

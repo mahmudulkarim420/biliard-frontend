@@ -100,10 +100,10 @@ const Navbar = () => {
                         "mx-auto transition-all duration-500 ease-in-out",
                         scrolled
                             ? "w-full rounded-none border-b border-white/10 bg-black/90 py-4 shadow-2xl backdrop-blur-xl"
-                            : "w-[95%] lg:w-[calc(100%-260px)] rounded-full border border-white/20 bg-white/10 py-4 backdrop-blur-md"
+                            : "w-[95%] md:w-[90%] lg:w-[calc(100%-100px)] xl:w-[calc(100%-260px)] 2xl:max-w-[1400px] rounded-full border border-white/20 bg-white/10 py-4 backdrop-blur-md"
                     )}
                 >
-                    <div className="mx-auto max-w-300 px-6">
+                    <div className="mx-auto max-w-300 2xl:max-w-[1400px] px-5 md:px-6 xl:px-8">
                         <div className="flex items-center justify-between">
                             {/* Logo */}
                             <Link to="/" className="flex items-center space-x-2">

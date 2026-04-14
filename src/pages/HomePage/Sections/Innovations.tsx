@@ -112,20 +112,20 @@ const Innovations = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-300">
+      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
 
         {/* ── Section Header ── */}
-        <div className="mb-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <h2 className="max-w-125 text-4xl font-semibold leading-[1.1] text-white md:text-5xl lg:text-[52px]">
-            Creative problem solving innovations
+        <div className="mb-10 md:mb-16 flex flex-col items-center justify-between gap-6 md:flex-row md:items-end text-center md:text-left xl:mb-20">
+          <h2 className="max-w-full md:max-w-125 xl:max-w-[800px] text-[36px] md:text-5xl lg:text-[52px] xl:text-[64px] 2xl:text-[72px] font-semibold leading-[1.1] text-white tracking-tight">
+            Creative problem solving <br className="hidden xl:block" /> innovations
           </h2>
 
           <a
             href="/services"
-            className="group relative flex items-center pb-2 text-sm font-semibold uppercase tracking-widest text-brand transition-colors"
+            className="group relative flex items-center pb-2 text-[14px] xl:text-[16px] font-semibold uppercase tracking-widest text-brand transition-colors"
           >
             Explore More
-            <ArrowDownRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:translate-y-1" />
+            <ArrowDownRight className="ml-2 h-4 w-4 xl:h-5 xl:w-5 transition-transform group-hover:translate-x-1 group-hover:translate-y-1" />
 
             {/* --- Bottom Line --- */}
             <span className="absolute bottom-0 left-0 h-[1.5px] w-full bg-brand origin-right scale-x-100 transition-transform duration-300 group-hover:origin-left group-hover:scale-x-100 group-hover:bg-red-400"></span>
@@ -134,11 +134,11 @@ const Innovations = () => {
 
         {/* ── Service Cards Grid ── */}
         {/* 1 col → 2 col → 4 col responsive layout. Each card lifts on hover. */}
-        <div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-10">
           {services.map((service, index) => (
             <div
               key={index}
-              className={`group relative flex flex-col overflow-hidden rounded-4xl p-8 pb-10 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/70 bg-linear-to-tl ${service.isActive
+              className={`group relative flex flex-col overflow-hidden rounded-4xl p-8 xl:p-10 pb-10 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/70 bg-linear-to-tl ${service.isActive
                   ? "from-[#222430] to-[#15161c] shadow-2xl shadow-black/60"
                   : "from-[#1a1b24] to-[#0c0d11] hover:from-[#1d1e29] hover:to-[#111218]"
                 }`}
@@ -157,7 +157,7 @@ const Innovations = () => {
 
               {/* Large outline number — fades up in opacity on hover */}
               <div
-                className="mb-12 sm:mb-20 text-[80px] sm:text-[120px] font-medium leading-none tracking-tight opacity-50 transition-opacity duration-300 group-hover:opacity-60"
+                className="mb-12 sm:mb-16 xl:mb-24 text-[80px] sm:text-[100px] xl:text-[130px] font-medium leading-none tracking-tight opacity-50 transition-opacity duration-300 group-hover:opacity-60"
                 style={{
                   WebkitTextStroke: "1px rgba(255, 255, 255, 0.29)",
                   color: "transparent",
@@ -169,10 +169,10 @@ const Innovations = () => {
 
               {/* Icon + title — icon glows red and scales on hover */}
               <div className="relative z-10 mt-auto">
-                <div className="mb-6 origin-left text-brand transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,59,48,0.5)]">
+                <div className="mb-6 xl:mb-8 origin-left text-brand transition-transform duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(255,59,48,0.5)]">
                   {service.icon}
                 </div>
-                <h3 className="whitespace-pre-line text-[16px] sm:text-[17px] font-semibold leading-snug text-gray-100">
+                <h3 className="whitespace-pre-line text-[16px] sm:text-[18px] xl:text-[22px] font-semibold leading-snug text-gray-100">
                   {service.title}
                 </h3>
               </div>

@@ -48,7 +48,7 @@ const BlogPage = () => {
       <div className="blog-page-standardized bg-white">
         
         <section className="section-padding">
-          <div className="max-w-300 mx-auto">
+          <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
             
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
               

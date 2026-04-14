@@ -33,7 +33,7 @@ const MarqueeDividerH2 = () => {
               <div key={index} className="flex items-center">
                 {/* Outline text word — whitespace-nowrap prevents wrapping mid-word */}
                 <span
-                  className="mx-8 whitespace-nowrap text-5xl font-black uppercase tracking-widest sm:text-6xl md:text-7xl lg:text-[100px]"
+                  className="mx-6 md:mx-8 whitespace-nowrap text-[40px] sm:text-5xl font-black uppercase tracking-widest md:text-7xl lg:text-[100px] xl:text-[130px] 2xl:text-[160px]"
                   style={{
                     WebkitTextStroke: "3px rgb(156, 163, 175)",
                     color: "transparent",
