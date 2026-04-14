@@ -6,14 +6,14 @@ const ContactPage = () => {
       <div className="bg-white">
         
         <section className="section-padding">
-          <div className="container-custom">
+          <div className="max-w-300 mx-auto">
             
             {/* ── Top Section: Info & Form ── */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start mb-16 md:mb-24">
               
               {/* Left Column: Contact Info */}
               <div>
-                <h2 className="text-[40px] md:text-[54px] font-bold text-title leading-[1.1] mb-12 tracking-tight">
+                <h2 className="text-[40px] md:text-[54px] font-semibold text-title leading-[1.1] mb-12 tracking-tight">
                   We’ve been <br /> waiting for you
                 </h2>
                 

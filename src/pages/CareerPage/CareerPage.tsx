@@ -13,10 +13,10 @@ const CareerPage = () => {
     <SubPageLayout title="Careers" breadcrumb="Home / Career">
       <div className="career-page-standardized bg-white">
         <section className="section-padding">
-          <div className="container-custom">
+          <div>
             <div className="mx-auto max-w-300">
               <div className="max-w-100">
-                <h2 className="text-[36px] font-bold leading-[1.05] tracking-tight text-title md:text-[54px]">
+                <h2 className="text-[36px] font-semibold leading-[1.1] tracking-tight text-title md:text-[54px]">
                   Recently we are looking for
                 </h2>
               </div>
