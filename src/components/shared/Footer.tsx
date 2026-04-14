@@ -1,7 +1,7 @@
 // ─── External Libraries ──────────────────────────────────────────────────────
 import { Link } from "react-router-dom";
 import { Send, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-
+import bgPattern from "@/assets/Mask group (1).png";
 // ─── Local Assets ─────────────────────────────────────────────────────────────
 import logo from "@/assets/logo.png";
 
@@ -14,23 +14,18 @@ const usefulLinks = [
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
-// Site-wide footer. Organized into a 4-column grid: brand/tagline, contact
-// details, quick links, and a newsletter form with social icons.
-// A radial-gradient dot pattern on the right half adds a subtle dark texture.
 const Footer = () => {
   return (
-    <footer className="relative bg-neutral-950 pt-24 overflow-hidden">
+    <footer className="relative bg-[#060710] pt-24 overflow-hidden">
 
-      {/* Decorative dot grid — fades with a radial mask toward center */}
-      <div
-        className="absolute right-0 top-0 h-full w-1/2 opacity-10 pointer-events-none"
-        style={{
-          backgroundImage: "radial-gradient(white 1.5px, transparent 1.5px)",
-          backgroundSize: "32px 32px",
-          maskImage: "radial-gradient(ellipse at center, black, transparent 80%)",
-          WebkitMaskImage: "radial-gradient(ellipse at center, black, transparent 80%)",
-        }}
-      />
+      {/* ── Background Image Pattern Layer ── */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-100">
+        <img 
+          src={bgPattern} 
+          alt="Footer Background Pattern" 
+          className="w-full h-full object-cover grayscale"
+        />
+      </div>
 
       <div className="relative z-10 mx-auto max-w-300 px-6 sm:px-12 lg:px-24 lg:max-w-300 box-content">
 

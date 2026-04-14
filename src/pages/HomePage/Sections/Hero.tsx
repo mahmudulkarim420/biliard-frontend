@@ -12,7 +12,7 @@ import DiscoverMoreBtn from "@/components/shared/DiscoverMoreBtn";
 // without any external animation library.
 const Hero = () => {
   return (
-    <section className="relative w-full flex flex-col justify-center items-center min-h-[65vh] md:min-h-[80vh] lg:min-h-screen overflow-hidden bg-gray-950 section-padding lg:py-0">
+    <section className="relative w-full flex flex-col justify-center items-center min-h-[45vh] md:min-h-[80vh] lg:min-h-screen overflow-hidden bg-gray-950 section-padding lg:py-0">
 
       {/* ── Layer 1: Grayscale base photo ── */}
       <div className="absolute inset-0 z-0">
@@ -37,7 +37,7 @@ const Hero = () => {
       </div>
 
       {/* ── Content ── */}
-      <div className="relative z-20 w-full mt-16 md:mt-20 lg:mt-24 py-16 sm:py-20 lg:py-32 px-6 sm:px-12 lg:px-24">
+      <div className="relative z-20 w-full mt-20 md:mt-20 lg:mt-24 py-12 sm:py-20 lg:py-32 px-6 sm:px-12 lg:px-24">
         <div className="mx-auto w-full max-w-300">
           <div className="max-w-162">
 

@@ -19,8 +19,6 @@ interface TabContent {
 }
 
 // ─── Static Data ──────────────────────────────────────────────────────────────
-// Each key corresponds to a tab label. The active tab's content is rendered
-// inside an AnimatePresence block for smooth cross-fade transitions.
 const tabData: Record<TabKey, TabContent> = {
   innovation: {
     text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at established fact that a reader will be by the readable content of a page when looking at.",
@@ -40,19 +38,14 @@ const tabData: Record<TabKey, TabContent> = {
 };
 
 // ─── Component ────────────────────────────────────────────────────────────────
-// Three sub-sections within one component:
-// 1. A video banner that overlaps the Hero below via negative top margin.
-// 2. A progress bar + animated tab panel (left/right two-column grid).
-// 3. A full-screen video modal triggered by the play button in the banner.
 const FeaturesSection = () => {
-  // Tracks which tab is active and whether the video modal is open.
   const [activeTab, setActiveTab] = useState<TabKey>("innovation");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <section className="relative z-20 w-full bg-slate-50 section-padding section-padding-x">
 
-      {/* Hexagonal repeating SVG pattern — very low opacity decorative texture */}
+      {/* Hexagonal repeating SVG pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
@@ -64,7 +57,6 @@ const FeaturesSection = () => {
       <div className="relative z-10 mx-auto max-w-300">
 
         {/* ── Video Banner ── */}
-        {/* Pulls upward with a negative margin to overlap the bottom of the Hero section. */}
         <div className="group relative z-30 -mt-44 sm:-mt-64 lg:-mt-80 mb-20 h-75 sm:h-100 lg:h-138 w-full overflow-hidden bg-gray-950 shadow-2xl rounded-sm">
           <img
             src={bg}
@@ -72,17 +64,22 @@ const FeaturesSection = () => {
             className="h-full w-full object-cover object-center sm:object-[center_20%] lg:object-top transition-transform duration-1000 group-hover:scale-105 opacity-60 lg:opacity-70"
           />
 
-          {/* Content overlay — heading aligned right, play button below it */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 sm:flex-row sm:text-left sm:justify-between lg:px-24">
+          {/* Content overlay */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center p-6 sm:flex-row sm:justify-between lg:px-24">
             <div className="hidden sm:block flex-1" />
 
-            <div className="flex flex-col items-center sm:items-end gap-6 sm:gap-10">
-              <h2 className="max-w-75 sm:max-w-125 text-2xl font-bold leading-tight text-white mb-2 sm:mb-0 sm:text-5xl lg:text-7xl text-center sm:text-right">
-                We creating unique <br className="hidden lg:block" /> brand agency
+            {/* Changed items-center/end to items-start for left alignment */}
+            <div className="flex flex-col items-start gap-6 sm:gap-10 sm:w-[500px]">
+
+              {/* Heading: Left aligned, 3 lines */}
+              <h2 className="text-3xl font-bold leading-[1.2] text-white sm:text-5xl lg:text-[64px] text-left">
+                We creating <br />
+                unique brand <br />
+                agency
               </h2>
 
-              {/* Play button with a continuous ping ripple animation */}
-              <div className="relative sm:mr-64">
+              {/* Play button */}
+              <div className="relative mt-4">
                 <div className="absolute inset-0 animate-ping rounded-full bg-white/20" />
                 <button
                   onClick={() => setIsModalOpen(true)}
@@ -97,7 +94,6 @@ const FeaturesSection = () => {
 
         {/* ── Content: Progress Bar (Left) + Tab Panel (Right) ── */}
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2 lg:gap-24">
-
           {/* Left: Section copy + animated skill bar */}
           <div>
             <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.2em] text-brand">
@@ -110,7 +106,6 @@ const FeaturesSection = () => {
               It is a long established fact that a reader will be distracted by the readable content of a page when looking at established fact.
             </p>
 
-            {/* Animated progress bar — fills to 85% when it enters the viewport */}
             <div className="w-full max-w-md">
               <div className="mb-3 flex justify-between">
                 <span className="text-sm font-bold text-title uppercase tracking-wide">Digital Marketing</span>
@@ -130,15 +125,13 @@ const FeaturesSection = () => {
 
           {/* Right: Tab selector + animated tab content panel */}
           <div>
-            {/* Tab buttons — active tab has an animated brand-red spring background */}
             <div className="mb-8 flex flex-wrap gap-3">
               {(Object.keys(tabData) as TabKey[]).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`relative px-7 py-3 text-[12px] font-bold uppercase tracking-wider transition-all duration-500 ${
-                    activeTab === tab ? "text-white" : "bg-white text-gray-600 hover:text-brand"
-                  }`}
+                  className={`relative px-7 py-3 text-[12px] font-bold uppercase tracking-wider transition-all duration-500 ${activeTab === tab ? "text-white" : "bg-white text-gray-600 hover:text-brand"
+                    }`}
                 >
                   <AnimatePresence>
                     {activeTab === tab && (
@@ -148,7 +141,6 @@ const FeaturesSection = () => {
                         initial={false}
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       >
-                        {/* Downward-pointing caret below the active tab */}
                         <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-3 w-3 rotate-45 bg-brand" />
                       </motion.div>
                     )}
@@ -158,7 +150,6 @@ const FeaturesSection = () => {
               ))}
             </div>
 
-            {/* Tab content panel — cross-fades between tabs via AnimatePresence "wait" mode */}
             <div className="min-h-62 bg-white p-8 shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100">
               <AnimatePresence mode="wait">
                 <motion.div
@@ -192,8 +183,6 @@ const FeaturesSection = () => {
       </div>
 
       {/* ── Video Modal ── */}
-      {/* Full-screen dark overlay with an embedded YouTube iframe.
-          The modal mounts/unmounts via AnimatePresence for fade + scale animation. */}
       <AnimatePresence>
         {isModalOpen && (
           <motion.div
@@ -208,7 +197,6 @@ const FeaturesSection = () => {
               exit={{ scale: 0.9, opacity: 0 }}
               className="relative aspect-video w-full max-w-5xl overflow-hidden rounded-xl bg-black"
             >
-              {/* Close button */}
               <button
                 onClick={() => setIsModalOpen(false)}
                 className="absolute right-4 top-4 z-10 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-brand"
@@ -216,7 +204,6 @@ const FeaturesSection = () => {
                 <X className="h-6 w-6" />
               </button>
 
-              {/* YouTube embed — autoplay is triggered when the modal opens */}
               <iframe
                 className="h-full w-full"
                 src="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1"

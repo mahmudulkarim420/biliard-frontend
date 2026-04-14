@@ -1,6 +1,7 @@
 // ─── External Libraries ──────────────────────────────────────────────────────
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import bgPattern from "@/assets/Mask group.png"; // তোমার ইম্পোর্ট করা প্যাটার্ন
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface ServiceItem {
@@ -9,8 +10,6 @@ interface ServiceItem {
 }
 
 // ─── Static Data ──────────────────────────────────────────────────────────────
-// Each service is rendered as a card in the grid. SVG icons are inlined to
-// retain full color and stroke control without an external icon library.
 const services: ServiceItem[] = [
   {
     title: "Brand Strategy & Art Direction",
@@ -113,14 +112,21 @@ const services: ServiceItem[] = [
 ];
 
 // ─── Component ────────────────────────────────────────────────────────────────
-// Renders a 3-column service grid with hover animations. The section overlaps
-// the Hero below it via a negative top margin and a rounded-top border-radius.
 const Services = () => {
   return (
-    <section className="relative z-20 w-full bg-[#f8f9fa] section-padding-h2 px-6 sm:px-12 lg:px-24 overflow-hidden rounded-t-[50px]">
+    <section className="relative z-20 w-full bg-[#F3F3F3] section-padding-h2 px-6 sm:px-12 lg:px-24 overflow-hidden rounded-t-[50px]">
 
-      {/* Decorative wavy line background — very low opacity for subtle texture */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+      {/* ── Background Image Pattern Layer ── */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-100">
+        <img 
+          src={bgPattern} 
+          alt="Background Texture" 
+          className="w-full h-full object-cover grayscale"
+        />
+      </div>
+
+      {/* Decorative wavy line background layer */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-0">
         <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
           <path d="M0 20 Q 50 40 100 20 T 200 20" fill="none" stroke="black" strokeWidth="0.1" />
           <path d="M0 50 Q 50 70 100 50 T 200 50" fill="none" stroke="black" strokeWidth="0.1" />
@@ -150,26 +156,22 @@ const Services = () => {
         </div>
 
         {/* ── Services Grid ── */}
-        {/* Each card has a hover-activated icon scale, title color change, and arrow rotation. */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12">
           {services.map((service, index) => (
             <div
               key={index}
               className="group flex items-center gap-6 py-10 border-b border-gray-200 hover:border-brand transition-colors duration-500 cursor-pointer"
             >
-              {/* Service icon with scale-on-hover */}
               <div className="text-brand shrink-0 transition-transform duration-500 group-hover:scale-110">
                 {service.icon}
               </div>
 
-              {/* Service title */}
               <div className="flex-1">
                 <h3 className="text-[20px] font-bold leading-tight text-title transition-colors duration-300 group-hover:text-brand">
                   {service.title}
                 </h3>
               </div>
 
-              {/* Arrow CTA — fills with brand color and rotates 45° on hover */}
               <div className="h-10 w-10 flex items-center justify-center rounded-full bg-white text-gray-400 group-hover:bg-brand group-hover:text-white transition-all duration-500 shadow-sm group-hover:shadow-brand/20">
                 <ArrowUpRight className="h-5 w-5 transition-transform duration-500 group-hover:rotate-45" />
               </div>

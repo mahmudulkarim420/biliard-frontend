@@ -1,4 +1,6 @@
-import { Check, Play } from "lucide-react";
+import { useState } from "react";
+import { Check, Play, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import mainImg from "@/assets/img (17).png";
 
 // --- Static Data ---
@@ -23,6 +25,8 @@ const featuresList = [
 // badge, followed by a two-column grid of an image composition and a
 // feature checklist with descriptive body copy.
 const ITFeatureSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <section className="relative w-full bg-white section-padding-h2 px-6 sm:px-12 lg:px-24 overflow-hidden">
       <div className="mx-auto max-w-300">
@@ -60,7 +64,10 @@ const ITFeatureSection = () => {
             </svg>
 
             {/* Center play button */}
-            <button className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-transparent border border-gray-200 text-title hover:bg-brand hover:text-white hover:border-brand transition-all duration-300">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-transparent border border-gray-200 text-title hover:bg-brand hover:text-white hover:border-brand transition-all duration-300"
+            >
               <Play className="h-4 w-4 fill-current ml-1" />
             </button>
           </div>
@@ -150,6 +157,39 @@ const ITFeatureSection = () => {
 
         </div>
       </div>
+      {/* ── Video Modal ── */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-100 flex items-center justify-center bg-black/90 p-4"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              className="relative aspect-video w-full max-w-5xl overflow-hidden rounded-xl bg-black"
+            >
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="absolute right-4 top-4 z-10 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-brand"
+              >
+                <X className="h-6 w-6" />
+              </button>
+
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1"
+                title="Agency Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

@@ -134,8 +134,8 @@ const Navbar2 = () => {
         className={cn(
           "w-full transition-all duration-500 border-b",
           scrolled
-            ? "bg-[#09090b]/95 backdrop-blur-md pt-10 pb-6 shadow-xl border-white/10 -mt-11 lg:-mt-11"
-            : "bg-white py-7 border-transparent"
+            ? "bg-[#09090b]/95 backdrop-blur-md pt-8 pb-4 shadow-xl border-white/10 -mt-11 lg:-mt-11"
+            : "bg-white py-5 border-transparent"
         )}
       >
         <div className="max-w-300 mx-auto px-6 flex items-center justify-between">

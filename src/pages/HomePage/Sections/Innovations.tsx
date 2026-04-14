@@ -121,7 +121,7 @@ const Innovations = () => {
           </h2>
 
           <a
-            href="#"
+            href="/services"
             className="group relative flex items-center pb-2 text-sm font-semibold uppercase tracking-widest text-brand transition-colors"
           >
             Explore More
