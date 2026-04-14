@@ -23,64 +23,64 @@ import NotFound from "@/pages/NotFound/NotFound";
 // Centralized route tree. Each top-level route uses a layout component that
 // wraps the matched child page with the appropriate Navbar and Footer.
 export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-    ],
-  },
-  {
-    path: "/about",
-    element: <AboutPage />,
-  },
-  {
-    path: "/services",
-    element: <ServicesPage />,
-  },
-  {
-    path: "/service-details",
-    element: <ServiceDetails />,
-  },
-  {
-    path: "/portfolio",
-    element: <PortfolioPage />,
-  },
-  {
-    path: "/portfolio/:id",
-    element: <PortfolioDetails />,
-  },
-  {
-    path: "/career",
-    element: <CareerPage />,
-  },
-  {
-    path: "/blog",
-    element: <BlogPage />,
-  },
-  {
-    path: "/blog/:id",
-    element: <BlogDetailsPage />,
-  },
-  {
-    path: "/contact",
-    element: <ContactPage />,
-  },
-  {
-    path: "/home-2",
-    element: <Home2Layout />,
-    children: [
-      {
-        index: true,
-        element: <Home2 />,
-      },
-    ],
-  },
-  {
-    path: "*",
-    element: <NotFound />,
-  },
+    {
+        path: "/",
+        element: <RootLayout />,
+        children: [
+            {
+                index: true,
+                element: <Home />,
+            },
+        ],
+    },
+    {
+        path: "/about",
+        element: <AboutPage />,
+    },
+    {
+        path: "/services",
+        element: <ServicesPage />,
+    },
+    {
+        path: "/services/:id",
+        element: <ServiceDetails />,
+    },
+    {
+        path: "/portfolio",
+        element: <PortfolioPage />,
+    },
+    {
+        path: "/portfolio/:id",
+        element: <PortfolioDetails />,
+    },
+    {
+        path: "/career",
+        element: <CareerPage />,
+    },
+    {
+        path: "/blog",
+        element: <BlogPage />,
+    },
+    {
+        path: "/blog/:id",
+        element: <BlogDetailsPage />,
+    },
+    {
+        path: "/contact",
+        element: <ContactPage />,
+    },
+    {
+        path: "/home-2",
+        element: <Home2Layout />,
+        children: [
+            {
+                index: true,
+                element: <Home2 />,
+            },
+        ],
+    },
+    {
+        path: "*",
+        element: <NotFound />,
+    },
 ]);
