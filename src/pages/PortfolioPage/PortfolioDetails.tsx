@@ -33,20 +33,20 @@ const PortfolioDetails = () => {
             
             {/* ── Top Header Section ── */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-16">
-              <div className="lg:col-span-6">
-                <h2 className="text-[32px] md:text-[46px] font-bold leading-[1.1] tracking-tight text-title">
+              <div className="lg:col-span-6 mb-12">
+                <h2 className="text-[32px] md:text-[54px] font-semibold leading-[1.3] tracking-tight text-title">
                   We drive into your business dream in order bring.
                 </h2>
               </div>
               <div className="lg:col-span-6 flex flex-col gap-6">
-                <p className="text-[15px] md:text-[16px] leading-[1.6] text-desc">
+                <p className="text-[15px] md:text-[16px] leading-[2.2] text-desc">
                   It is a long established fact that a reader will be distracted by the  readable content of a page when looking at established fact that a  reader will be by the readable content of a page when looking at the Creative Director and development team to blend user needs 
                 </p>
               </div>
             </div>
 
             {/* ── Project Info Grid ── */}
-            <div className="py-10 border-t border-b border-gray-100 mb-16">
+            <div className="py-10 border-t border-b border-gray-100 mb-25">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-2 text-gray-400 mb-1">
@@ -83,7 +83,7 @@ const PortfolioDetails = () => {
             </div>
 
             {/* ── Main Project Image ── */}
-            <div className="rounded-md overflow-hidden mb-20 shadow-xl">
+            <div className="rounded-md overflow-hidden mb-20 ">
               <img
                 src={mainImage}
                 alt={project.title}
@@ -103,10 +103,10 @@ const PortfolioDetails = () => {
                 
                 {/* Two Supporting Images */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                  <div className="rounded-2xl overflow-hidden h-62 shadow-lg">
+                  <div className="rounded-lg overflow-hidden h-62">
                     <img src={detailImageOne} alt="Visual 1" className="w-full h-full object-cover" />
                   </div>
-                  <div className="rounded-2xl overflow-hidden h-62 shadow-lg">
+                  <div className="rounded-lg overflow-hidden h-62">
                     <img src={detailImageTwo} alt="Visual 2" className="w-full h-full object-cover" />
                   </div>
                 </div>
