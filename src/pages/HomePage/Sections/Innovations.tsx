@@ -134,7 +134,7 @@ const Innovations = () => {
 
         {/* ── Service Cards Grid ── */}
         {/* 1 col → 2 col → 4 col responsive layout. Each card lifts on hover. */}
-        <div className="grid grid-cols-1 gap-7.5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-[30px] sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {services.map((service, index) => (
             <div
               key={index}
