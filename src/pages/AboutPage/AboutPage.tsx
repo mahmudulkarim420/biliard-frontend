@@ -9,7 +9,7 @@ import Partners from "@/pages/AboutPage/Sections/Partners";
 const AboutPage = () => {
   return (
     <SubPageLayout title="About Us" breadcrumb="Home / About Us">
-      <div className="about-page-standardized">
+      <div>
         <AboutExperience />
         <MarqueeDivider/>
         <OurHistory/>

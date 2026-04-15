@@ -34,11 +34,6 @@ html,
 body {
   scroll-behavior: smooth;
   font-family: var(--font-body);
-  background-color: var(--color-spaceWhite);
-  /* Desktop এ কাস্টম কার্সারের জন্য */
-  @media (pointer: fine) {
-    cursor: none;
-  }
 }
 
 @layer base {
@@ -55,7 +50,7 @@ body {
   }
 
   h2 { 
-    @apply text-[30px] sm:text-[38px] md:text-[46px] lg:text-[54px] xl:text-[62px] 2xl:text-[72px] leading-[1.15] font-bold; 
+    @apply text-[30px] sm:text-[38px] md:text-[46px] lg:text-[48px] xl:text-[54px] leading-[1.15] font-bold; 
   }
 
   h3 { 
@@ -68,7 +63,7 @@ body {
 
   /* Body Text Adjustment */
   p { 
-    @apply font-body text-[15px] md:text-[16px] xl:text-[18px] leading-[1.6] text-desc font-normal; 
+    @apply font-body text-[16px] text-desc font-normal; 
   }
 
   /* ── Standardized Spacing Utilities (XL Optimized) ── */
@@ -77,14 +72,14 @@ body {
    * 1. Global Section Padding
    */
   .section-padding {
-    @apply py-16 md:py-24 lg:py-[120px] xl:py-[140px] 2xl:py-[160px];
+    @apply py-14 md:py-20 lg:py-[100px] xl:py-[120px];
   }
 
   /**
    * 2. Global Section Gap
    */
   .section-gap {
-    @apply mt-16 md:mt-24 lg:mt-[120px] xl:mt-[140px];
+    @apply mt-14 md:mt-20 lg:mt-[100px] xl:mt-[120px];
   }
 
 }

@@ -43,7 +43,7 @@ const FeaturesSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative z-20 w-full bg-slate-50 section-padding">
+    <section className="relative z-20 w-full section-padding">
 
       {/* Hexagonal repeating SVG pattern */}
       <div
@@ -93,13 +93,13 @@ const FeaturesSection = () => {
         </div>
 
         {/* ── Content: Progress Bar (Left) + Tab Panel (Right) ── */}
-        <div className="grid grid-cols-1 gap-12 md:gap-16 lg:grid-cols-2 xl:gap-24 w-full">
+        <div className="grid grid-cols-1 gap-12 md:gap-16 lg:grid-cols-2 xl:gap-24 w-full mt-14">
           {/* Left: Section copy + animated skill bar */}
           <div className="text-center lg:text-left flex flex-col items-center lg:items-start xl:max-w-[90%] lg:mr-auto">
             <p className="mb-3 text-[11px] md:text-[13px] xl:text-[14px] font-bold uppercase tracking-[0.2em] text-brand">
               Innovative Ideas
             </p>
-            <h2 className="mb-6 text-[36px] md:text-4xl lg:text-[42px] xl:text-[54px] 2xl:text-[64px] font-bold leading-[1.1] tracking-tight text-title">
+            <h2 className="mb-6 text-[36px] md:text-4xl lg:text-[42px] xl:text-[54px] font-bold leading-[1.1] tracking-tight text-title">
               We Offer You A <br className="hidden xl:block" /> Digital Platform
             </h2>
             <p className="mb-10 text-[14px] md:text-[15px] xl:text-[18px] leading-relaxed text-desc max-w-full lg:max-w-[90%]">

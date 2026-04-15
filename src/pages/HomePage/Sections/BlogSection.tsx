@@ -69,7 +69,7 @@ const BlogSection = () => {
         <p className="text-brand text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.2em] mb-4">
           LATEST BLOG
         </p>
-        <h2 className="text-[36px] md:text-5xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] font-bold text-gray-900 mb-12 md:mb-16 tracking-tight">
+        <h2 className="text-[36px] md:text-5xl  2xl:text-[54px] font-bold text-gray-900 mb-12 md:mb-16 tracking-tight">
           Latest Blog & News
         </h2>
 

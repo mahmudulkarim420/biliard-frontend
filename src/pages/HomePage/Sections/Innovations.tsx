@@ -101,7 +101,7 @@ const services: ServiceCard[] = [
 // and a service title. A decorative cross/plus SVG pattern fills the background.
 const Innovations = () => {
   return (
-    <section className="relative z-10 w-full overflow-hidden bg-[#09090b] section-padding section-padding-x">
+    <section className="relative z-10 w-full overflow-hidden bg-[#09090b] section-padding">
 
       {/* Repeating cross-plus SVG pattern — very low opacity decorative texture */}
       <div
@@ -116,7 +116,7 @@ const Innovations = () => {
 
         {/* ── Section Header ── */}
         <div className="mb-10 md:mb-16 flex flex-col items-center justify-between gap-6 md:flex-row md:items-end text-center md:text-left xl:mb-20">
-          <h2 className="max-w-full md:max-w-125 xl:max-w-[800px] text-[36px] md:text-5xl lg:text-[52px] xl:text-[64px] 2xl:text-[72px] font-semibold leading-[1.1] text-white tracking-tight">
+          <h2 className="max-w-full md:max-w-125 xl:max-w-[800px] text-white">
             Creative problem solving <br className="hidden xl:block" /> innovations
           </h2>
 

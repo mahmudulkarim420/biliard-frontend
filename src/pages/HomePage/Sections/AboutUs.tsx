@@ -51,7 +51,7 @@ const AboutUs = () => {
             </p>
 
             {/* Section heading */}
-            <h2 className="mb-8 md:mb-10 max-w-full md:max-w-100 xl:max-w-[800px] text-[36px] md:text-4xl lg:text-[46px] xl:text-[54px] 2xl:text-[64px] font-bold leading-[1.1] text-title tracking-tight">
+            <h2 className="mb-8 md:mb-10 max-w-full md:max-w-100 xl:max-w-[800px] text-title tracking-tight">
               We Empower Clients to <br className="hidden lg:block" /> be loved
             </h2>
 

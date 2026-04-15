@@ -5,14 +5,9 @@ import redAccents from "@/assets/bg.png";
 // ─── Local Components ─────────────────────────────────────────────────────────
 import DiscoverMoreBtn from "@/components/shared/DiscoverMoreBtn";
 
-// ─── Component ────────────────────────────────────────────────────────────────
-// Full-bleed hero section for the primary Home page. Uses three stacked
-// absolute layers — a grayscale photo base, brand-colored red shape accents
-// (mix-blend-screen), and dark gradient overlays — to build visual depth
-// without any external animation library.
 const Hero = () => {
   return (
-    <section className="relative w-full flex flex-col justify-center items-center min-h-[45vh] md:min-h-[80vh] lg:min-h-screen overflow-hidden bg-gray-950 section-padding lg:py-0">
+    <section className="relative w-full flex flex-col justify-center items-center min-h-[50vh] md:min-h-[60vh] lg:min-h-[60vh] xl:min-h-screen overflow-hidden bg-[#4C5294]">
 
       {/* ── Layer 1: Grayscale base photo ── */}
       <div className="absolute inset-0 z-0">
@@ -49,7 +44,7 @@ const Hero = () => {
             </div>
 
             {/* Main heading */}
-            <h1 className="mb-8 sm:mb-12 text-[42px] sm:text-7xl lg:text-[85px] xl:text-[100px] 2xl:text-[120px] font-semibold leading-[1.1] text-white tracking-tight lg:leading-[1.05]">
+            <h1 className="mb-8 sm:mb-12 text-[42px] sm:text-7xl lg:text-[85px] xl:text-[100px] 2xl:text-[120px] font-semibold leading-[1.3] text-white tracking-tight xl:leading-[110px] 2xl:leading-[130px]">
               Best Digital
               <br className="block xl:hidden" />
               <span className="hidden sm:inline"> </span>

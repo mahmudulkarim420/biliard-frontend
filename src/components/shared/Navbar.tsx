@@ -99,8 +99,8 @@ const Navbar = () => {
                     className={cn(
                         "mx-auto transition-all duration-500 ease-in-out",
                         scrolled
-                            ? "w-full rounded-none border-b border-white/10 bg-black/90 py-4 shadow-2xl backdrop-blur-xl"
-                            : "w-[95%] md:w-[90%] lg:w-[calc(100%-100px)] xl:w-[calc(100%-260px)] 2xl:max-w-[1400px] rounded-full border border-white/20 bg-white/10 py-4 backdrop-blur-md"
+                            ? "w-full rounded-none bg-black py-4 backdrop-blur-[25px]"
+                            : "w-[95%] md:w-[90%] lg:w-[calc(100%-100px)] xl:w-[calc(100%-260px)] 2xl:max-w-[1400px] rounded-full bg-[rgba(255,255,255,0.20)] py-4 backdrop-blur-[25px]"
                     )}
                 >
                     <div className="mx-auto max-w-300 2xl:max-w-[1400px] px-5 md:px-6 xl:px-8">
@@ -127,7 +127,7 @@ const Navbar = () => {
                                             <Link
                                                 to={link.href}
                                                 className={cn(
-                                                    "flex items-center gap-1 text-[16px] font-semibold tracking-wide transition-colors hover:text-white",
+                                                    "flex items-center gap-1 text-[16px] font-medium tracking-wide transition-colors hover:text-white",
                                                     isActive ? "text-white" : "text-gray-300"
                                                 )}
                                             >

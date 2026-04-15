@@ -15,7 +15,7 @@ const PageHeader = ({ title, breadcrumb, className }: PageHeaderProps) => {
   return (
     <section
       className={cn(
-        "relative w-full flex flex-col justify-center min-h-112 md:min-h-138 lg:min-h-162 overflow-hidden bg-gray-950 py-20",
+        "relative w-full flex flex-col justify-center min-h-[350px] md:min-h-[350px] lg:min-h-[400px] xl:min-h-[400px] 2xl:min-h-[500px] overflow-hidden bg-gray-950 py-20",
         className
       )}
     >
