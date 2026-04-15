@@ -115,14 +115,14 @@ const Innovations = () => {
       <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
 
         {/* ── Section Header ── */}
-        <div className="mb-10 md:mb-16 flex flex-col items-center justify-between gap-6 md:flex-row md:items-end text-center md:text-left xl:mb-20">
-          <h2 className="max-w-full md:max-w-125 xl:max-w-[800px] text-white">
+        <div className="mb-10 md:mb-16 flex flex-row text-left items-center justify-between gap-6  md:flex-row md:items-end text-center md:text-left xl:mb-20">
+          <h2 className="max-w-[200px] text-[20px] md:max-w-[300px] md:text-[30px] lg:max-w-[400px] lg:text-[30px] xl:max-w-[500px] xl:text-[40px] 2xl:max-w-[630px] 2xl:text-[54px] text-white">
             Creative problem solving <br className="hidden xl:block" /> innovations
           </h2>
 
           <a
             href="/services"
-            className="group relative flex items-center pb-2 text-[14px] xl:text-[16px] font-semibold uppercase tracking-widest text-brand transition-colors"
+            className="group relative flex items-center pb-2 text-[10px] md:text-[14px] lg:text-[16px] xl:text-[16px] font-semibold uppercase tracking-widest text-brand transition-colors"
           >
             Explore More
             <ArrowDownRight className="ml-2 h-4 w-4 xl:h-5 xl:w-5 transition-transform group-hover:translate-x-1 group-hover:translate-y-1" />
@@ -134,7 +134,7 @@ const Innovations = () => {
 
         {/* ── Service Cards Grid ── */}
         {/* 1 col → 2 col → 4 col responsive layout. Each card lifts on hover. */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-10">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-10">
           {services.map((service, index) => (
             <div
               key={index}
