@@ -10,7 +10,17 @@ const MarqueeDivider = () => {
   ];
 
   return (
-    <section className="relative z-10 w-full overflow-hidden bg-white pt-10 md:pt-13 pb-40 sm:pb-52 md:pb-72 lg:pb-88 xl:pb-[400px] 2xl:pb-[500px]">
+    <section className="relative z-10 w-full max-w-[100vw] overflow-hidden bg-white pt-10 md:pt-13 pb-40 sm:pb-52 md:pb-72 lg:pb-88 xl:pb-[400px] 2xl:pb-[500px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+      <style>{`
+        .rfm-marquee-container {
+          overflow-x: hidden !important;
+          -ms-overflow-style: none !important;
+          scrollbar-width: none !important;
+        }
+        .rfm-marquee-container::-webkit-scrollbar {
+          display: none !important;
+        }
+      `}</style>
       <Marquee
         speed={60}
         gradient={false}

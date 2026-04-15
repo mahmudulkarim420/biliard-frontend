@@ -61,10 +61,10 @@ const PortfolioMarquee = () => {
   // Main scroll logic
   const handleScroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
-    
+
     const container = scrollRef.current;
     const { scrollLeft, scrollWidth, clientWidth } = container;
-    
+
     const firstCard = container.children[0] as HTMLElement;
     const scrollAmount = firstCard ? firstCard.offsetWidth + 32 : 350; // card width + gap-8 (32px)
 

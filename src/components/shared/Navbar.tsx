@@ -22,15 +22,14 @@ const navLinks = [
     },
     {
         name: "Pages",
-        href: "/pages",
         hasDropdown: true,
         subLinks: [
             { name: "About Us", href: "/about" },
-            { name: "Services", href: "/services" },
+            { name: "Career", href: "/career" },
             { name: "Our Portfolio", href: "/portfolio" },
         ],
     },
-    { name: "Career", href: "/career", hasDropdown: false },
+    { name: "Services", href: "/services", hasDropdown: false },
     { name: "Blog", href: "/blog", hasDropdown: false },
     { name: "Contact", href: "/contact", hasDropdown: false },
 ];
@@ -103,7 +102,7 @@ const Navbar = () => {
                             : "w-[95%] md:w-[95%] lg:w-[calc(100%-60px)] xl:w-[calc(100%-100px)] 2xl:w-[calc(100%-120px)] 2xl:max-w-[1658px] rounded-full bg-[rgba(255,255,255,0.20)] py-4 backdrop-blur-[25px]"
                     )}
                 >
-                    <div className="mx-auto max-w-300 2xl:max-w-[1658px] px-5 md:px-6 xl:px-8">
+                    <div className="mx-auto w-full px-5 md:px-6">
                         <div className="flex items-center justify-between">
                             {/* Logo */}
                             <Link to="/" className="flex items-center space-x-2">
@@ -125,7 +124,8 @@ const Navbar = () => {
                                             onMouseLeave={() => setActiveDropdown(null)}
                                         >
                                             <Link
-                                                to={link.href}
+                                                to={link.href || "#"}
+                                                onClick={(e) => !link.href && e.preventDefault()}
                                                 className={cn(
                                                     "flex items-center gap-1 text-[16px] font-medium tracking-wide transition-colors hover:text-white",
                                                     isActive ? "text-white" : "text-gray-300"
@@ -254,8 +254,11 @@ const Navbar = () => {
                         <div key={link.name} className="border-b border-gray-50 last:border-none pb-2">
                             <div className="flex items-center justify-between">
                                 <Link
-                                    to={link.href}
-                                    onClick={() => !link.hasDropdown && setIsOpen(false)}
+                                    to={link.href || "#"}
+                                    onClick={(e) => {
+                                        if (!link.href) e.preventDefault();
+                                        if (!link.hasDropdown) setIsOpen(false);
+                                    }}
                                     className={cn(
                                         "text-lg font-bold py-2 transition-colors",
                                         location.pathname === link.href ? "text-brand" : "text-title hover:text-brand"
