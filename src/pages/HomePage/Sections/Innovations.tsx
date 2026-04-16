@@ -111,7 +111,7 @@ const Innovations = () => {
 
         {/* ── Section Header ── */}
         <div className="mb-10 md:mb-16 flex flex-row text-left items-center justify-between gap-6 md:flex-row md:items-end text-center md:text-left xl:mb-20">
-          <h2 className="max-w-[200px] text-[20px] md:max-w-[300px] md:text-[30px] lg:max-w-[400px] lg:text-[30px] xl:max-w-[500px] xl:text-[40px] 2xl:max-w-[630px] 2xl:text-[54px] text-white leading-tight">
+          <h2 className="max-w-[200px] text-[20px] md:max-w-[300px] md:text-[30px] lg:max-w-[300px] lg:text-[30px] xl:max-w-[500px] xl:text-[40px] 2xl:max-w-[630px] 2xl:text-[54px] text-white leading-tight">
             Creative problem solving <br className="hidden xl:block" /> innovations
           </h2>
 

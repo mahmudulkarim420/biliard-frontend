@@ -165,7 +165,7 @@ const Collaboration = () => {
           <p className="mb-4 text-[11px] md:text-[13px] xl:text-[14px] font-bold uppercase tracking-[0.2em] text-brand text-center lg:text-left">
             COLLABORATION
           </p>
-          <h2 className="mb-10 md:mb-14 text-[36px] md:text-5xl lg:text-[54px] xl:text-[64px] 2xl:text-[72px] text-center lg:text-left font-bold leading-[1.1] text-gray-900 tracking-tight max-w-full md:max-w-[800px] xl:max-w-[900px] mx-auto lg:mx-0">
+          <h2 className="mb-10 md:mb-14 text-[20px] md:text-[20px] lg:max-w-[300px] lg:text-[35px] xl:text-[54px] text-center lg:text-left font-bold leading-[1.1] text-title tracking-tight max-w-full md:max-w-[800px] xl:max-w-[900px] mx-auto lg:mx-0">
             Help You Grow Your
             <br className="hidden xl:block" />
             Business
@@ -182,10 +182,10 @@ const Collaboration = () => {
                   {step.num}
                 </div>
                 <div>
-                  <h4 className="mb-2 text-[16px] md:text-[18px] xl:text-[22px] font-bold text-gray-900 transition-colors duration-300 group-hover:text-brand">
+                  <h4 className="mb-2 text-[16px] md:text-[18px] xl:text-[22px] font-bold text-title transition-colors duration-300 group-hover:text-brand">
                     {step.title}
                   </h4>
-                  <p className="text-[14px] xl:text-[16px] leading-relaxed text-gray-500 max-w-sm xl:max-w-md">
+                  <p className="text-[14px] xl:text-[16px] leading-relaxed text-desc max-w-sm xl:max-w-md">
                     {step.desc}
                   </p>
                 </div>
