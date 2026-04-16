@@ -8,7 +8,7 @@ import bg from "@/assets/bg (3).png";
 import img1 from "@/assets/img (15).avif";
 import img2 from "@/assets/img (16).avif";
 import img3 from "@/assets/img (17).avif";
-
+import bgPattern from "@/assets/over (3).png";
 // ─── Types ────────────────────────────────────────────────────────────────────
 type TabKey = "innovation" | "creative idea" | "experience";
 
@@ -21,7 +21,7 @@ interface TabContent {
 // ─── Static Data ──────────────────────────────────────────────────────────────
 const tabData: Record<TabKey, TabContent> = {
   innovation: {
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at established fact that a reader will be by the readable content of a page when looking at.",
+    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at established fact that a reader will be by the readable content of a page when looking at",
     image: img1,
     list: ["Europe inline concept surplus law", "Edition embulum dignisim", "If you are going to use a passage"],
   },
@@ -43,7 +43,7 @@ const FeaturesSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative z-20 w-full section-padding">
+    <section className="relative z-20 bg-[#F3F3F3] w-full section-padding">
 
       {/* Hexagonal repeating SVG pattern */}
       <div
@@ -57,28 +57,24 @@ const FeaturesSection = () => {
       <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
 
         {/* ── Video Banner ── */}
-        <div className="group relative z-30 -mt-24 sm:-mt-64 lg:-mt-80 mb-12 md:mb-20 xl:mb-24 h-75 sm:h-100 lg:h-138 xl:h-[600px] 2xl:h-[700px] w-full overflow-hidden bg-gray-950 shadow-2xl rounded-sm">
+        <div className="group relative z-30 -mt-30 md:-mt-60 lg:-mt-80 xl:-mt-90 2xl:-mt-120 mb-12 md:mb-20 xl:mb-24 h-75 sm:h-100 lg:h-138 xl:h-[600px] 2xl:h-[700px] w-full overflow-hidden bg-gray-950 shadow-2xl rounded-sm">
           <img
             src={bg}
             alt="Agency team"
             className="h-full w-full object-cover object-center sm:object-[center_20%] lg:object-top transition-transform duration-1000 group-hover:scale-105 opacity-60 lg:opacity-70"
           />
 
-          {/* Content overlay */}
           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 sm:flex-row sm:justify-between lg:px-24">
             <div className="hidden sm:block flex-1" />
 
-            {/* Changed items-center/end to items-start for left alignment */}
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-6 sm:gap-10 sm:w-[500px] xl:w-[600px] 2xl:w-[700px]">
 
-              {/* Heading: Left aligned, 3 lines */}
               <h2 className="text-[32px] sm:text-5xl lg:text-[64px] xl:text-[76px] 2xl:text-[84px] font-bold leading-[1.1] text-white tracking-tight">
                 We creating <br className="hidden sm:block" />
                 unique brand <br className="hidden xl:block" />
                 agency
               </h2>
 
-              {/* Play button */}
               <div className="relative mt-2 md:mt-4">
                 <div className="absolute inset-0 animate-ping rounded-full bg-white/20" />
                 <button
@@ -92,18 +88,17 @@ const FeaturesSection = () => {
           </div>
         </div>
 
-        {/* ── Content: Progress Bar (Left) + Tab Panel (Right) ── */}
+        {/* ── Content ── */}
         <div className="grid grid-cols-1 gap-12 md:gap-16 lg:grid-cols-2 xl:gap-24 w-full mt-14">
-          {/* Left: Section copy + animated skill bar */}
           <div className="text-center lg:text-left flex flex-col items-center lg:items-start xl:max-w-[90%] lg:mr-auto">
             <p className="mb-3 text-[11px] md:text-[13px] xl:text-[14px] font-bold uppercase tracking-[0.2em] text-brand">
               Innovative Ideas
             </p>
-            <h2 className="mb-6 text-[36px] md:text-4xl lg:text-[42px] xl:text-[54px] font-bold leading-[1.1] tracking-tight text-title">
+            <h2 className="mb-6 max-w-[250px] text-[20px] md:max-w-[300px] md:text-[30px] lg:max-w-[400px] lg:text-[42px] xl:text-[54px] font-bold leading-[1.1] tracking-tight text-title">
               We Offer You A <br className="hidden xl:block" /> Digital Platform
             </h2>
-            <p className="mb-10 text-[14px] md:text-[15px] xl:text-[18px] leading-relaxed text-desc max-w-full lg:max-w-[90%]">
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at established fact.
+            <p className="mb-10 text-[14px] md:text-[15px] xl:text-[18px] leading-[2] text-desc max-w-full lg:max-w-[90%]">
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at established fact that a reader will be by the readable content of a page when looking at
             </p>
 
             <div className="w-full max-w-full md:max-w-md xl:max-w-lg">
@@ -123,14 +118,13 @@ const FeaturesSection = () => {
             </div>
           </div>
 
-          {/* Right: Tab selector + animated tab content panel */}
           <div>
             <div className="mb-8 flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3">
               {(Object.keys(tabData) as TabKey[]).map((tab) => (
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`relative px-5 md:px-7 py-3 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-wider transition-all duration-500 rounded-lg lg:rounded-none overflow-hidden ${activeTab === tab ? "text-white" : "bg-white text-gray-600 hover:text-brand"
+                  className={`relative px-5 md:px-7 py-3 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-wider transition-all duration-500 rounded-sm overflow-visible ${activeTab === tab ? "text-white" : "bg-white text-gray-600 hover:text-brand"
                     }`}
                 >
                   <AnimatePresence>
@@ -141,6 +135,7 @@ const FeaturesSection = () => {
                         initial={false}
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       >
+                        
                         <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-3 w-3 rotate-45 bg-brand" />
                       </motion.div>
                     )}
@@ -150,7 +145,7 @@ const FeaturesSection = () => {
               ))}
             </div>
 
-            <div className="min-h-[280px] xl:min-h-[320px] bg-white p-6 md:p-8 xl:p-10 shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 rounded-xl lg:rounded-none">
+            <div className="min-h-[280px] xl:min-h-[320px]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
@@ -159,14 +154,14 @@ const FeaturesSection = () => {
                   exit={{ opacity: 0, y: -15 }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
                 >
-                  <p className="mb-8 text-[14px] md:text-[15px] xl:text-[16px] leading-relaxed text-gray-500">{tabData[activeTab].text}</p>
-                  <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
+                  <p className="mb-8 text-[14px] md:text-[15px] xl:text-[16px] leading-[2] text-desc">{tabData[activeTab].text}</p>
+                  <div className="flex flex-col gap-6 sm:flex-row md:items-center sm:items-center">
                     <div className="h-28 w-full sm:w-40 xl:h-36 xl:w-48 shrink-0 overflow-hidden rounded-md grayscale transition-all duration-500">
                       <img src={tabData[activeTab].image} alt="visual" className="h-full w-full object-cover" />
                     </div>
                     <ul className="flex flex-col gap-3 xl:gap-4">
                       {tabData[activeTab].list.map((item, index) => (
-                         <li key={index} className="flex items-center gap-3 text-[13px] md:text-[14px] xl:text-[16px] font-bold text-gray-800">
+                        <li key={index} className="flex items-center gap-3 text-[13px] md:text-[14px] xl:text-[16px] font-bold text-title">
                           <div className="flex h-5 w-5 xl:h-6 xl:w-6 items-center justify-center rounded-full bg-brand/10 shrink-0">
                             <Check className="h-3 w-3 xl:h-4 xl:w-4 text-brand stroke-[3px]" />
                           </div>
