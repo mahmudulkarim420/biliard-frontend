@@ -19,7 +19,7 @@ const Hero = () => {
         <img
           src={bgMain}
           alt="Team collaboration"
-          className="h-full w-full object-cover grayscale contrast-125 brightness-75 opacity-30 md:opacity-40 transition-opacity duration-700"
+          className="h-full w-full object-cover grayscale contrast-125 brightness-75 opacity-30 md:opacity-80 transition-opacity duration-700"
         />
 
       </div>
@@ -49,13 +49,13 @@ const Hero = () => {
 
           {/* Eyebrow label */}
           <div className="mb-2 md:mb-6 flex justify-center">
-            <span className="text-[10px] md:text-[13px] font-semibold uppercase tracking-[0.4em] md:tracking-[0.6em] text-white/60">
+            <span className="text-[10px] md:text-[13px] font-semibold uppercase tracking-[0.4em] text-white/60">
               Creative Digital Agency
             </span>
           </div>
 
           {/* Main heading */}
-          <h1 className="mb-6 md:mb-10 text-[32px] sm:text-5xl md:text-7xl lg:text-[80px] xl:text-[100px] 2xl:text-[120px] font-extrabold leading-[1.2] md:leading-[1.1] text-white tracking-tight">
+          <h1 className="mb-6 md:mb-10 text-[32px] sm:text-5xl md:text-[60px] lg:text-[80px] xl:text-[100px] font-bold leading-[1.2] md:leading-[1.1] text-white tracking-tight">
             Cost effective <br className="hidden sm:block" />
             <span className="relative">
               & trusted agency
