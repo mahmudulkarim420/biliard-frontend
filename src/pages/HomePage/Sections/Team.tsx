@@ -36,7 +36,7 @@ const Team = () => {
           <p className="mb-4 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.2em] text-brand">
             OUR TEAM
           </p>
-          <h2 className="text-[36px] md:text-5xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] font-bold leading-tight text-gray-900 tracking-tight">
+          <h2 className="max-w-[200px] text-[20px] md:max-w-[300px] md:text-[30px] lg:max-w-[400px] lg:text-[40px] xl:max-w-[510px] xl:text-[54px] mx-auto font-bold leading-tight text-title tracking-tight">
             Dedicated team
             <br className="hidden md:block" />
             members
@@ -82,10 +82,10 @@ const Team = () => {
               <div className="flex items-center gap-4 px-1">
                 <div className="h-8.75 w-0.5 shrink-0 bg-brand transition-all duration-500 ease-in-out group-hover:h-11.15 group-hover:w-1" />
                 <div className="flex flex-col justify-center">
-                  <h4 className="text-[19px] font-extrabold text-gray-900 transition-colors duration-300 group-hover:text-brand">
+                  <h4 className="text-[18px] font-extrabold text-title transition-colors duration-300 group-hover:text-brand">
                     {member.name}
                   </h4>
-                  <p className="text-[11px] font-bold uppercase tracking-wider text-gray-400">
+                  <p className="text-[14px] font-bold uppercase tracking-wider text-desc">
                     {member.role}
                   </p>
                 </div>

@@ -65,7 +65,7 @@ const MarketingSection = () => {
             OUR OFFER
           </span>
 
-          <h2 className="text-[36px] md:text-5xl lg:text-6xl xl:text-[72px] 2xl:text-[80px] font-bold text-gray-900 leading-[1.1] mb-8 md:mb-10 tracking-tight">
+          <h2 className="max-w-[200px] text-[20px] md:max-w-[300px] md:text-[30px] lg:max-w-[400px] lg:text-[40px] xl:max-w-[510px] xl:text-[54px] mx-auto font-bold text-title leading-[1.1] mb-8 md:mb-10 tracking-tight">
             We perform best <br className="hidden xl:block" /> digital marketing
           </h2>
 
@@ -80,7 +80,7 @@ const MarketingSection = () => {
                 className="grayscale object-cover w-full h-40 md:h-32 xl:h-40"
               />
             </div>
-            <p className="text-gray-500 text-[14px] md:text-sm xl:text-[16px] leading-relaxed text-center md:text-left">
+            <p className="text-desc text-[14px] md:text-sm xl:text-[16px] leading-[2] text-center md:text-left">
               It is a long established fact that a reader will be distracted by the readable content of a page when looking at established fact that a reader will be by the readable content of a page.
             </p>
           </div>
@@ -97,12 +97,12 @@ const MarketingSection = () => {
                 className="flex items-center justify-between py-5 xl:py-6 pr-6 border-b border-gray-200 group cursor-pointer"
               >
                 <div className="flex items-center gap-3">
-                  <span className="text-[12px] xl:text-[14px] font-bold text-gray-400">{service.id}.</span>
-                  <span className="text-[15px] xl:text-[18px] font-bold text-gray-900 group-hover:text-brand transition-colors">
+                  <span className="text-[12px] xl:text-[14px] font-bold text-desc">{service.id}.</span>
+                  <span className="text-[15px] xl:text-[18px] font-bold text-title group-hover:text-brand transition-colors">
                     {service.title}
                   </span>
                 </div>
-                <MoveRight className="w-4 h-4 xl:w-5 xl:h-5 text-gray-400 group-hover:text-brand group-hover:translate-x-1 transition-all" />
+                <MoveRight className="w-4 h-4 xl:w-5 xl:h-5 text-desc group-hover:text-brand group-hover:translate-x-1 transition-all" />
               </motion.div>
             ))}
           </div>
