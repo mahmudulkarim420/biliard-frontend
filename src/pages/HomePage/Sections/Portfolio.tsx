@@ -13,12 +13,12 @@ const Portfolio = () => {
   );
 
   return (
-    <section className="relative w-full bg-white section-padding">
+    <section className="relative w-full section-padding">
       <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
 
         {/* ── Section Header + Category Filter ── */}
         <div className="mb-12 md:mb-16 flex flex-col justify-between gap-6 md:gap-8 md:flex-row md:items-end text-center md:text-left">
-          <h2 className="text-[36px] md:text-4xl lg:text-[56px] xl:text-[64px] 2xl:text-[72px] font-bold leading-[1.1] text-gray-900 tracking-tight">
+          <h2 className="text-[20px] md:text-[30px] lg:text-[56px] xl:text-[54px] font-bold leading-[1.1] text-title tracking-tight">
             Our Portfolio
           </h2>
 
@@ -27,7 +27,7 @@ const Portfolio = () => {
               <li key={category}>
                 <button
                   onClick={() => setActiveCategory(category)}
-                  className={`relative text-[13px] font-bold tracking-wider transition-colors duration-300 ${
+                  className={`relative text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold tracking-wider transition-colors duration-300 ${
                     activeCategory === category ? "text-gray-900" : "text-gray-400 hover:text-gray-900"
                   }`}
                 >
