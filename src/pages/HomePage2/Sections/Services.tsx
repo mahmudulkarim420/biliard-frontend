@@ -1,7 +1,7 @@
 // ─── External Libraries ──────────────────────────────────────────────────────
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import bgPattern from "@/assets/Mask group.png"; // তোমার ইম্পোর্ট করা প্যাটার্ন
+import bgPattern from "@/assets/Mask group.png";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface ServiceItem {
@@ -114,7 +114,7 @@ const services: ServiceItem[] = [
 // ─── Component ────────────────────────────────────────────────────────────────
 const Services = () => {
   return (
-    <section className="relative z-20 w-full bg-[#F3F3F3] section-padding overflow-hidden rounded-t-[50px]">
+    <section className="relative z-20 w-full bg-[#F3F3F3] section-padding overflow-hidden">
 
       {/* ── Background Image Pattern Layer ── */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-100">
@@ -136,22 +136,22 @@ const Services = () => {
       <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 relative z-10">
 
         {/* ── Section Header ── */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+        <div className="flex flex-row justify-between items-center sm:items-end mb-16 gap-4 sm:gap-6">
           <div className="max-w-xl xl:max-w-2xl">
-            <p className="mb-4 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.3em] text-brand">
+            <p className="mb-2 sm:mb-4 text-[10px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.1em] text-brand">
               OUR SERVICES
             </p>
-            <h2 className="text-[36px] md:text-5xl lg:text-[54px] xl:text-[64px] 2xl:text-[72px] font-bold leading-[1.1] text-title tracking-tight">
+            <h2 className="max-w-[200px] text-[20px] md:max-w-[300px] md:text-[30px] lg:max-w-[400px] lg:text-[40px] xl:max-w-[600px] xl:text-[54px] font-bold leading-[1.1] text-title tracking-tight">
               We Offer You A Digital <br className="hidden xl:block" /> Platform
             </h2>
           </div>
 
           <Link
             to="/services"
-            className="group flex items-center gap-2 text-brand font-bold text-sm uppercase tracking-wider border-b border-transparent hover:border-brand transition-all pb-1"
+            className="group flex items-center gap-1 sm:gap-2 text-brand font-bold text-[9px] xs:text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] xl:text-[16px] uppercase tracking-wider border-b border-transparent hover:border-brand transition-all pb-0.5 sm:pb-1 shrink-0"
           >
             Explore More
-            <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            <ArrowUpRight className="h-3 w-3 sm:h-4 sm:w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
           </Link>
         </div>
 
@@ -167,7 +167,7 @@ const Services = () => {
               </div>
 
               <div className="flex-1">
-                <h3 className="text-[20px] xl:text-[24px] font-bold leading-tight text-title transition-colors duration-300 group-hover:text-brand">
+                <h3 className="text-[17px] sm:text-[18px] xl:text-[21px] font-bold leading-[1.3] text-title transition-colors duration-300 group-hover:text-brand line-clamp-2 max-w-[140px] xs:max-w-[150px] sm:max-w-[180px] md:max-w-[180px] lg:max-w-[200px] xl:max-w-[220px]">
                   {service.title}
                 </h3>
               </div>
