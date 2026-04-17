@@ -29,11 +29,11 @@ const OurHistory = () => {
           {/* ── Left Column: Heading ── */}
           <div className="w-full lg:w-5/12">
             
-            <div className="sticky top-32">
-              <p className="text-brand font-bold uppercase tracking-[0.2em] text-[12px] mb-4">
+            <div className="flex flex-col items-center text-center lg:items-start lg:text-left sticky top-32">
+              <p className="text-brand font-bold uppercase tracking-[0.1em] text-[12px] mb-4">
                 OUR HISTORY
               </p>
-              <h2 className="text-[36px] md:text-[42px] font-extrabold leading-[1.2] text-title tracking-tight">
+              <h2 className="mx-auto lg:mx-0 max-w-[200px] md:max-w-[300px] lg:max-w-[400px] xl:max-w-[510px] text-[20px] md:text-[30px] lg:text-[40px] xl:text-[54px] font-bold leading-[1.2] text-title tracking-tight">
                 We Empower <br className="hidden lg:block" />
                 Clients to be loved
               </h2>
@@ -67,7 +67,7 @@ const OurHistory = () => {
                   </h4>
                   
                   {/* Description */}
-                  <p className="text-desc text-[15px] leading-[1.8] max-w-138">
+                  <p className="text-desc text-[15px] max-w-[450px] leading-[1.8] max-w-138">
                     {item.description}
                   </p>
 

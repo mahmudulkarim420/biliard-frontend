@@ -55,7 +55,7 @@ const AboutExperience = () => {
   return (
     <section className="section-padding bg-white overflow-hidden">
       <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 xl:gap-50 items-center">
           
           {/* --- Images Section (Asymmetrical with Hover Effect) --- */}
           <div className="flex-1 flex gap-6 w-full lg:max-w-138">
@@ -84,10 +84,10 @@ const AboutExperience = () => {
 
           {/* --- Content Section --- */}
           <div className="flex-1 max-w-150">
-            <p className="text-brand font-bold uppercase tracking-[0.3em] text-[12px] mb-4">
+            <p className="text-center lg:text-left text-brand font-bold uppercase tracking-[0.1em] text-[12px] mb-4">
               ABOUT US
             </p>
-            <h2 className="text-[36px] md:text-[46px] font-extrabold leading-[1.1] text-title mb-8 tracking-tight">
+            <h2 className="mx-auto lg:mx-0 text-center lg:text-left max-w-[200px] md:max-w-[300px] lg:max-w-[400px] xl:max-w-[510px] text-[20px] md:text-[30px] lg:text-[40px] xl:text-[54px] font-bold leading-[1.1] text-title mb-8 tracking-tight">
               We Empower<br />
               Clients to be loved
             </h2>
