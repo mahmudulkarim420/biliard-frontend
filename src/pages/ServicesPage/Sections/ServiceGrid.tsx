@@ -16,9 +16,9 @@ const services = [
 
 const ServiceGrid = () => {
   return (
-    <section className="bg-[#fafafa] pt-[130px] pb-80">
+    <section className="bg-[#fafafa] pt-[130px] pb-50 md:pb-70 lg:pb-90 xl:pb-100 2xl:pb-120">
       <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] mx-auto px-5 md:px-8 xl:px-0">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 xl:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 xl:gap-10">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
