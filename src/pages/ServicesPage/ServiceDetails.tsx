@@ -71,9 +71,6 @@ const ServiceDetails = () => {
     return <Navigate to="/services" replace />;
   }
 
-  const { label, title } = servicesMap[id];
-  const [titleLine1, titleLine2] = title.split("\n");
-
   return (
     <SubPageLayout
       title={'Services Single'}
@@ -88,19 +85,15 @@ const ServiceDetails = () => {
             {/* ── Header & Text Area ── */}
             <div className="mb-16 md:mb-20 xl:mb-24">
               {/* Eyebrow Label */}
-              <span className="text-brand text-[12px] md:text-[14px] xl:text-[16px] font-bold tracking-[0.2em] uppercase mb-4 block text-center lg:text-left">
-                {label}
+              <span className="text-brand text-[12px] md:text-[14px] xl:text-[16px] font-bold tracking-[0.1em] uppercase mb-4 block text-center lg:text-left">
+                Brand strategy & art direction
               </span>
 
               {/* Main Title — dynamic per service */}
-              <h2 className="text-[38px] md:text-[54px] xl:text-[64px] 2xl:text-[76px] font-bold text-title mb-8 md:mb-12 max-w-full md:max-w-150 xl:max-w-[800px] 2xl:max-w-[1000px] leading-[1.1] tracking-tight text-center lg:text-left mx-auto lg:mx-0">
-                {titleLine1}
-                {titleLine2 && (
-                  <>
-                    <br className="hidden md:block" />
-                    <span>{titleLine2}</span>
-                  </>
-                )}
+              <h2 className="text-[38px] md:text-[30px] lg:max-w-[400px] lg:text-[40px] xl:max-w-[500px] xl:text-[54px]  font-bold text-title mb-8 md:mb-12 leading-[1.1] tracking-tight text-center lg:text-left mx-auto lg:mx-0">
+
+                We Offer wide range
+                of brand identity
               </h2>
 
               {/* Two Column Layout: Paragraphs & List */}
@@ -120,7 +113,7 @@ const ServiceDetails = () => {
                 </div>
 
                 {/* Right: Feature List */}
-                <div className="lg:col-span-5 lg:pl-10 flex flex-col gap-4 text-left mx-auto lg:mx-0">
+                <div className="lg:col-span-5 lg:pl-10 grid grid-cols-2 lg:grid-cols-1 gap-4 sm:gap-6 lg:gap-4 text-left mx-auto lg:mx-0 w-full md:w-auto">
                   {serviceList.map((item, index) => (
                     <div key={index} className="flex items-center gap-4 group">
                       <span className="text-title font-semibold text-[18px] xl:text-[22px] transition-colors group-hover:text-brand">+</span>
