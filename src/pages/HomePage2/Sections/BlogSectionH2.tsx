@@ -2,9 +2,9 @@
 import { User, MessageSquare } from "lucide-react";
 
 // ─── Local Assets ─────────────────────────────────────────────────────────────
-import blog1 from "@/assets/img (12).avif";
-import blog2 from "@/assets/img (13).avif";
-import blog3 from "@/assets/img (14).avif";
+import blog1 from "@/assets/img (14).png";
+import blog2 from "@/assets/img (16).png";
+import blog3 from "@/assets/img (12).png";
 import partnerLogo1 from "@/assets/brand-1-1.png";
 import partnerLogo2 from "@/assets/brand-1-2.png";
 import partnerLogo3 from "@/assets/brand-1-3.png";

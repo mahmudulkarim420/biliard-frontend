@@ -1,6 +1,6 @@
-import blogImg1 from "@/assets/img (13).avif";
-import blogImg2 from "@/assets/img (19).avif";
-import blogImg3 from "@/assets/img (20).avif";
+import blogImg1 from "@/assets/img (13).png";
+import blogImg2 from "@/assets/img (16).png";
+import blogImg3 from "@/assets/img (14).png";
 import thumb1 from "@/assets/thumbnail.png";
 import thumb2 from "@/assets/thumbnail (1).png";
 import thumb3 from "@/assets/thumbnail (2).png";

@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // ─── Local Assets ─────────────────────────────────────────────────────────────
-import img1 from "@/assets/img (18).avif";
-import img2 from "@/assets/img (19).avif";
-import img3 from "@/assets/img (20).avif";
+import img1 from "@/assets/img (18).png";
+import img2 from "@/assets/img (19).png";
+import img3 from "@/assets/img (20).png";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface TestimonialItem {

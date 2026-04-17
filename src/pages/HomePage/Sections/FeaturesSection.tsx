@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 // ─── Local Assets ─────────────────────────────────────────────────────────────
 import bg from "@/assets/bg (3).png";
-import img1 from "@/assets/img (15).avif";
-import img2 from "@/assets/img (16).avif";
-import img3 from "@/assets/img (17).avif";
+import img1 from "@/assets/img (13).png";
+import img2 from "@/assets/img (14).png";
+import img3 from "@/assets/img (16).png";
 import bgPattern from "@/assets/over (3).png";
 // ─── Types ────────────────────────────────────────────────────────────────────
 type TabKey = "innovation" | "creative idea" | "experience";
