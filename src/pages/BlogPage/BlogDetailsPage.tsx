@@ -126,7 +126,7 @@ const BlogDetailsPage = () => {
                         </button>
                       ))}
                    </div>
-                   <div className="flex items-center gap-3">
+                   <div className="flex items-center md:mr-40 lg:mr-60 xl:mr-80 gap-3">
                       <button className="w-10 h-10 border border-gray-100 flex items-center justify-center rounded-full bg-[#ff3838] text-white hover:bg-title transition-all shadow-md">
                         <Twitter className="w-4 h-4 fill-current" />
                       </button>
