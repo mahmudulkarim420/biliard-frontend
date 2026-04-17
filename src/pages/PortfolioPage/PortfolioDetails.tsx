@@ -34,7 +34,7 @@ const PortfolioDetails = () => {
             {/* ── Top Header Section ── */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-16">
               <div className="lg:col-span-6 mb-12">
-                <h2 className="text-[32px] md:text-[54px] font-semibold leading-[1.3] tracking-tight text-title">
+                <h2 className="max-w-[300px] text-[30px] md:max-w-[400px] md:text-[40px] xl:max-w-[500px] xl:text-[54px] font-semibold leading-[1.3] tracking-tight text-title">
                   We drive into your business dream in order bring.
                 </h2>
               </div>
@@ -46,7 +46,7 @@ const PortfolioDetails = () => {
             </div>
 
             {/* ── Project Info Grid ── */}
-            <div className="py-10 border-t border-b border-gray-100 mb-25">
+            <div className="py-10 border-t border-gray-700 mb-25">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-2 text-gray-400 mb-1">
