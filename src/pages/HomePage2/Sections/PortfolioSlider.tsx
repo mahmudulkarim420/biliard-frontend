@@ -87,10 +87,10 @@ const PortfolioSlider = () => {
     <section className="bg-white section-padding overflow-hidden">
       {/* ── Section Header ── */}
       <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 text-center mb-16">
-        <p className="mb-4 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.3em] text-brand">
+        <p className="mb-4 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.1em] text-brand">
           OUR PORTFOLIO
         </p>
-        <h2 className="text-[36px] md:text-5xl lg:text-[54px] xl:text-[64px] 2xl:text-[72px] font-black text-title tracking-tight">
+        <h2 className="max-w-[200px] text-[20px] md:max-w-[300px] md:text-[30px] lg:max-w-[400px] lg:text-[40px] xl:max-w-[510px] mx-auto font-black text-title">
           Our Fascinating Work
         </h2>
       </div>
