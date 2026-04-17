@@ -112,7 +112,7 @@ const ITFeatureSection = () => {
               That a reader will be distracted by the readable content of a page when looking at established fact that a reader will be by the readable content.
             </p>
 
-            <div className="flex flex-col sm:items-center md:items-center">
+            <div className="flex flex-col sm:items-center md:items-center lg:items-start">
               {featuresList.map((feature, index) => (
                 <div
                   key={index}

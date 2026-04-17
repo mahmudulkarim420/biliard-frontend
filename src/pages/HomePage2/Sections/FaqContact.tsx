@@ -106,7 +106,7 @@ const FaqContact = () => {
                         }`}
                     >
                       <div className="overflow-hidden">
-                        <p className="px-6 pb-6 pt-2 text-[14px] leading-relaxed text-gray-400">
+                        <p className="px-6 pb-6 pt-2 text-[14px] leading-relaxed text-desc">
                           {faq.answer}
                         </p>
                       </div>

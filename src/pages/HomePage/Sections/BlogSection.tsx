@@ -119,11 +119,11 @@ const BlogSection = () => {
         {/* Grayscale logos fade in to full opacity on section hover as a group. */}
         <div className="pt-12 border-t border-gray-100">
           <div className="flex items-center justify-between gap-4 mb-12 overflow-hidden">
-            <div className="h-px bg-gray-200 flex-1" />
+            <div className="h-px bg-gray-700 flex-1" />
             <p className="text-[10px] sm:text-[11px] xl:text-[13px] font-bold text-title uppercase tracking-[0.2em] whitespace-nowrap px-4 md:px-6">
               Some of the partners & clients worked with
             </p>
-            <div className="h-px bg-gray-200 flex-1" />
+            <div className="h-px bg-gray-700 flex-1" />
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-16 opacity-100 grayscale transition-all duration-300 hover:opacity-100">

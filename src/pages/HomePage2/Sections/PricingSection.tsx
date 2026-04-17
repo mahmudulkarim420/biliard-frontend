@@ -3,7 +3,7 @@ import { Check, X } from "lucide-react";
 
 // ─── Local Assets ─────────────────────────────────────────────────────────────
 import cardShapeImg from "@/assets/bg (7).png";
-
+import bgPattern from "@/assets/over (3).png";
 // ─── Types ────────────────────────────────────────────────────────────────────
 interface PlanFeature {
   text: string;
@@ -57,38 +57,36 @@ interface PricingSectionProps {
 // ─── Component ────────────────────────────────────────────────────────────────
 // Three-column pricing cards on a light grey background. Each card lifts on
 // hover and reveals a brand-colored bottom bar via a scale-x animation.
-// A repeating hexagon SVG pattern is inlined as a background texture.
+// High-quality repeating background pattern overlay.
 const PricingSection = ({ showBackground = true }: PricingSectionProps) => {
   return (
-    <section className="relative w-full section-padding bg-[#f8f9fa] overflow-hidden">
+    <section className="relative w-full section-padding bg-[#F3F3F3] overflow-hidden">
 
-      {/* Subtle hexagonal repeating pattern — very low opacity decorative texture */}
+      {/* ── Background Pattern Overlay ── */}
       {showBackground && (
-        <div
-          className="absolute inset-0 z-0 pointer-events-none opacity-[0.05]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='103.92304845413264' viewBox='0 0 60 103.92304845413264' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 103.92304845413264l-30-17.32050807568877v-34.64101615137754l30-17.32050807568877 30 17.32050807568877v34.64101615137754z' fill='none' stroke='black' strokeWidth='2'/%3E%3C/svg%3E")`,
-            backgroundSize: "120px 208px",
-            backgroundRepeat: "repeat",
-            backgroundPosition: "center",
-          }}
-        />
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden opacity-100">
+          <img
+            src={bgPattern}
+            alt="background pattern"
+            className="h-full w-full object-cover"
+          />
+        </div>
       )}
 
       <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 relative z-10">
 
         {/* ── Section Header ── */}
         <div className="text-center mb-16 xl:mb-20">
-          <p className="mb-4 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.3em] text-brand">
+          <p className="mb-4 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.1em] text-brand">
             PRICING PLANS
           </p>
-          <h2 className="text-[36px] md:text-5xl lg:text-[54px] xl:text-[64px] 2xl:text-[72px] font-extrabold text-title tracking-tight">
+          <h2 className="text-[20px] md:text-[30] lg:text-[40px] xl:text-[54px] font-extrabold text-title tracking-tight">
             Choose The Best Plan
           </h2>
         </div>
 
         {/* ── Pricing Cards Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 xl:gap-14 2xl:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 xl:gap-14 2xl:gap-16">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
