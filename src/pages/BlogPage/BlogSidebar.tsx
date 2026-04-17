@@ -8,7 +8,7 @@ interface BlogSidebarProps {
 
 const BlogSidebar = ({ searchQuery, onSearchChange }: BlogSidebarProps) => {
   return (
-    <div className="  p-8 lg:p-10  sticky top-32">
+    <div className="bg-white p-8 lg:p-10 rounded-lg shadow-[0_20px_60px_rgba(0,0,0,0.08)] sticky top-32 border border-gray-100/50">
       
       {/* Search Bar */}
       <div className="relative mb-12">
