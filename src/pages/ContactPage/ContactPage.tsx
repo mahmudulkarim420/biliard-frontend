@@ -13,29 +13,29 @@ const ContactPage = () => {
               
               {/* Left Column: Contact Info */}
               <div>
-                <h2 className="text-[40px] md:text-[54px] xl:text-[64px] 2xl:text-[72px] font-semibold text-title leading-[1.1] mb-12 tracking-tight">
+                <h2 className="text-[32px] md:text-[40px] xl:text-[54px] font-semibold text-title leading-[1.1] mb-12 tracking-tight">
                   We’ve been <br /> waiting for you
                 </h2>
                 
-                <div className="flex flex-col gap-8">
+                <div className="flex flex-col sm:flex-row lg:flex-col gap-8 sm:gap-14 lg:gap-8">
                   {/* Phone */}
                   <div>
-                    <h4 className="text-[20px] font-bold text-title">Phone</h4>
-                    <p className="text-[15px] text-gray-500">(+23) 5535 68 68</p>
+                    <h4 className="text-[20px] sm:text-[16px] xl:text-[20px] font-bold text-title mb-1">Phone</h4>
+                    <p className="text-[15px] sm:text-[13px] xl:text-[15px] text-gray-500">(+23) 5535 68 68</p>
                   </div>
                   
                   {/* Email */}
                   <div>
-                    <h4 className="text-[20px] font-bold text-title">Email Address</h4>
-                    <a href="mailto:hello@biliard.com" className="text-[14px] text-desc hover:underline transition-all">
+                    <h4 className="text-[20px] sm:text-[16px] xl:text-[20px] font-bold text-title mb-1">Email Address</h4>
+                    <a href="mailto:hello@biliard.com" className="text-[15px] sm:text-[13px] xl:text-[14px] text-desc hover:underline transition-all">
                       hello@biliard.com
                     </a>
                   </div>
                   
                   {/* Address */}
                   <div>
-                    <h4 className="text-[20px] font-bold text-title">Address</h4>
-                    <p className="text-[15px] text-gray-500 leading-relaxed uppercase">
+                    <h4 className="text-[20px] sm:text-[16px] xl:text-[20px] font-bold text-title mb-1">Address</h4>
+                    <p className="text-[15px] sm:text-[13px] xl:text-[15px] text-gray-500 leading-relaxed uppercase">
                       230 alaska street dunasia QC <br /> (USA) H8R 1A1
                     </p>
                   </div>
