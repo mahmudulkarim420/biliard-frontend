@@ -54,9 +54,9 @@ const ProgressBar = ({ label, percentage }: { label: string; percentage: number 
 const AboutExperience = () => {
   return (
     <section className="section-padding bg-white overflow-hidden">
-      <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+      <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 xl:gap-50 items-center">
-          
+
           {/* --- Images Section (Asymmetrical with Hover Effect) --- */}
           <div className="flex-1 flex gap-6 w-full lg:max-w-138">
             {/* Left Image: Pushed UP */}
@@ -69,7 +69,7 @@ const AboutExperience = () => {
                 />
               </div>
             </div>
-            
+
             {/* Right Image: Pushed DOWN */}
             <div className="flex-1 lg:mt-10 transition-all duration-500 hover:translate-y-2">
               <div className="overflow-hidden rounded-sm shadow-2xl group">
@@ -92,8 +92,8 @@ const AboutExperience = () => {
               Clients to be loved
             </h2>
             <p className="text-desc text-[16px] leading-relaxed mb-6">
-              It is a long established fact that a reader will be distracted by the readable 
-              content of a page when looking at established fact that a reader will be by 
+              It is a long established fact that a reader will be distracted by the readable
+              content of a page when looking at established fact that a reader will be by
               the readable content of a page when looking at.
             </p>
 

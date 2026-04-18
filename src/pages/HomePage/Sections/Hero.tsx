@@ -33,7 +33,7 @@ const Hero = () => {
 
       {/* ── Content ── */}
       <div className="relative z-20 w-full mt-20 md:mt-20 lg:mt-24 py-12 sm:py-20 lg:py-32 px-5 md:px-8 xl:px-24 2xl:px-48 text-center sm:text-left">
-        <div className="mx-auto w-full max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px]">
+        <div className="mx-auto w-full max-w-300 xl:max-w-[1280px]">
           <div className="max-w-162 xl:max-w-[800px] 2xl:max-w-[1000px] mx-auto sm:mx-0">
 
             {/* Eyebrow label */}

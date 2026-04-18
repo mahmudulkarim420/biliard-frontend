@@ -100,14 +100,14 @@ const Innovations = () => {
 
       {/* ── Background Image Pattern Layer ── */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-100">
-        <img 
-          src={bgPattern} 
-          alt="Background Texture" 
+        <img
+          src={bgPattern}
+          alt="Background Texture"
           className="w-full h-full object-cover grayscale"
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
 
         {/* ── Section Header ── */}
         <div className="mb-10 md:mb-16 flex flex-row text-left items-center justify-between gap-6 md:flex-row md:items-end text-center md:text-left xl:mb-20">
@@ -133,8 +133,8 @@ const Innovations = () => {
             <div
               key={index}
               className={`group relative flex flex-col overflow-hidden rounded-4xl p-8 xl:p-10 pb-10 transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl hover:shadow-black/70 bg-linear-to-tl ${service.isActive
-                  ? "from-[#222430] to-[#15161c] shadow-2xl shadow-black/60"
-                  : "from-[#1a1b24] to-[#0c0d11] hover:from-[#1d1e29] hover:to-[#111218]"
+                ? "from-[#222430] to-[#15161c] shadow-2xl shadow-black/60"
+                : "from-[#1a1b24] to-[#0c0d11] hover:from-[#1d1e29] hover:to-[#111218]"
                 }`}
             >
               {/* Rectangle texture overlay */}

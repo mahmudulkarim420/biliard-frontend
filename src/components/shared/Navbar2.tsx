@@ -3,7 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import {
     Menu, X, ChevronDown, ShoppingCart, Search,
     Mail, MapPin, Twitter, Facebook, Instagram, Linkedin, Phone,
-    ArrowRight
+    ArrowRight,
+    LayoutGrid
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
@@ -18,22 +19,37 @@ const navLinks = [
         href: "/",
         hasDropdown: true,
         subLinks: [
-            { name: "Home Style 1", href: "/" },
-            { name: "Home Style 2", href: "/home-2" },
+            { name: "Home Style 1", href: "/", icon: LayoutGrid },
+            { name: "Home Style 2", href: "/home-2", icon: LayoutGrid },
         ],
     },
     {
         name: "Pages",
-        href: "/pages",
         hasDropdown: true,
         subLinks: [
             { name: "About Us", href: "/about" },
-            { name: "Services", href: "/services" },
+            { name: "Career", href: "/career" },
             { name: "Our Portfolio", href: "/portfolio" },
+            { name: "Our Portfolio Details", href: "/portfolio/1" },
         ],
     },
-    { name: "Career", href: "/career", hasDropdown: false },
-    { name: "Blog", href: "/blog", hasDropdown: false },
+
+    {
+        name: "Services",
+        hasDropdown: true,
+        subLinks: [
+            { name: "Services", href: "/services" },
+            { name: "Services Details", href: "/services/01" },
+        ],
+    },
+    {
+        name: "Blog",
+        hasDropdown: true,
+        subLinks: [
+            { name: "Blog", href: "/blog" },
+            { name: "Blog Details", href: "/blog/1" },
+        ],
+    },
     { name: "Contact", href: "/contact", hasDropdown: false },
 ];
 
@@ -160,7 +176,8 @@ const Navbar2 = () => {
                                 onMouseLeave={() => setActiveDropdown(null)}
                             >
                                 <Link
-                                    to={link.href}
+                                    to={link.href || "#"}
+                                    onClick={(e) => !link.href && e.preventDefault()}
                                     className={cn(
                                         "flex items-center gap-1 text-[15px] xl:text-[16px] font-bold transition-all duration-300",
                                         location.pathname === link.href
@@ -307,8 +324,11 @@ const Navbar2 = () => {
                             <div key={link.name} className="border-b border-gray-50 last:border-none pb-2">
                                 <div className="flex items-center justify-between">
                                     <Link
-                                        to={link.href}
-                                        onClick={() => !link.hasDropdown && setIsOpen(false)}
+                                        to={link.href || "#"}
+                                        onClick={(e) => {
+                                            if (!link.href) e.preventDefault();
+                                            if (!link.hasDropdown) setIsOpen(false);
+                                        }}
                                         className={cn(
                                             "text-lg font-bold py-2 transition-colors",
                                             location.pathname === link.href ? "text-brand" : "text-title hover:text-brand"
@@ -364,7 +384,7 @@ const Navbar2 = () => {
                             </div>
                             <div>
                                 <p className="text-xs text-desc font-bold">Call Us</p>
-                                <p className="font-bold text-title">555 123 000</p>
+                                <p className="font-bold text-title">01516370422</p>
                             </div>
                         </div>
                     </div>

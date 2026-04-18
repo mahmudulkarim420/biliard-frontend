@@ -60,7 +60,7 @@ interface PricingSectionProps {
 // High-quality repeating background pattern overlay.
 const PricingSection = ({ showBackground = true }: PricingSectionProps) => {
   return (
-    <section className="relative w-full section-padding bg-[#F3F3F3] overflow-hidden">
+    <section className="relative w-full section-gap overflow-hidden">
 
       {/* ── Background Pattern Overlay ── */}
       {showBackground && (
@@ -73,7 +73,7 @@ const PricingSection = ({ showBackground = true }: PricingSectionProps) => {
         </div>
       )}
 
-      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 relative z-10">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-6 xl:px-0 relative z-10">
 
         {/* ── Section Header ── */}
         <div className="text-center mb-16 xl:mb-20">
@@ -86,7 +86,7 @@ const PricingSection = ({ showBackground = true }: PricingSectionProps) => {
         </div>
 
         {/* ── Pricing Cards Grid ── */}
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 xl:gap-14 2xl:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}

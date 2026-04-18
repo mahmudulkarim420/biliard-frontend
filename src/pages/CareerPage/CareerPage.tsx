@@ -13,7 +13,7 @@ const CareerPage = () => {
     <SubPageLayout title="Careers" breadcrumb="Home / Career">
       <div className="career-page-standardized bg-white">
         <section className="section-padding">
-          <div className="px-5 md:px-8 xl:px-0 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] ">
+          <div className="px-5 md:px-8 xl:px-0 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] ">
             <div>
               <div className="mx-auto max-w-[80%] text-center lg:mx-0 lg:max-w-100 lg:text-left xl:max-w-[600px] 2xl:max-w-[700px]">
                 <h2 className="text-[36px] font-bold leading-[1.1] tracking-tight text-title md:text-[40px] xl:text-[54px] ">

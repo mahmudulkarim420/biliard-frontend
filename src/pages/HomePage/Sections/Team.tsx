@@ -29,7 +29,7 @@ const teamMembers: TeamMember[] = [
 const Team = () => {
   return (
     <section className="w-full bg-white section-padding overflow-hidden">
-      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
 
         {/* ── Section Header ── */}
         <div className="mb-16 text-center lg:mb-24">
@@ -49,9 +49,8 @@ const Team = () => {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className={`group relative flex flex-col transition-all duration-500 ${
-                index % 2 === 1 ? "lg:mt-16" : "lg:-mt-4"
-              }`}
+              className={`group relative flex flex-col transition-all duration-500 ${index % 2 === 1 ? "lg:mt-16" : "lg:-mt-4"
+                }`}
             >
               {/* Image container — lifts and gains shadow on hover */}
               <div className="relative mb-8 aspect-3/4 w-full overflow-hidden rounded-[20px] bg-gray-100 shadow-sm transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2">

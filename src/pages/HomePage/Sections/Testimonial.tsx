@@ -37,11 +37,6 @@ const testimonials: TestimonialItem[] = [
   },
 ];
 
-// ─── Component ────────────────────────────────────────────────────────────────
-// Auto-advancing testimonial slider with a dark full-bleed background. The
-// background image cross-fades on each slide change. Text slides in horizontally
-// via Framer Motion. A subtle quote SVG sits behind the content for visual
-// richness. Pagination dots allow manual navigation.
 const Testimonial = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -54,7 +49,7 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <section className="relative flex min-h-[400px] md:min-h-125 lg:min-h-150 xl:min-h-[700px] 2xl:min-h-[800px] w-full items-center overflow-hidden bg-neutral-950 section-padding">
+    <section className="relative flex min-h-[400px] md:min-h-125 lg:min-h-120 xl:min-h-[600px] 2xl:min-h-[600px] w-full items-center overflow-hidden bg-neutral-950 section-padding">
 
       {/* ── Background Image Layer ── */}
       {/* Cross-fades between testimonial images using AnimatePresence "wait" mode. */}
@@ -76,7 +71,7 @@ const Testimonial = () => {
         <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+      <div className="relative z-10 mx-auto w-full max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
         <div className="relative mx-auto flex w-full max-w-4xl xl:max-w-[1000px] flex-col items-center text-center">
 
           {/* Large decorative quote mark — positioned behind the content */}
@@ -125,11 +120,10 @@ const Testimonial = () => {
                 <button
                   key={index}
                   onClick={() => setCurrentIndex(index)}
-                  className={`h-1 rounded-full transition-all duration-500 ${
-                    index === currentIndex
+                  className={`h-1 rounded-full transition-all duration-500 ${index === currentIndex
                       ? "w-10 bg-brand shadow-[0_0_15px_rgba(255,59,48,0.6)]"
                       : "w-2.5 bg-white/20 hover:bg-white/40"
-                  }`}
+                    }`}
                 />
               ))}
             </div>

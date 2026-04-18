@@ -58,7 +58,7 @@ const partners = [partnerLogo1, partnerLogo2, partnerLogo3, partnerLogo4, partne
 const BlogSectionH2 = () => {
   return (
     <section className="bg-white section-padding w-full">
-      <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] mx-auto text-center px-5 md:px-8 xl:px-0">
+      <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] mx-auto text-center px-5 md:px-8 xl:px-0">
 
         <p className="text-brand text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.1em] mb-4">
           LATEST BLOG
@@ -67,7 +67,7 @@ const BlogSectionH2 = () => {
           Latest Blog & News
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10 xl:gap-14 2xl:gap-16 mb-16 lg:mb-20 text-left">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-8 mb-16 lg:mb-20 text-left">
           {blogs.map((blog) => (
             <div key={blog.id} className="group cursor-pointer">
 

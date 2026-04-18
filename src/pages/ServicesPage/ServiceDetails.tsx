@@ -80,7 +80,7 @@ const ServiceDetails = () => {
 
         {/* Detail Content Section */}
         <section className="section-padding bg-white">
-          <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+          <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
 
             {/* ── Header & Text Area ── */}
             <div className="mb-16 md:mb-20 xl:mb-24">

@@ -43,7 +43,7 @@ const FeaturesSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative z-20 bg-[#F3F3F3] w-full section-padding">
+    <section className="relative z-20 bg-[#F3F3F3] w-full section-gap pb-14 md:pb-20 lg:pb-[120px]">
 
       {/* Hexagonal repeating SVG pattern */}
       <div
@@ -54,14 +54,14 @@ const FeaturesSection = () => {
         }}
       />
 
-      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
 
         {/* ── Video Banner ── */}
-        <div className="group relative z-30 -mt-30 md:-mt-60 lg:-mt-80 xl:-mt-90 2xl:-mt-120 mb-12 md:mb-20 xl:mb-24 h-75 sm:h-100 lg:h-138 xl:h-[600px] 2xl:h-[700px] w-full overflow-hidden bg-gray-950 shadow-2xl rounded-sm">
+        <div className="group relative z-30 h-75 sm:h-100 lg:h-138 xl:h-[600px] 2xl:h-[700px] w-full overflow-hidden bg-gray-950 shadow-2xl rounded-sm">
           <img
             src={bg}
             alt="Agency team"
-            className="h-full w-full object-cover object-center sm:object-[center_20%] lg:object-top transition-transform duration-1000 group-hover:scale-105 opacity-60 lg:opacity-70"
+            className="h-full w-full object-cover object-center sm:object-[center_20%] lg:object-top transition-transform duration-1000 group-hover:scale-105"
           />
 
           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 sm:flex-row sm:justify-between lg:px-24">
@@ -135,7 +135,7 @@ const FeaturesSection = () => {
                         initial={false}
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       >
-                        
+
                         <div className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 h-3 w-3 rotate-45 bg-brand" />
                       </motion.div>
                     )}

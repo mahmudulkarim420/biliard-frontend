@@ -1,8 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import SubPageLayout from "@/layouts/SubPageLayout";
 import { initialBlogPosts } from "@/lib/blog-data";
-import { 
-  User, MessageSquare, ChevronLeft, ChevronRight, 
+import {
+  User, MessageSquare, ChevronLeft, ChevronRight,
   Check, Quote, Twitter, Facebook, Globe
 } from "lucide-react";
 import BlogSidebar from "./BlogSidebar";
@@ -18,7 +18,7 @@ import icon1 from "@/assets/icon.png";
  */
 const BlogDetailsPage = () => {
   const { id } = useParams<{ id: string }>();
-  
+
   const postIndex = initialBlogPosts.findIndex((item) => item.id.toString() === id);
   const post = initialBlogPosts[postIndex];
 
@@ -42,18 +42,18 @@ const BlogDetailsPage = () => {
     <SubPageLayout title="Latest Blog" breadcrumb={`Home / Blog / Latest Blog`}>
       <div className="blog-details-page bg-white">
         <section className="section-padding">
-          <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
-            
+          <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
+
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-              
+
               {/* ── Left Column: Article Content ── */}
               <div className="lg:col-span-8">
 
                 {/* Main Article Header with Date Badge */}
                 <div className="relative rounded-[5px] overflow-hidden mb-8">
-                  <img 
-                    src={post.image} 
-                    alt={post.title} 
+                  <img
+                    src={post.image}
+                    alt={post.title}
                     className="w-full h-[350px] object-cover grayscale brightness-90 transition-all duration-700 hover:grayscale-0 hover:brightness-100"
                   />
                   <div className="absolute top-5 left-5 bg-[#ff3838] text-white px-4 py-2 flex items-center gap-2 rounded-sm shadow-xl z-20">
@@ -84,7 +84,7 @@ const BlogDetailsPage = () => {
                   <p className="leading-[2]">
                     In a few seconds, our A.I. will generate amazing results that you can copy, paste & publish. No matter your native tongue, write creatively and clearly in 25+ languages. Applications are like the lifeblood of mobile phones and tablets today. The true potential of your mobile phone is harnessed.
                   </p>
-                  
+
                   {/* Styled Blockquote Section */}
                   <div className="relative bg-[#F8F7FC] p-8 md:p-14 rounded-[5px] my-4 overflow-hidden group">
                     <div className="absolute left-6 top-6 opacity-80">
@@ -100,7 +100,7 @@ const BlogDetailsPage = () => {
 
                   <h3 className="text-2xl font-bold text-title mt-6 mb-2 tracking-tight">4 Tips To Put Your Creativity On The Development?</h3>
                   <p className="leading-[2]">In a few seconds, our A.I. will generate amazing results that you can copy, paste & publish. No matter your native tongue, write creatively and clearly in 25+ languages. Applications.</p>
-                  
+
                   <ul className="flex flex-col gap-6 mt-2">
                     {[
                       "Normal People Are Getting Themselves Enrolled In Coding And Programming",
@@ -109,7 +109,7 @@ const BlogDetailsPage = () => {
                     ].map((item, idx) => (
                       <li key={idx} className="flex items-start gap-4 group">
                         <div className="mt-1 flex items-center justify-center w-5 h-5 rounded-full bg-white shadow-sm transition-colors border border-gray-100">
-                           <Check className="w-3 h-3 text-[#ff3838] stroke-[4px]" />
+                          <Check className="w-3 h-3 text-[#ff3838] stroke-[4px]" />
                         </div>
                         <span className="text-title font-bold text-[15px] opacity-80 group-hover:opacity-100 transition-opacity">{item}</span>
                       </li>
@@ -119,98 +119,98 @@ const BlogDetailsPage = () => {
 
                 {/* Tags & Social row */}
                 <div className="mt-12 py-8 border-t border-gray-100 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                   <div className="flex flex-wrap items-center gap-3">
-                      {["Software", "App", "Technology"].map((tag) => (
-                        <button key={tag} className="px-5 md:px-6 py-2 bg-[#f6f6f6] text-[11px] md:text-[12px] font-bold text-title hover:bg-[#ff3838] hover:text-white transition-all rounded-sm uppercase tracking-widest">
-                          {tag}
-                        </button>
-                      ))}
-                   </div>
-                   <div className="flex items-center md:mr-40 lg:mr-60 xl:mr-80 gap-3">
-                      <button className="w-10 h-10 border border-gray-100 flex items-center justify-center rounded-full bg-[#ff3838] text-white hover:bg-title transition-all shadow-md">
-                        <Twitter className="w-4 h-4 fill-current" />
+                  <div className="flex flex-wrap items-center gap-3">
+                    {["Software", "App", "Technology"].map((tag) => (
+                      <button key={tag} className="px-5 md:px-6 py-2 bg-[#f6f6f6] text-[11px] md:text-[12px] font-bold text-title hover:bg-[#ff3838] hover:text-white transition-all rounded-sm uppercase tracking-widest">
+                        {tag}
                       </button>
-                      <button className="w-10 h-10 border border-gray-100 flex items-center justify-center rounded-full bg-[#ff3838] text-white hover:bg-title transition-all shadow-md">
-                        <Facebook className="w-4 h-4 fill-current" />
-                      </button>
-                      <button className="w-10 h-10 border border-gray-100 flex items-center justify-center rounded-full bg-[#ff3838] text-white hover:bg-title transition-all shadow-md">
-                        <Globe className="w-4 h-4" />
-                      </button>
-                   </div>
+                    ))}
+                  </div>
+                  <div className="flex items-center md:mr-40 lg:mr-60 xl:mr-80 gap-3">
+                    <button className="w-10 h-10 border border-gray-100 flex items-center justify-center rounded-full bg-[#ff3838] text-white hover:bg-title transition-all shadow-md">
+                      <Twitter className="w-4 h-4 fill-current" />
+                    </button>
+                    <button className="w-10 h-10 border border-gray-100 flex items-center justify-center rounded-full bg-[#ff3838] text-white hover:bg-title transition-all shadow-md">
+                      <Facebook className="w-4 h-4 fill-current" />
+                    </button>
+                    <button className="w-10 h-10 border border-gray-100 flex items-center justify-center rounded-full bg-[#ff3838] text-white hover:bg-title transition-all shadow-md">
+                      <Globe className="w-4 h-4" />
+                    </button>
+                  </div>
                 </div>
 
                 {/* Previous/Next Post Navigation */}
                 <div className="grid grid-cols-1 md:grid-cols-2 mt-10 gap-4">
-                   {prevPost && (
-                     <Link to={`/blog/${prevPost.id}`} className="group flex items-center gap-4 bg-white border border-gray-100 p-6 hover:bg-gray-50 transition-all rounded-md">
-                        <ChevronLeft className="w-5 h-5 shrink-0 text-gray-400 group-hover:text-[#ff3838] transition-colors" />
-                        <div className="hidden sm:block shrink-0 w-16 h-16 rounded overflow-hidden shadow-sm">
-                           <img src={prevPost.image} className="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110" />
-                        </div>
-                        <div className="flex flex-col gap-1">
-                           <h4 className="text-[13px] md:text-[15px] font-bold text-title leading-tight line-clamp-2 transition-colors group-hover:text-[#ff3838]">
-                             UX writing: Copy is an integral part
-                           </h4>
-                           <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
-                             {prevPost.date} Jan 2024
-                           </span>
-                        </div>
-                     </Link>
-                   )}
-                   {nextPost && (
-                     <Link to={`/blog/${nextPost.id}`} className="group flex items-center justify-between md:justify-end text-right gap-4 bg-white border border-gray-100 p-6 hover:bg-gray-50 transition-all rounded-md">
-                        <div className="flex flex-col gap-1">
-                           <h4 className="text-[13px] md:text-[15px] font-bold text-title leading-tight line-clamp-2 transition-colors group-hover:text-[#ff3838]">
-                             UX writing: Copy is an integral part
-                           </h4>
-                           <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
-                             {nextPost.date} Jan 2024
-                           </span>
-                        </div>
-                        <div className="hidden sm:block shrink-0 w-16 h-16 rounded overflow-hidden shadow-sm">
-                           <img src={nextPost.image} className="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110" />
-                        </div>
-                        <ChevronRight className="w-5 h-5 shrink-0 text-gray-400 group-hover:text-[#ff3838] transition-colors" />
-                     </Link>
-                   )}
+                  {prevPost && (
+                    <Link to={`/blog/${prevPost.id}`} className="group flex items-center gap-4 bg-white border border-gray-100 p-6 hover:bg-gray-50 transition-all rounded-md">
+                      <ChevronLeft className="w-5 h-5 shrink-0 text-gray-400 group-hover:text-[#ff3838] transition-colors" />
+                      <div className="hidden sm:block shrink-0 w-16 h-16 rounded overflow-hidden shadow-sm">
+                        <img src={prevPost.image} className="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110" />
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <h4 className="text-[13px] md:text-[15px] font-bold text-title leading-tight line-clamp-2 transition-colors group-hover:text-[#ff3838]">
+                          UX writing: Copy is an integral part
+                        </h4>
+                        <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
+                          {prevPost.date} Jan 2024
+                        </span>
+                      </div>
+                    </Link>
+                  )}
+                  {nextPost && (
+                    <Link to={`/blog/${nextPost.id}`} className="group flex items-center justify-between md:justify-end text-right gap-4 bg-white border border-gray-100 p-6 hover:bg-gray-50 transition-all rounded-md">
+                      <div className="flex flex-col gap-1">
+                        <h4 className="text-[13px] md:text-[15px] font-bold text-title leading-tight line-clamp-2 transition-colors group-hover:text-[#ff3838]">
+                          UX writing: Copy is an integral part
+                        </h4>
+                        <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">
+                          {nextPost.date} Jan 2024
+                        </span>
+                      </div>
+                      <div className="hidden sm:block shrink-0 w-16 h-16 rounded overflow-hidden shadow-sm">
+                        <img src={nextPost.image} className="w-full h-full object-cover grayscale transition-all group-hover:grayscale-0 group-hover:scale-110" />
+                      </div>
+                      <ChevronRight className="w-5 h-5 shrink-0 text-gray-400 group-hover:text-[#ff3838] transition-colors" />
+                    </Link>
+                  )}
                 </div>
 
                 {/* Leave a Reply Section */}
                 <div className="mt-20">
-                   <h3 className="text-[26px] font-black text-title mb-2 tracking-tight">Leave A Reply</h3>
-                   <p className="text-[14px] text-gray-500 mb-10">Your email address will not be published. Required fields are marked <span className="text-[#ff3838] font-bold">*</span></p>
+                  <h3 className="text-[26px] font-black text-title mb-2 tracking-tight">Leave A Reply</h3>
+                  <p className="text-[14px] text-gray-500 mb-10">Your email address will not be published. Required fields are marked <span className="text-[#ff3838] font-bold">*</span></p>
 
-                   <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                         <input 
-                           type="text" 
-                           placeholder="Your Name *" 
-                           className="bg-[#f6f6f6] border-none px-6 py-4 rounded-sm text-[14px] font-bold text-title outline-none focus:ring-1 focus:ring-[#ff3838]/30 transition-all placeholder:text-gray-400" 
-                         />
-                         <input 
-                           type="email" 
-                           placeholder="Your Mail *" 
-                           className="bg-[#f6f6f6] border-none px-6 py-4 rounded-sm text-[14px] font-bold text-title outline-none focus:ring-1 focus:ring-[#ff3838]/30 transition-all placeholder:text-gray-400" 
-                         />
-                      </div>
-                      <textarea 
-                        rows={6}
-                        placeholder="Your Comment *" 
-                        className="bg-[#f6f6f6] border-none px-6 py-6 rounded-sm text-[14px] font-bold text-title outline-none focus:ring-1 focus:ring-[#ff3838]/30 transition-all placeholder:text-gray-400 resize-none"
+                  <form className="flex flex-col gap-6" onSubmit={(e) => e.preventDefault()}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <input
+                        type="text"
+                        placeholder="Your Name *"
+                        className="bg-[#f6f6f6] border-none px-6 py-4 rounded-sm text-[14px] font-bold text-title outline-none focus:ring-1 focus:ring-[#ff3838]/30 transition-all placeholder:text-gray-400"
                       />
-                      <div className="w-full">
-                        <button className="w-full sm:w-auto bg-[#ff3838] text-white px-10 py-5 rounded-sm font-black text-[12px] uppercase tracking-widest hover:bg-title transition-all shadow-xl hover:-translate-y-1 active:scale-95 active:translate-y-0">
-                          Post Comment
-                        </button>
-                      </div>
-                   </form>
+                      <input
+                        type="email"
+                        placeholder="Your Mail *"
+                        className="bg-[#f6f6f6] border-none px-6 py-4 rounded-sm text-[14px] font-bold text-title outline-none focus:ring-1 focus:ring-[#ff3838]/30 transition-all placeholder:text-gray-400"
+                      />
+                    </div>
+                    <textarea
+                      rows={6}
+                      placeholder="Your Comment *"
+                      className="bg-[#f6f6f6] border-none px-6 py-6 rounded-sm text-[14px] font-bold text-title outline-none focus:ring-1 focus:ring-[#ff3838]/30 transition-all placeholder:text-gray-400 resize-none"
+                    />
+                    <div className="w-full">
+                      <button className="w-full sm:w-auto bg-[#ff3838] text-white px-10 py-5 rounded-sm font-black text-[12px] uppercase tracking-widest hover:bg-title transition-all shadow-xl hover:-translate-y-1 active:scale-95 active:translate-y-0">
+                        Post Comment
+                      </button>
+                    </div>
+                  </form>
                 </div>
 
               </div>
 
               {/* ── Right Column: Shared Sidebar ── */}
               <div className="lg:col-span-4">
-                 <BlogSidebar />
+                <BlogSidebar />
               </div>
 
             </div>

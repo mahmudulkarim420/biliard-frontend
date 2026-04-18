@@ -14,15 +14,12 @@ const FEATURE_POINTS = [
   "Neque ornare aenean euismod",
 ];
 
-// --- AboutSection ---
-// Two-column layout: an image composition on the left and the brand
-// narrative, feature checklist, author signature, and an experience
-// stat card on the right.
+
 const AboutSection = () => {
   return (
-    <section className="relative w-full bg-white py-[60px] md:py-[100px] overflow-hidden">
-      <div className="mx-auto w-full xl:max-w-[1280px] 2xl:max-w-[1440px] px-4 sm:px-6 md:px-5 lg:px-8 xl:px-0">
-        <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-14 lg:gap-24 xl:gap-32">
+    <section className="relative w-full bg-white section-padding overflow-hidden">
+      <div className="mx-auto w-full xl:max-w-[1280px] 2xl:max-w-[1280px] px-4 sm:px-6 md:px-5 lg:px-8 xl:px-0">
+        <div className="flex flex-col lg:flex-row items-center gap-10 md:gap-14 lg:gap-24">
 
           {/* ── Left Column: Image Composition ── */}
           <div className="w-full lg:w-1/2 mb-12 sm:mb-16 lg:mb-0 flex justify-center lg:justify-start">

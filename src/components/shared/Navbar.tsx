@@ -27,10 +27,26 @@ const navLinks = [
             { name: "About Us", href: "/about" },
             { name: "Career", href: "/career" },
             { name: "Our Portfolio", href: "/portfolio" },
+            { name: "Our Portfolio Details", href: "/portfolio/1" },
         ],
     },
-    { name: "Services", href: "/services", hasDropdown: false },
-    { name: "Blog", href: "/blog", hasDropdown: false },
+
+    {
+        name: "Services",
+        hasDropdown: true,
+        subLinks: [
+            { name: "Services", href: "/services" },
+            { name: "Services Details", href: "/services/01" },
+        ],
+    },
+    {
+        name: "Blog",
+        hasDropdown: true,
+        subLinks: [
+            { name: "Blog", href: "/blog" },
+            { name: "Blog Details", href: "/blog/1" },
+        ],
+    },
     { name: "Contact", href: "/contact", hasDropdown: false },
 ];
 
@@ -313,7 +329,7 @@ const Navbar = () => {
                         </div>
                         <div className="flex flex-col">
                             <span className="text-xs text-gray-500 uppercase font-medium">Contact Us</span>
-                            <span className="font-bold text-primaryColor">555 123 000</span>
+                            <span className="font-bold text-primaryColor">01516370422</span>
                         </div>
                     </div>
                 </div>

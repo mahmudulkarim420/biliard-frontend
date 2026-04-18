@@ -12,7 +12,7 @@ import DiscoverMoreBtn from "@/components/shared/DiscoverMoreBtn";
 const AboutUs = () => {
   return (
     <section className="bg-white section-padding">
-      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
         <div className="grid grid-cols-1 items-center gap-12 md:gap-16 lg:grid-cols-2 xl:gap-24 w-full mx-auto">
 
           {/* ── Left Column: Staggered Image Grid ── */}

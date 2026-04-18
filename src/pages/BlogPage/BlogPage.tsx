@@ -20,7 +20,7 @@ const BlogPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const filteredPosts = useMemo(() => {
-    return initialBlogPosts.filter(post => 
+    return initialBlogPosts.filter(post =>
       post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       post.author.toLowerCase().includes(searchQuery.toLowerCase())
     );
@@ -46,23 +46,23 @@ const BlogPage = () => {
   return (
     <SubPageLayout title="Latest Blog" breadcrumb="Home / Blog">
       <div className="blog-page-standardized bg-white">
-        
+
         <section className="section-padding">
-          <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
-            
+          <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
+
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-              
+
               {/* ── Left Column: Blog Posts ── */}
               <div className="lg:col-span-8">
                 <div className="flex flex-col gap-12">
                   {currentPosts.length > 0 ? (
                     currentPosts.map((post) => (
                       <Link to={`/blog/${post.id}`} key={post.id} className="group relative block">
-                        
+
                         <div className="relative rounded-t-lg overflow-hidden">
-                          <img 
-                            src={post.image} 
-                            alt={post.title} 
+                          <img
+                            src={post.image}
+                            alt={post.title}
                             className="w-full h-88 md:h-112 object-cover grayscale transition-transform duration-700 group-hover:scale-105 group-hover:grayscale-0"
                           />
                           <div className="absolute top-6 left-6 bg-brand text-white flex items-center gap-2 px-4 py-2 rounded-sm shadow-md z-10">
@@ -74,7 +74,7 @@ const BlogPage = () => {
                         </div>
 
                         <div className="relative bg-white border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.04)] mx-4 md:mx-8 -mt-16 p-6 md:p-10 z-20 rounded-md transition-shadow group-hover:shadow-[0_15px_50px_rgba(0,0,0,0.08)]">
-                          
+
                           <div className="flex items-center gap-6 mb-4 text-[13px] md:text-[14px] font-medium text-gray-500">
                             <div className="flex items-center gap-2">
                               <User className="w-4 h-4 text-brand" />
@@ -98,7 +98,7 @@ const BlogPage = () => {
                         <Search className="w-12 h-12 text-gray-300" />
                         <h3 className="text-2xl font-bold text-title">No matching results</h3>
                         <p className="text-desc">We couldn't find any posts matching "{searchQuery}"</p>
-                        <button 
+                        <button
                           onClick={() => { setSearchQuery(""); setCurrentPage(1); }}
                           className="text-brand font-bold underline mt-2 hover:text-brand/80"
                         >
@@ -119,40 +119,37 @@ const BlogPage = () => {
               {totalPages > 1 && (
                 <div className="lg:col-span-8">
                   <div className="flex items-center gap-2">
-                    <button 
+                    <button
                       onClick={(e) => { e.preventDefault(); goToPage(currentPage - 1); }}
                       disabled={currentPage === 1}
-                      className={`w-10 h-10 flex items-center justify-center border rounded-sm transition-colors ${
-                        currentPage === 1 
-                          ? 'border-gray-100 text-gray-300 cursor-not-allowed' 
+                      className={`w-10 h-10 flex items-center justify-center border rounded-sm transition-colors ${currentPage === 1
+                          ? 'border-gray-100 text-gray-300 cursor-not-allowed'
                           : 'border-gray-200 text-title hover:border-brand hover:text-brand'
-                      }`}
+                        }`}
                     >
                       <ChevronLeft className="w-4 h-4" />
                     </button>
-                    
+
                     {[...Array(totalPages)].map((_, i) => (
-                      <button 
+                      <button
                         key={i + 1}
                         onClick={(e) => { e.preventDefault(); goToPage(i + 1); }}
-                        className={`w-10 h-10 flex items-center justify-center border rounded-sm font-bold transition-all ${
-                          currentPage === i + 1 
-                            ? 'border-brand bg-brand text-white shadow-sm' 
+                        className={`w-10 h-10 flex items-center justify-center border rounded-sm font-bold transition-all ${currentPage === i + 1
+                            ? 'border-brand bg-brand text-white shadow-sm'
                             : 'border-gray-200 text-title hover:border-brand hover:text-brand'
-                        }`}
+                          }`}
                       >
                         {String(i + 1).padStart(2, '0')}
                       </button>
                     ))}
 
-                    <button 
+                    <button
                       onClick={(e) => { e.preventDefault(); goToPage(currentPage + 1); }}
                       disabled={currentPage === totalPages}
-                      className={`w-10 h-10 flex items-center justify-center border rounded-sm transition-colors ${
-                        currentPage === totalPages 
-                          ? 'border-gray-100 text-gray-300 cursor-not-allowed' 
+                      className={`w-10 h-10 flex items-center justify-center border rounded-sm transition-colors ${currentPage === totalPages
+                          ? 'border-gray-100 text-gray-300 cursor-not-allowed'
                           : 'border-gray-200 text-title hover:border-brand hover:text-brand'
-                      }`}
+                        }`}
                     >
                       <ChevronRight className="w-4 h-4" />
                     </button>
@@ -161,7 +158,7 @@ const BlogPage = () => {
               )}
 
             </div>
-            
+
           </div>
         </section>
 

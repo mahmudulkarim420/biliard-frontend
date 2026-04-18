@@ -26,11 +26,11 @@ const PortfolioDetails = () => {
 
   return (
     <SubPageLayout title="Portfolio Details" breadcrumb={`Home / Portfolio / ${project.title}`}>
-      <section className="pt-[130px] pb-[50px] bg-white">
+      <section className="pt-[120px] pb-[50px] bg-white">
         <div className="">
 
-          <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
-            
+          <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
+
             {/* ── Top Header Section ── */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 mb-16">
               <div className="lg:col-span-6 mb-12">
@@ -40,7 +40,7 @@ const PortfolioDetails = () => {
               </div>
               <div className="lg:col-span-6 flex flex-col gap-6">
                 <p className="text-[15px] md:text-[16px] leading-[2.2] text-desc">
-                  It is a long established fact that a reader will be distracted by the  readable content of a page when looking at established fact that a  reader will be by the readable content of a page when looking at the Creative Director and development team to blend user needs 
+                  It is a long established fact that a reader will be distracted by the  readable content of a page when looking at established fact that a  reader will be by the readable content of a page when looking at the Creative Director and development team to blend user needs
                 </p>
               </div>
             </div>
@@ -50,15 +50,15 @@ const PortfolioDetails = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-2 text-gray-400 mb-1">
-                    
+
                     <span className="text-[18px] font-semibold text-title uppercase ">Clients</span>
                   </div>
                   <p className="text-[15px] font-bold ">Art Media & News</p>
                 </div>
-                
+
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-2 text-gray-400 mb-1">
-                    
+
                     <span className="text-[18px] font-semibold text-title uppercase ">Budget</span>
                   </div>
                   <p className="text-[15px] font-bold ">$270</p>
@@ -66,7 +66,7 @@ const PortfolioDetails = () => {
 
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-2 text-gray-400 mb-1">
-                    
+
                     <span className="text-[18px] font-semibold text-title uppercase ">Category</span>
                   </div>
                   <p className="text-[15px] font-bold ">Business & Consulting</p>
@@ -74,7 +74,7 @@ const PortfolioDetails = () => {
 
                 <div className="flex flex-col gap-1">
                   <div className="flex items-center gap-2 text-gray-400 mb-1">
-                    
+
                     <span className="text-[18px] font-semibold text-title uppercase ">Website</span>
                   </div>
                   <a href="#" className="text-[15px] font-bold hover:text-brand text-desc underline transition-colors">www.creativemela.com</a>
@@ -83,30 +83,30 @@ const PortfolioDetails = () => {
             </div>
 
             {/* ── Main Project Image ── */}
-            <div className="rounded-md overflow-hidden mb-20 ">
+            <div className="rounded-md overflow-hidden">
               <img
                 src={mainImage}
                 alt={project.title}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
+                className="w-full max-h-[600px] object-cover hover:scale-105 transition-transform duration-1000"
               />
             </div>
 
             {/* ── Solution Section ── */}
-            <div className="mb-20">
-              <div className="max-w-238">
+            <div className="my-20">
+              <div>
                 <h3 className="text-[28px] md:text-[36px] font-extrabold text-title mb-6 tracking-tight">
                   Our Solution
                 </h3>
                 <p className="text-[15px] md:text-[16px] leading-[1.8] text-desc mb-10">
                   It is a long established fact that a reader will be distracted by the  readable content of a page when looking at established fact that a  reader will be by the readable content of a page when looking at the Creative Director and development team to blend user needs  Duis sed augue condimentum, blandit sapien in, accumsan eros. Curabitur  sodales pulvinar libero et venenatis. Nullam eleifend risus a quam  dictum auctor. Mauris .
                 </p>
-                
+
                 {/* Two Supporting Images */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                  <div className="rounded-lg overflow-hidden h-62">
+                  <div className="rounded-lg overflow-hidden">
                     <img src={detailImageOne} alt="Visual 1" className="w-full h-full object-cover" />
                   </div>
-                  <div className="rounded-lg overflow-hidden h-62">
+                  <div className="rounded-lg overflow-hidden">
                     <img src={detailImageTwo} alt="Visual 2" className="w-full h-full object-cover" />
                   </div>
                 </div>

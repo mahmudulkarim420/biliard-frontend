@@ -14,22 +14,19 @@ const Portfolio = () => {
 
   return (
     <section className="relative w-full section-padding">
-      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
 
         {/* ── Section Header + Category Filter ── */}
-        <div className="mb-12 md:mb-16 flex flex-col justify-between gap-6 md:gap-8 md:flex-row md:items-end text-center md:text-left">
-          <h2 className="text-[20px] md:text-[30px] lg:text-[56px] xl:text-[54px] font-bold leading-[1.1] text-title tracking-tight">
-            Our Portfolio
-          </h2>
+        <div className="mb-12 md:mb-16 flex flex-col justify-center items-center gap-6 md:gap-8 md:flex-row md:items-end text-center md:text-left">
+         
 
-          <ul className="flex flex-wrap justify-center md:justify-end gap-x-6 lg:gap-x-8 gap-y-3 md:gap-y-4">
+          <ul className="flex flex-wrap justify-center items-center gap-x-6 lg:gap-x-8 gap-y-3 md:gap-y-4">
             {categories.map((category) => (
               <li key={category}>
                 <button
                   onClick={() => setActiveCategory(category)}
-                  className={`relative text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold tracking-wider transition-colors duration-300 ${
-                    activeCategory === category ? "text-gray-900" : "text-gray-400 hover:text-gray-900"
-                  }`}
+                  className={`relative text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold tracking-wider transition-colors duration-300 ${activeCategory === category ? "text-gray-900" : "text-gray-400 hover:text-gray-900"
+                    }`}
                 >
                   {category}
                   {activeCategory === category && (
@@ -51,8 +48,8 @@ const Portfolio = () => {
         >
           <AnimatePresence mode="popLayout">
             {filteredItems.map((item) => (
-              <Link 
-                key={item.id} 
+              <Link
+                key={item.id}
                 to={`/portfolio/${item.id}`}
                 className="block"
               >

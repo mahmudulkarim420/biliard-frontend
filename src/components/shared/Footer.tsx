@@ -20,14 +20,14 @@ const Footer = () => {
 
       {/* ── Background Image Pattern Layer ── */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-100">
-        <img 
-          src={bgPattern} 
-          alt="Footer Background Pattern" 
+        <img
+          src={bgPattern}
+          alt="Footer Background Pattern"
           className="w-full h-full object-cover grayscale"
         />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 box-content">
+      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0 box-content">
 
         {/* ── Main Footer Grid ── */}
         <div className="grid grid-cols-1 gap-12 pb-20 md:grid-cols-2 lg:grid-cols-4">

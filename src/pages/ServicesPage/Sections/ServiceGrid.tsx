@@ -16,16 +16,16 @@ const services = [
 
 const ServiceGrid = () => {
   return (
-    <section className="bg-[#fafafa] pt-[130px] pb-50 md:pb-70 lg:pb-90 xl:pb-100 2xl:pb-120">
-      <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] mx-auto px-5 md:px-8 xl:px-0">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 xl:gap-10">
+    <section>
+      <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] mx-auto px-5 md:px-8 xl:px-0 section-gap">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
               <Link
                 key={index}
                 to={`/services/${service.id}`}
-                className="group bg-white border border-gray-200 rounded-[20px] p-8 md:p-10 xl:p-12 transition-all duration-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2 flex flex-col min-h-[300px] xl:min-h-[350px]"
+                className="group bg-white border border-[#D2D2D2] rounded-[20px] p-6 md:p-8 transition-all duration-300 hover:shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2 flex flex-col min-h-[300px] xl:min-h-[350px]"
               >
                 {/* ── Outline Number ── */}
                 <h3

@@ -48,19 +48,19 @@ const Counter = ({ value, duration = 2.5 }: CounterProps) => {
 const StatCounter = () => {
   return (
     <section className="relative w-full overflow-hidden bg-[#0a0a0f] section-padding">
-      
+
       {/* ── Background Image Layer ── */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <img 
-          src={bgMain} 
-          alt="Background Texture" 
+        <img
+          src={bgMain}
+          alt="Background Texture"
           className="w-full h-full object-cover opacity-30 mix-blend-overlay grayscale"
         />
       </div>
 
       {/* ── Background Decorations ── */}
       {/* Dot Pattern Overlay (Sits on top of the image for extra texture) */}
-      <div 
+      <div
         className="pointer-events-none absolute inset-0 z-0 opacity-[0.03]"
         style={{
           backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
@@ -76,15 +76,15 @@ const StatCounter = () => {
       </div>
 
       {/* ── Content ── */}
-      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+      <div className="relative z-10 mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-16 gap-x-8">
           {stats.map((stat, index) => (
             <div key={index} className="flex flex-col items-center md:items-start group">
-              
+
               {/* Animated Outline Number */}
               <h3
                 className="mb-6 text-[56px] md:text-[64px] lg:text-[75px] font-black tracking-wide text-transparent leading-none"
-                style={{ 
+                style={{
                   WebkitTextStroke: "1px #ff3b30",
                   fontFamily: 'var(--font-title, sans-serif)'
                 }}

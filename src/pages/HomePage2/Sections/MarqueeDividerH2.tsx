@@ -8,7 +8,7 @@ const MarqueeDividerH2 = () => {
   const words = ["Software", "Web Design", "Development", "UI/UX Design", "Branding"];
 
   return (
-    <section className="relative z-10 w-full overflow-hidden section-padding bg-white">
+    <section className="relative z-10 w-full overflow-hidden">
       
       <Marquee 
         gradient={false} 
@@ -18,7 +18,7 @@ const MarqueeDividerH2 = () => {
       >
         <div className="flex items-center">
           {words.map((word, index) => (
-            <div key={index} className="flex items-center">
+            <div key={index} className="flex items-center overflow-hidden">
               {/* Outline text word */}
               <span
                 className="mx-8 md:mx-12 lg:mx-16 whitespace-nowrap text-[40px] sm:text-5xl font-black uppercase tracking-widest md:text-7xl lg:text-[100px] xl:text-[130px] 2xl:text-[160px]"

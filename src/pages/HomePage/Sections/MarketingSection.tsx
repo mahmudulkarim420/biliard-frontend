@@ -50,7 +50,7 @@ const MarketingSection = () => {
 
   return (
     <section className="bg-[#F3F3F3] section-padding w-full overflow-hidden">
-      <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 xl:gap-20 items-start">
+      <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 xl:gap-20 items-start">
 
         {/* ── Left: Service Offer List ── */}
         {/* Slides in from the left on first viewport entry. */}
@@ -122,26 +122,23 @@ const MarketingSection = () => {
             return (
               <div
                 key={index}
-                className={`bg-white rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.03)] overflow-hidden border transition-colors duration-300 ${
-                  isOpen ? "border-brand/20" : "border-transparent"
-                }`}
+                className={`bg-white rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.03)] overflow-hidden border transition-colors duration-300 ${isOpen ? "border-brand/20" : "border-transparent"
+                  }`}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
                   className="w-full flex items-center justify-between p-6 md:p-8 text-left outline-none"
                 >
                   <span
-                    className={`text-[16px] md:text-[18px] font-bold transition-colors duration-300 ${
-                      isOpen ? "text-brand" : "text-gray-900"
-                    }`}
+                    className={`text-[16px] md:text-[18px] font-bold transition-colors duration-300 ${isOpen ? "text-brand" : "text-gray-900"
+                      }`}
                   >
                     {faq.question}
                   </span>
                   {/* Toggle icon — rotates and fills with brand color when open */}
                   <div
-                    className={`rounded-full p-1.5 transition-all duration-300 ${
-                      isOpen ? "bg-brand text-white rotate-180" : "bg-gray-100 text-gray-600"
-                    }`}
+                    className={`rounded-full p-1.5 transition-all duration-300 ${isOpen ? "bg-brand text-white rotate-180" : "bg-gray-100 text-gray-600"
+                      }`}
                   >
                     {isOpen ? <Minus className="w-3.5 h-3.5" /> : <Plus className="w-3.5 h-3.5" />}
                   </div>

@@ -10,8 +10,8 @@ const Partners = () => {
 
   return (
     <section className="bg-white section-padding">
-      <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
-        
+      <div className="max-w-300 mx-auto xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
+
         {/* Header with Horizontal Lines */}
         <div className="flex items-center justify-center lg:justify-between gap-4 md:gap-6 mb-10 md:mb-16">
           <div className="flex-1 h-[1.5px] bg-gray-100 hidden md:block" />
@@ -24,8 +24,8 @@ const Partners = () => {
         {/* Partners Logo Row */}
         <div className="grid grid-cols-2 lg:flex lg:flex-wrap justify-center lg:justify-between items-center gap-8 md:gap-12 xl:gap-16 px-4 md:px-10">
           {partners.map((brand, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`group transition-all duration-300 transform hover:scale-105 flex justify-center ${index === 4 ? "col-span-2 lg:col-span-1" : ""}`}
             >
               <img

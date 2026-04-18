@@ -10,17 +10,7 @@ const MarqueeDivider = () => {
   ];
 
   return (
-    <section className="relative z-10 w-full max-w-[100vw] overflow-hidden bg-white pt-10 md:pt-13 pb-40 sm:pb-52 md:pb-72 lg:pb-88 xl:pb-[400px] 2xl:pb-[500px] [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
-      <style>{`
-        .rfm-marquee-container {
-          overflow-x: hidden !important;
-          -ms-overflow-style: none !important;
-          scrollbar-width: none !important;
-        }
-        .rfm-marquee-container::-webkit-scrollbar {
-          display: none !important;
-        }
-      `}</style>
+    <section className="relative z-40 w-full overflow-hidden bg-white">
       <Marquee
         speed={60}
         gradient={false}
@@ -28,7 +18,7 @@ const MarqueeDivider = () => {
         autoFill={true}
       >
         {words.map((word, index) => (
-          <div key={index} className="flex items-center shrink-0">
+          <div key={index} className="flex items-center shrink-0 overflow-hidden">
             <span
               className="inline-block mx-6 md:mx-8 whitespace-nowrap leading-none text-[40px] sm:text-5xl font-black uppercase tracking-widest md:text-7xl lg:text-[100px] xl:text-[130px] 2xl:text-[160px]"
               style={{

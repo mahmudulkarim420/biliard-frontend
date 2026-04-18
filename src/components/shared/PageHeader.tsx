@@ -41,10 +41,10 @@ const PageHeader = ({ title, breadcrumb, className }: PageHeaderProps) => {
       </div>
 
       {/* Content Container */}
-      <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-30 md:px-46 lg:px-52 xl:px-58 pt-5 md:pt-8 lg:pt-10 xl:pt-10 mx-auto w-full relative z-20">
+      <div className="max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-10 md:px-20 lg:px-20 xl:px-20 pt-5 md:pt-8 lg:pt-10 xl:pt-10 mx-auto w-full relative z-20">
         <div className="flex flex-col items-start gap-3">
           {/* Title */}
-          <h1 className="text-white text-[32px] md:text-[48px] lg:text-[52px] xl:text-[64px] font-bold leading-tight tracking-tight animate-in slide-in-from-bottom-5 duration-700">
+          <h1 className="text-white text-[32px] md:text-[48px] lg:text-[52px] font-bold leading-tight tracking-tight animate-in slide-in-from-bottom-5 duration-700">
             {title}
           </h1>
 

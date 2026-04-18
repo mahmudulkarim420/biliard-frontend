@@ -7,7 +7,7 @@ import Partners from "../AboutPage/Sections/Partners";
 const ServicesPage = () => {
   return (
     <SubPageLayout title="Our Services" breadcrumb="Home / Services">
-      <div className="services-page-standardized">
+      <div>
         <ServiceGrid />
         <FeaturesSection/>
         <PricingSection showBackground={false} />

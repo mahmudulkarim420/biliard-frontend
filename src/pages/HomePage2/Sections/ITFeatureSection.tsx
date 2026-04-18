@@ -23,8 +23,8 @@ const ITFeatureSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="relative w-full bg-white pb-[130px] pt-[50px] overflow-hidden">
-      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0">
+    <section className="relative w-full bg-white pb-14 md:pb-20 lg:pb-[100px] xl:[120px] overflow-hidden">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0">
 
         {/* ── Section Header (Updated for side-by-side on mobile) ── */}
         <div className="flex flex-row md:flex-row justify-between items-center md:items-center gap-4 md:gap-24 lg:gap-25 xl:gap-35 mb-20 xl:mb-15">

@@ -86,7 +86,7 @@ const PortfolioSlider = () => {
   return (
     <section className="bg-white section-padding overflow-hidden">
       {/* ── Section Header ── */}
-      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1440px] px-5 md:px-8 xl:px-0 text-center mb-16">
+      <div className="mx-auto max-w-300 xl:max-w-[1280px] 2xl:max-w-[1280px] px-5 md:px-8 xl:px-0 text-center mb-16">
         <p className="mb-4 text-[11px] md:text-[12px] xl:text-[14px] font-bold uppercase tracking-[0.1em] text-brand">
           OUR PORTFOLIO
         </p>
@@ -138,11 +138,10 @@ const PortfolioSlider = () => {
                 swiperInstance.slideTo(swiperInstance.activeIndex + diff, 1000);
               }
             }}
-            className={`transition-all duration-500 rounded-full h-2 ${
-              normalizedIndex === index
+            className={`transition-all duration-500 rounded-full h-2 ${normalizedIndex === index
                 ? "w-8 bg-brand"
                 : "w-2 bg-gray-200 hover:bg-gray-300"
-            }`}
+              }`}
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
